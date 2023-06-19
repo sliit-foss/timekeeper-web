@@ -1,3 +1,5 @@
+<br/>
+
 <p align="center">
   <img src="https://github.com/sliit-foss/timekeeper-web/assets/73662613/9909688c-ef21-4a17-b7fa-5cd45d5d04b2" width="158" height="137" alt="Timekeeper Logo"/>
   
