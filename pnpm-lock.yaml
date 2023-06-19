@@ -1,9 +1,6 @@
 lockfileVersion: "6.0"
 
 dependencies:
-  husky:
-    specifier: 8.0.3
-    version: 8.0.3
   react:
     specifier: 18.2.0
     version: 18.2.0
@@ -48,6 +45,9 @@ devDependencies:
   eslint-plugin-react-refresh:
     specifier: 0.3.4
     version: 0.3.4(eslint@8.38.0)
+  husky:
+    specifier: 8.0.3
+    version: 8.0.3
   postcss:
     specifier: 8.4.23
     version: 8.4.23
@@ -2129,7 +2129,7 @@ packages:
       { integrity: sha512-+dQSyqPh4x1hlO1swXBiNb2HzTDN1I2IGLQx1GrBuiqFJfoMrnZWwVmatvSiO+Iz8fBUnf+lekwNo4c2LlXItg== }
     engines: { node: ">=14" }
     hasBin: true
-    dev: false
+    dev: true
 
   /ignore@5.2.4:
     resolution:
