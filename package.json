@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "format": "prettier .  --write --cache",
-    "lint": "eslint src --ext js,jsx --fix --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint src --ext js,jsx --ignore-path .gitignore --fix --report-unused-disable-directives",
     "preview": "vite preview",
     "prepare": "husky install"
   },
@@ -19,6 +19,8 @@
     "tailwind-merge": "1.13.2"
   },
   "devDependencies": {
+    "@commitlint/cli": "17.4.2",
+    "@commitlint/config-conventional": "17.4.2",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
     "@vitejs/plugin-react": "4.0.0",
