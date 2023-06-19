@@ -1,3 +1,4 @@
-import { default as Footer } from './footer';
-import { default as Header } from './header';
-import { default as Layout } from './layout';
+export { default as Button } from "./button";
+export { default as Footer } from "./footer";
+export { default as Header } from "./header";
+export { default as Layout } from "./layout";
