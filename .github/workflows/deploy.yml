@@ -1,17 +1,11 @@
-name: Deploy PR previews
+name: Deploy to production
 
 on:
-  pull_request:
-    types:
-      - opened
-      - reopened
-      - synchronize
-      - closed
-
-concurrency: preview-${{ github.ref }}
-
+  push:
+    branches:
+      - main
 jobs:
-  deploy-preview:
+  deploy-production:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -29,9 +23,8 @@ jobs:
           pnpm install --ignore-scripts
           pnpm run build
 
-      - name: Deploy preview
-        uses: rossjrw/pr-preview-action@v1
+      - uses: JamesIves/github-pages-deploy-action@v4
         with:
-          source-dir: ./dist/
-          umbrella-dir: preview
-          custom-url: timekeeper.sliitfoss.org
+          folder: ./dist/
+          branch: gh-pages
+          clean-exclude: preview
