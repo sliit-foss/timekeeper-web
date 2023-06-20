@@ -1,0 +1,30 @@
+name: Deploy to production
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy-production:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8.0.0
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+          cache: "pnpm"
+
+      - name: Install and Build
+        run: |
+          pnpm install --ignore-scripts
+          pnpm run build
+
+      - uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: ./dist/
+          branch: gh-pages
+          clean-exclude: preview
