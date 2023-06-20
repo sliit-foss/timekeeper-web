@@ -30,7 +30,7 @@ jobs:
           pnpm run build
 
       - name: Deploy preview
-        uses: rossjrw/pr-preview-action@v1
+        uses: access-nri/pr-preview-action@main
         with:
           source-dir: ./dist/
           umbrella-dir: preview
