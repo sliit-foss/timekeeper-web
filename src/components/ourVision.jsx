@@ -9,13 +9,13 @@ const timeLine = (data) => {
         {data.imgType === "npm" ? (
           <FaNpm className={data.logoFirst ? "text-4xl ml-auto" : "text-4xl mr-auto"} />
         ) : data.imgType === "vscode" ? (
-          <TbBrandVscode className={data.logoFirst ? "text-2xl ml-auto" : "text-4xl mr-auto"} />
+          <TbBrandVscode className={data.logoFirst ? "text-2xl ml-auto" : "text-3xl pt-1 mr-auto"} />
         ) : (
           <></>
         )}
       </div>
       <div className="w-1/5 ">
-        <RxDotFilled className="text-4xl mx-auto border-2 border-dashed rounded-full" />
+        <RxDotFilled className="text-4xl mx-auto border-2 border-dashed rounded-full bg-white" />
       </div>
       <div className={data.logoFirst ? "w-2/5 text-start" : "w-2/5 text-right order-first"}>
         <p>{data.details}</p>
@@ -35,7 +35,11 @@ const OurVision = ({ dataList }) => {
           source code
         </p>
       </div>
-      <div className="p-5 text-center">{dataList && dataList.map((data) => timeLine(data))}</div>
+
+      <div className="relative">
+        <div className="w-1/2 min-h-full absolute inline-block border-r-2 z-0 border-dashed"></div>
+        <div className="p-5 text-center z-10 relative">{dataList && dataList.map((data) => <>{timeLine(data)}</>)}</div>
+      </div>
     </>
   );
 };
