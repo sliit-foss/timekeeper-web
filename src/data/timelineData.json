@@ -2,32 +2,28 @@
   "timeline": [
     {
       "id": 1,
-      "imgAlt": "logo",
-      "imgSrc": "",
+      "imgType": "npm",
       "details": "@sliit-foss/functions",
       "date": "May 2023",
       "logoFirst": true
     },
     {
       "id": 2,
-      "imgAlt": "logo",
-      "imgSrc": "",
+      "imgType": "npm",
       "details": "@sliit-foss/babel-plugin-transform-trace",
       "date": "June 2023",
       "logoFirst": false
     },
     {
       "id": 3,
-      "imgAlt": "logo",
-      "imgSrc": "",
+      "imgType": "npm",
       "details": "@sliit-foss/timekeeper",
       "date": "August 2023",
       "logoFirst": true
     },
     {
       "id": 4,
-      "imgAlt": "logo",
-      "imgSrc": "",
+      "imgType": "vscode",
       "details": "Timekeeper extension",
       "date": "December 2023",
       "logoFirst": false
