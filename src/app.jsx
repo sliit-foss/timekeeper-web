@@ -1,4 +1,6 @@
 import { Header, Footer, Layout } from "@/components/common";
+import OurVision from "./components/ourVision";
+import timelineData from "./data/timelineData.json";
 
 function App() {
   return (
@@ -6,6 +8,7 @@ function App() {
       <Layout>
         <Header />
         <Footer />
+        <OurVision dataList={timelineData.timeline} />
       </Layout>
     </>
   );
