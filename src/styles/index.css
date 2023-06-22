@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Cabinet Grotesk Variable";
+  src: url("../../public/assets/Fonts/CabinetGrotesk-Variable.ttf");
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("../../public/assets/Fonts/Inter-VariableFont_slnt\,wght.ttf");
+}

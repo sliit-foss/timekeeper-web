@@ -2,7 +2,12 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {}
+    extend: {
+      fontFamily: {
+        CabinetGroteskVariable: ["Cabinet Grotesk Variable", "sans"],
+        Inter: ["Inter", "sans"]
+      }
+    }
   },
   plugins: []
 };
