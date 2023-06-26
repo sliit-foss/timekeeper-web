@@ -34,7 +34,7 @@ jobs:
       - name: Deploy preview
         uses: access-nri/pr-preview-action@v2.1.1
         with:
-          source-dir: /dist/
+          source-dir: ./dist/
           action: deploy
           umbrella-dir: preview
           pr-number: ${{ github.event.number }}
