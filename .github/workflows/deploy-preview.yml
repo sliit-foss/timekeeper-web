@@ -2,7 +2,8 @@ name: Deploy PR preview
 
 on:
   workflow_run:
-    workflows: ["Build PR preview"]
+    workflows:
+      - Build PR preview
     types:
       - completed
 
@@ -70,7 +71,7 @@ jobs:
       - name: Deploy preview
         uses: access-nri/pr-preview-action@v2.1.1
         with:
-          source-dir: site
+          source-dir: dist
           action: deploy
           pr-number: ${{ env.pr-number }}
           
