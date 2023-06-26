@@ -69,9 +69,11 @@ jobs:
       - run: unzip pr_site.zip
 
       - name: Deploy preview
-        uses: access-nri/pr-preview-action@v2.1.1
+        uses: akalanka47000/pr-preview-action@main
         with:
           source-dir: dist
           action: deploy
           pr-number: ${{ env.pr-number }}
+          umbrella-dir: preview
+          custom-url: timekeeper.sliitfoss.org
           
