@@ -1,11 +1,13 @@
-import { Header, Footer, Layout } from "@/components/common";
+import { Header, Footer, Hero, Layout, About } from "@/components/common";
 
 function App() {
   return (
     <>
       <Layout>
-        <Header />
-        <Footer />
+          <Header />
+          <Hero />
+          <About />
+          <Footer />
       </Layout>
     </>
   );
