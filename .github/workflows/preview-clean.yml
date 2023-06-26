@@ -45,8 +45,9 @@ jobs:
           python-version: 3.x
 
       - name: Clean preview
-        uses: access-nri/pr-preview-action@v2.1.1
+        uses: akalanka47000/pr-preview-action@main
         with:
           action: remove
           pr-number: ${{ env.pr-number }}
+          umbrella-dir: preview
           
