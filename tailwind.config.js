@@ -17,9 +17,9 @@ export default {
         }
       },
       fontFamily: {
-        cabinet: ["Cabinet Grotesk Variable"],
-        inter: ["Inter"],
-        sf: ["SF Pro Display"]
+        cabinet: ["Cabinet Grotesk Variable", "sans"],
+        inter: ["Inter", "sans"],
+        sf: ["SFP Pro Display", "sans"]
       }
     }
   },
