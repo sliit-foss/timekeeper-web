@@ -1,9 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import { FaNpm } from "react-icons/fa";
 import { TbBrandVscode } from "react-icons/tb";
 import { RxDotFilled } from "react-icons/rx";
-import { useNavigate } from "react-router-dom";
 
-const OurVision = ({ dataList }) => {
+import { default as dataList } from "./data.json";
+
+const OurVision = () => {
   const navigate = useNavigate();
 
   const handleInstallButtonClick = () => {

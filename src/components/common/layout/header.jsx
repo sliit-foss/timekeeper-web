@@ -1,6 +1,7 @@
-import Logo from "../assets/logo";
-import LogoFOSS from "../assets/logo-foss";
+import Logo from "../../assets/logo";
+import LogoFOSS from "../../assets/logo-foss";
 import { FaGithub, FaTimes, FaChevronRight } from "react-icons/fa";
+
 const Header = () => {
   return (
     <header className="items-center grid grid-cols-2 py-[30px]">

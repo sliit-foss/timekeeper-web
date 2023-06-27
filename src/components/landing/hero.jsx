@@ -1,5 +1,6 @@
 import { FaArrowUp, FaChevronRight } from "react-icons/fa";
 import Logo from "../assets/logo";
+
 const Hero = () => {
   return (
     <div className="h-screen">

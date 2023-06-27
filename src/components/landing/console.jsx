@@ -1,5 +1,6 @@
 import { CopyBlock, monoBlue } from "react-code-blocks";
-const About = () => {
+
+const Console = () => {
   return (
     <div className="space-y-10">
       <h1 className="font-cabinet font-bold lg:text-[76px] text-[30px] text-center">See the time in real-time</h1>
@@ -29,4 +30,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Console;

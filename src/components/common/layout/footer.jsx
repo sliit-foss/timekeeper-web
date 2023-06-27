@@ -1,5 +1,5 @@
-import LogoFOSS from "../assets/logo-foss";
-import Logo from "../assets/logo";
+import LogoFOSS from "../../assets/logo-foss";
+import Logo from "../../assets/logo";
 import {
   AiFillFacebook,
   AiFillInstagram,
@@ -9,6 +9,7 @@ import {
   AiFillGithub,
   AiOutlineArrowUp
 } from "react-icons/ai";
+
 const Footer = () => {
   return (
     <footer className="mt-[40px]">
