@@ -5,15 +5,15 @@
 @layer base {
   @font-face {
     font-family: "Cabinet Grotesk Variable";
-    src: url("../../public/assets/Fonts/CabinetGrotesk-Variable.ttf");
+    src: url("../../public/assets/fonts/cabinet-grotesk-variable.ttf");
   }
   @font-face {
     font-family: "Inter";
-    src: url("../../public/assets/Fonts/Inter-VariableFont_slnt\,wght.ttf");
+    src: url("../../public/assets/Fonts/inter.ttf");
   }
   @font-face {
     font-family: "SF Pro Display";
-    src: url("../components/assets/fonts/SFProDisplay-Regular.ttf");
+    src: url("../../public/assets/fonts/sf-pro-display.ttf");
   }
   html {
     scroll-behavior: smooth;
