@@ -30,8 +30,8 @@ const Timeline = () => {
             <div
               className={data.logoFirst ? "w-[230px] text-start order-4" : "w-[230px] text-start md:text-right order-2"}
             >
-              <p className="font-CabinetGroteskVariable text-xl font-extrabold">{data.details}</p>
-              <p className="text-black/40 font-Inter">{data.date}</p>
+              <p className="font-cabinet text-xl font-extrabold">{data.details}</p>
+              <p className="text-black/40 font-inter">{data.date}</p>
             </div>
           </div>
         ))}

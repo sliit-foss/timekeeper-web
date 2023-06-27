@@ -4,9 +4,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        CabinetGroteskVariable: ["Cabinet Grotesk Variable", "sans"],
-        Inter: ["Inter", "sans"],
-        SFPProDisplay: ["SFP Pro Display", "sans"]
+        cabinet: ["Cabinet Grotesk Variable", "sans"],
+        inter: ["Inter", "sans"],
+        sf: ["SFP Pro Display", "sans"]
       }
     }
   },
