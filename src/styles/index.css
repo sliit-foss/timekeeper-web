@@ -11,3 +11,8 @@
   font-family: "Inter";
   src: url("../../public/assets/Fonts/Inter-VariableFont_slnt\,wght.ttf");
 }
+
+@font-face {
+  font-family: "SFP Pro Display";
+  src: url("../../public/assets/Fonts/SFPRODISPLAYREGULAR.OTF");
+}

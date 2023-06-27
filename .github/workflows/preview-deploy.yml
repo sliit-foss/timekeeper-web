@@ -67,7 +67,6 @@ jobs:
             var fs = require('fs');
             fs.writeFileSync('${{github.workspace}}/pr_site.zip', Buffer.from(download.data));
       - run: unzip pr_site.zip
-
       - name: Deploy preview
         uses: akalanka47000/pr-preview-action@main
         with:
@@ -76,4 +75,3 @@ jobs:
           pr-number: ${{ env.pr-number }}
           umbrella-dir: preview
           custom-url: timekeeper.sliitfoss.org
-          

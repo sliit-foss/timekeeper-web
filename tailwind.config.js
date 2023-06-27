@@ -5,7 +5,8 @@ export default {
     extend: {
       fontFamily: {
         CabinetGroteskVariable: ["Cabinet Grotesk Variable", "sans"],
-        Inter: ["Inter", "sans"]
+        Inter: ["Inter", "sans"],
+        SFPProDisplay: ["SFP Pro Display", "sans"]
       }
     }
   },
