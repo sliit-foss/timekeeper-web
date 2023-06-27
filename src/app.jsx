@@ -1,6 +1,6 @@
 import { Header, Footer, Layout } from "@/components/common";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import LandingPage from "./pages/LandingPage";
+import Landing from "./pages/Landing";
 
 function App() {
   return (
@@ -8,7 +8,7 @@ function App() {
       <Layout>
         <Header />
         <Routes>
-          <Route path="/" element={<LandingPage />} />
+          <Route path="/" element={<Landing />} />
         </Routes>
         <Footer />
       </Layout>

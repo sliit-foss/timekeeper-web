@@ -37,7 +37,7 @@ jobs:
           unzip prnumber.zip
           echo "pr-number=$(cat prnumber.txt)" >> "$GITHUB_ENV"
         shell: bash
- 
+
       - name: Checkout
         uses: actions/checkout@v3
       - uses: actions/setup-python@v2
@@ -50,4 +50,3 @@ jobs:
           action: remove
           pr-number: ${{ env.pr-number }}
           umbrella-dir: preview
-          

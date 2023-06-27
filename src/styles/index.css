@@ -9,5 +9,10 @@
 
 @font-face {
   font-family: "Inter";
-  src: url("../../public/assets/Fonts/Inter-VariableFont_slnt\,wght.ttf");
+  src: url("../../public/assets/Fonts/Inter-VariableFont.ttf");
+}
+
+@font-face {
+  font-family: "SFP Pro Display";
+  src: url("../../public/assets/Fonts/SFPRODISPLAYREGULAR.OTF");
 }
