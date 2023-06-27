@@ -1,4 +1,4 @@
-export default () => {
+const FossLogoDark = () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -53,3 +53,5 @@ export default () => {
     </svg>
   );
 };
+
+export default FossLogoDark;
