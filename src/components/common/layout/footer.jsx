@@ -8,6 +8,7 @@ import {
   AiFillGithub,
   AiOutlineArrowUp
 } from "react-icons/ai";
+import { Button } from "@/components/common";
 
 const Footer = () => {
   return (
@@ -46,20 +47,20 @@ const Footer = () => {
           <span className="font-cabinet row-start-2 text-[20px] font-bold text-center">Timekeeper</span>
         </div>
 
-        <div className="md:col-start-3 md:row-start-1 col-start-1 md:mt-0 mt-10 row-start-2 col-span-2 grid grid-rows-4 md:place-content-end">
+        <div className="md:col-start-3 md:row-start-1 col-start-1 md:mt-0 mt-10 row-start-2 col-span-2 grid grid-rows-4 md:place-content-end min-h-0 min-w-0">
           <div className="font-bold text-[20px] font-inter row-start-1">Visit us on</div>
-          <button className="btn-primary w-fit text-[16px] mx-0">
-            <span className="gradient-text">sliitfoss.org</span>
-            <AiOutlineArrowUp style={{ color: "#11EFE3", transform: "rotate(45deg)" }} />
-          </button>
+          <Button className="md:w-3/4 h-8 bg-transparent border font-medium py-[0.1rem] gap-x-2">
+            <span className="gradient-text text-[1rem]">sliitfoss.org</span>
+            <AiOutlineArrowUp className="text-primary-light rotate-45" />
+          </Button>
           <div className="font-bold text-[20px] font-inter row-start-3">Open with source</div>
-          <button className="btn-primary w-fit text-[16px] mx-0">
-            <span className="gradient-text">Visit at</span>
-            <AiFillGithub />
-          </button>
+          <Button className="md:w-3/4 h-8 bg-transparent border font-medium gap-x-2">
+            <span className="gradient-text text-[1rem]">Visit at</span>
+            <AiFillGithub className="text-black" />
+          </Button>
         </div>
       </div>
-      <div className="text-center mt-[40px]">Crafted with ❤️ at SLIIT FOSS</div>
+      <div className="text-center mt-[40px] mb-4">Crafted with 🖤 at SLIIT FOSS</div>
     </footer>
   );
 };

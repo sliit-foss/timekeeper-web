@@ -5,9 +5,10 @@ export default {
     extend: {
       colors: {
         primary: {
-          dark: "rgba(0, 41, 156, 1)",
-          medium: "rgba(0, 115, 230, 1)",
-          light: "rgba(17, 239, 227, 0.24)"
+          "dark": "rgba(0, 41, 156, 1)",
+          "medium": "rgba(0, 115, 230, 1)",
+          "light": "rgba(17, 239, 227, 1)",
+          "light-translucent": "rgba(17, 239, 227, 0.24)"
         },
         gray: {
           "medium": "rgba(0, 0, 0, 0.4)",

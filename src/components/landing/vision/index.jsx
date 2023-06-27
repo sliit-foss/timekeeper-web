@@ -66,7 +66,7 @@ const OurVision = () => {
             </p>
           </div>
           <div className="my-5 py-5 md:flex border-t-2 border-dashed justify-center">
-            <div className="mx-5 mt-2 md:mt-0 p-5 border-2 lg:w-1/4 bg-white border-dashed rounded rounded-3xl">
+            <div className="mx-5 mt-2 md:mt-0 p-5 border-2 lg:w-1/2 bg-white border-dashed rounded-3xl">
               <p className="font-Inter text-black/60">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos debitis quasi perspiciatis voluptate rem
                 nam recusandae impedit nulla reprehenderit sit odio cumque aperiam minima atque, natus commodi sed,
@@ -88,7 +88,7 @@ const OurVision = () => {
                 </div>
               </div>
             </div>
-            <div className="mx-5 mt-5 md:mt-0 p-5 border-2 lg:w-1/4 bg-white border-dashed rounded-3xl">
+            <div className="mx-5 mt-5 md:mt-0 p-5 border-2 lg:w-1/2 bg-white border-dashed rounded-3xl">
               <p className="font-Inter text-black/60">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos debitis quasi perspiciatis voluptate rem
                 nam recusandae impedit nulla reprehenderit sit odio cumque aperiam minima atque, natus commodi sed,

@@ -4,7 +4,7 @@ const Console = () => {
   return (
     <div className="space-y-10">
       <h1 className="font-cabinet font-bold lg:text-[76px] text-[30px] text-center">See the time in real-time</h1>
-      <p className="opacity-40 text-center mx-auto md:w-[790px] w-[300px] font-inter">
+      <p className="text-gray-medium text-center mx-auto w-full md:w-3/4 font-inter">
         A highly portable and versatile plugin ecosystem which will enable fine-grained tracing in your Javascript
         source code
       </p>
