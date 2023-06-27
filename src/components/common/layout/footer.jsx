@@ -1,5 +1,4 @@
-import LogoFOSS from "../../assets/logo-foss";
-import Logo from "../../assets/logo";
+import { Timekeeper, FossLogoDark } from "@/icons";
 import {
   AiFillFacebook,
   AiFillInstagram,
@@ -15,7 +14,7 @@ const Footer = () => {
     <footer className="mt-[40px]">
       <div className="grid md:grid-cols-3 md:grid-rows-1 grid-cols-2 grid-rows-2">
         <div className="space-y-4 col-start-1">
-          <LogoFOSS />
+          <FossLogoDark />
           <p className="md:w-[244px] text-xs opacity-40 font-sf">
             Welcome to SLIIT FOSS community. We&apos;re a group of volunteers who believe in the usage of Free/Open
             Source Software (FOSS)
@@ -42,7 +41,7 @@ const Footer = () => {
 
         <div className="grid col-start-2 grid-rows-3 md:place-content-center place-content-end">
           <div className="mx-[23px] row-start-1">
-            <Logo height={46} />
+            <Timekeeper height={46} />
           </div>
           <span className="font-cabinet row-start-2 text-[20px] font-bold text-center">Timekeeper</span>
         </div>

@@ -1,5 +1,5 @@
 import { FaArrowUp, FaChevronRight } from "react-icons/fa";
-import Logo from "../assets/logo";
+import { Timekeeper } from "@/icons";
 
 const Hero = () => {
   return (
@@ -17,7 +17,7 @@ const Hero = () => {
           quo quos quod recusandae amet, ex aut quam delectus animi voluptatem eum fugiat. Laudantium, pariatur?
         </p>
         <div className="md:block lg:px-[140px] px-[40px] hidden">
-          <Logo height={250} />
+          <Timekeeper height={250} />
         </div>
       </div>
       <div className="grid items-center md:grid-rows-1 md:grid-cols-4 grid-cols-1 grid-rows-3 md:place-items-start place-items-center space-x-4 mt-[40px]">

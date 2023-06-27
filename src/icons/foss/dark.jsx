@@ -1,4 +1,4 @@
-const LogoFOSS = () => {
+export default () => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -53,5 +53,3 @@ const LogoFOSS = () => {
     </svg>
   );
 };
-
-export default LogoFOSS;

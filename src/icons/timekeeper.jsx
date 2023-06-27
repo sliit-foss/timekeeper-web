@@ -1,6 +1,6 @@
-const Logo = (props) => {
+export default ({ width, height }) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width={props.width} height={props.height} fill="none" viewBox="0 0 53 46">
+    <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} fill="none" viewBox="0 0 53 46">
       <path fill="#1E1E1E" d="M0 0H53V46H0z"></path>
       <g>
         <path fill="#fff" d="M0 0H1920V3465H0z" transform="translate(-420 -37)"></path>
@@ -79,5 +79,3 @@ const Logo = (props) => {
     </svg>
   );
 };
-
-export default Logo;

@@ -4,13 +4,13 @@ import { Landing } from "@/pages";
 
 function App() {
   return (
-    <Router>
-      <Layout>
+    <Layout>
+      <Router>
         <Routes>
           <Route path="/" element={<Landing />} />
         </Routes>
-      </Layout>
-    </Router>
+      </Router>
+    </Layout>
   );
 }
 
