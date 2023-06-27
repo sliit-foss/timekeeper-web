@@ -3,29 +3,29 @@
 @tailwind utilities;
 
 @layer base {
-    @font-face {
-        font-family: 'Cabinet Grotesk Variable';
-        src: url('../components/assets/fonts/CabinetGrotesk-Variable.ttf');
-    }
-    @font-face {
-        font-family: 'SF Pro Display';
-        src: url('../components/assets/fonts/SFProDisplay-Regular.ttf');
-    }
-    @font-face {
-        font-family: 'Inter';
-        src: url('../components/assets/fonts/Inter.ttf');
-    }
-    html {
-        scroll-behavior: smooth;
-    }
+  @font-face {
+    font-family: "Cabinet Grotesk Variable";
+    src: url("../components/assets/fonts/CabinetGrotesk-Variable.ttf");
+  }
+  @font-face {
+    font-family: "SF Pro Display";
+    src: url("../components/assets/fonts/SFProDisplay-Regular.ttf");
+  }
+  @font-face {
+    font-family: "Inter";
+    src: url("../components/assets/fonts/Inter.ttf");
+  }
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 @layer components {
-    .gradient-text {
-        @apply bg-gradient-to-r from-gl to-gr bg-clip-text text-transparent;
-    }
+  .gradient-text {
+    @apply bg-gradient-to-r from-gl to-gr bg-clip-text text-transparent;
+  }
 
-    .btn-primary {
-        @apply flex items-center font-semibold text-[24px] font-sf space-x-2 mx-auto border px-4 py-1 rounded-2xl border-black border-opacity-10;
-    }
+  .btn-primary {
+    @apply flex items-center font-semibold text-[24px] font-sf space-x-2 mx-auto border px-4 py-1 rounded-2xl border-black border-opacity-10;
+  }
 }

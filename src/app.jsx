@@ -4,10 +4,10 @@ function App() {
   return (
     <>
       <Layout>
-          <Header />
-          <Hero />
-          <About />
-          <Footer />
+        <Header />
+        <Hero />
+        <About />
+        <Footer />
       </Layout>
     </>
   );

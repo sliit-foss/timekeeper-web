@@ -1,19 +1,9 @@
 const Logo = (props) => {
   return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width={props.width}
-      height={props.height}
-      fill="none"
-      viewBox="0 0 53 46"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" width={props.width} height={props.height} fill="none" viewBox="0 0 53 46">
       <path fill="#1E1E1E" d="M0 0H53V46H0z"></path>
       <g>
-        <path
-          fill="#fff"
-          d="M0 0H1920V3465H0z"
-          transform="translate(-420 -37)"
-        ></path>
+        <path fill="#fff" d="M0 0H1920V3465H0z" transform="translate(-420 -37)"></path>
         <g>
           <mask id="path-1-inside-1_426_33" fill="#fff">
             <path d="M-420-37h1920V83H-420V-37z"></path>
@@ -52,14 +42,7 @@ const Logo = (props) => {
           ></path>
         </g>
         <g fill="#000">
-          <mask
-            id="path-7-outside-2_426_33"
-            width="1162"
-            height="3463"
-            x="-41"
-            y="-37"
-            maskUnits="userSpaceOnUse"
-          >
+          <mask id="path-7-outside-2_426_33" width="1162" height="3463" x="-41" y="-37" maskUnits="userSpaceOnUse">
             <path fill="#fff" d="M-41 -37H1121V3426H-41z"></path>
             <path d="M-40-37h1160v3463H-40V-37z"></path>
           </mask>
@@ -71,27 +54,13 @@ const Logo = (props) => {
         </g>
       </g>
       <defs>
-        <linearGradient
-          id="paint0_linear_426_33"
-          x1="42.55"
-          x2="17.25"
-          y1="23"
-          y2="23"
-          gradientUnits="userSpaceOnUse"
-        >
+        <linearGradient id="paint0_linear_426_33" x1="42.55" x2="17.25" y1="23" y2="23" gradientUnits="userSpaceOnUse">
           <stop stopColor="#11EFE3"></stop>
           <stop offset="0.33" stopColor="#15E8E2"></stop>
           <stop offset="0.74" stopColor="#1FD3E0"></stop>
           <stop offset="1" stopColor="#21CFE0"></stop>
         </linearGradient>
-        <linearGradient
-          id="paint1_linear_426_33"
-          x1="5.75"
-          x2="40.25"
-          y1="23"
-          y2="23"
-          gradientUnits="userSpaceOnUse"
-        >
+        <linearGradient id="paint1_linear_426_33" x1="5.75" x2="40.25" y1="23" y2="23" gradientUnits="userSpaceOnUse">
           <stop stopColor="#00299C"></stop>
           <stop offset="1" stopColor="#0073E6"></stop>
         </linearGradient>
@@ -109,6 +78,6 @@ const Logo = (props) => {
       </defs>
     </svg>
   );
-}
+};
 
 export default Logo;

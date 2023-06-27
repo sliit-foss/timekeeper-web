@@ -9,11 +9,7 @@ const LogoFOSS = () => {
       viewBox="0 0 74 42"
     >
       <path fill="#1E1E1E" d="M0 0H74V42H0z"></path>
-      <path
-        fill="#fff"
-        d="M0 0H1920V3465H0z"
-        transform="translate(-559 -39)"
-      ></path>
+      <path fill="#fff" d="M0 0H1920V3465H0z" transform="translate(-559 -39)"></path>
       <mask id="path-1-inside-1_426_33" fill="#fff">
         <path d="M-559-39h1920V81H-559V-39z"></path>
       </mask>
@@ -44,16 +40,8 @@ const LogoFOSS = () => {
       ></path>
       <path fill="url(#pattern0)" d="M0 0H73.92V42H0z"></path>
       <defs>
-        <pattern
-          id="pattern0"
-          width="1"
-          height="1"
-          patternContentUnits="objectBoundingBox"
-        >
-          <use
-            transform="matrix(.00085 0 0 .0015 -.375 -1.01)"
-            xlinkHref="#image0_426_33"
-          ></use>
+        <pattern id="pattern0" width="1" height="1" patternContentUnits="objectBoundingBox">
+          <use transform="matrix(.00085 0 0 .0015 -.375 -1.01)" xlinkHref="#image0_426_33"></use>
         </pattern>
         <image
           id="image0_426_33"
@@ -64,6 +52,6 @@ const LogoFOSS = () => {
       </defs>
     </svg>
   );
-}
+};
 
 export default LogoFOSS;
