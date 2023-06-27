@@ -1,11 +1,7 @@
-import OurVision from "../components/ourVision";
+//import OurVision from "../components/ourVision";
 
 const Landing = () => {
-  return (
-    <>
-      <OurVision />
-    </>
-  );
+  return <></>;
 };
 
 export default Landing;
