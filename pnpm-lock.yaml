@@ -1,9 +1,5 @@
 lockfileVersion: "6.0"
 
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
-
 dependencies:
   react:
     specifier: 18.2.0
@@ -17,6 +13,9 @@ dependencies:
   react-icons:
     specifier: 4.9.0
     version: 4.9.0(react@18.2.0)
+  react-router-dom:
+    specifier: 6.14.0
+    version: 6.14.0(react-dom@18.2.0)(react@18.2.0)
   tailwind-merge:
     specifier: 1.13.2
     version: 1.13.2
@@ -896,6 +895,12 @@ packages:
       "@nodelib/fs.scandir": 2.1.5
       fastq: 1.15.0
     dev: true
+
+  /@remix-run/router@1.7.0:
+    resolution:
+      { integrity: sha512-Eu1V3kz3mV0wUpVTiFHuaT8UD1gj/0VnoFHQYX35xlslQUpe8CuYoKFn9d4WZFHm3yDywz6ALZuGdnUPKrNeAw== }
+    engines: { node: ">=14" }
+    dev: false
 
   /@tsconfig/node10@1.0.9:
     resolution:
@@ -3267,7 +3272,7 @@ packages:
       react: 18.2.0
       react-syntax-highlighter: 12.2.1(react@18.2.0)
       styled-components: 5.3.11(@babel/core@7.22.5)(react-dom@18.2.0)(react-is@16.13.1)(react@18.2.0)
-      tslib: 2.5.3
+      tslib: 2.6.0
     transitivePeerDependencies:
       - "@babel/core"
       - react-dom
@@ -3303,6 +3308,31 @@ packages:
       { integrity: sha512-wViHqhAd8OHeLS/IRMJjTSDHF3U9eWi62F/MledQGPdJGDhodXJ9PBLNGr6WWL7qlH12Mt3TyTpbS+hGXMjCzQ== }
     engines: { node: ">=0.10.0" }
     dev: true
+
+  /react-router-dom@6.14.0(react-dom@18.2.0)(react@18.2.0):
+    resolution:
+      { integrity: sha512-YEwlApKwzMMMbGbhh+Q7MsloTldcwMgHxUY/1g0uA62+B1hZo2jsybCWIDCL8zvIDB1FA0pBKY9chHbZHt+2dQ== }
+    engines: { node: ">=14" }
+    peerDependencies:
+      react: ">=16.8"
+      react-dom: ">=16.8"
+    dependencies:
+      "@remix-run/router": 1.7.0
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      react-router: 6.14.0(react@18.2.0)
+    dev: false
+
+  /react-router@6.14.0(react@18.2.0):
+    resolution:
+      { integrity: sha512-OD+vkrcGbvlwkspUFDgMzsu1RXwdjNh83YgG/28lBnDzgslhCgxIqoExLlxsfTpIygp7fc+Hd3esloNwzkm2xA== }
+    engines: { node: ">=14" }
+    peerDependencies:
+      react: ">=16.8"
+    dependencies:
+      "@remix-run/router": 1.7.0
+      react: 18.2.0
+    dev: false
 
   /react-syntax-highlighter@12.2.1(react@18.2.0):
     resolution:
@@ -3898,9 +3928,9 @@ packages:
       yn: 3.1.1
     dev: true
 
-  /tslib@2.5.3:
+  /tslib@2.6.0:
     resolution:
-      { integrity: sha512-mSxlJJwl3BMEQCUNnxXBU9jP4JBktcEGhURcPR6VQVlnP0FdDEsIaz0C35dXNGLyRfrATNofF0F5p2KPxQgB+w== }
+      { integrity: sha512-7At1WUettjcSRHXCyYtTselblcHl9PJFFVKiCAy/bY97+BPZXSQ2wbq0P9s8tK2G7dFQfNnlJnPAiArVBVBsfA== }
     dev: false
 
   /type-check@0.4.0:
