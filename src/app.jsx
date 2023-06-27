@@ -1,18 +1,24 @@
-import { Header, Footer, Layout } from "@/components/common";
+import { Layout } from "@/components/common";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Landing from "./pages/Landing";
+import { Landing } from "@/pages";
 
 function App() {
+  let basename = "/";
+
+  const matchPreviewDeployment = window.location.pathname.match(/preview\/pr-\d+/);
+
+  if (matchPreviewDeployment) {
+    basename += matchPreviewDeployment[0];
+  }
+
   return (
-    <Router>
-      <Layout>
-        <Header />
+    <Layout>
+      <Router basename={basename}>
         <Routes>
           <Route path="/" element={<Landing />} />
         </Routes>
-        <Footer />
-      </Layout>
-    </Router>
+      </Router>
+    </Layout>
   );
 }
 

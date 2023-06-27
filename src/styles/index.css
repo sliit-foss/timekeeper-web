@@ -2,17 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: "Cabinet Grotesk Variable";
-  src: url("../../public/assets/Fonts/CabinetGrotesk-Variable.ttf");
+@layer base {
+  @font-face {
+    font-family: "Cabinet Grotesk Variable";
+    src: url("../../public/assets/fonts/cabinet-grotesk-variable.ttf");
+  }
+  @font-face {
+    font-family: "Inter";
+    src: url("../../public/assets/fonts/inter.ttf");
+  }
+  @font-face {
+    font-family: "SF Pro Display";
+    src: url("../../public/assets/fonts/sf-pro-display.ttf");
+  }
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
-@font-face {
-  font-family: "Inter";
-  src: url("../../public/assets/Fonts/Inter-VariableFont.ttf");
-}
-
-@font-face {
-  font-family: "SFP Pro Display";
-  src: url("../../public/assets/Fonts/SFPRODISPLAYREGULAR.OTF");
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-dark to-primary-medium bg-clip-text text-transparent;
+  }
 }
