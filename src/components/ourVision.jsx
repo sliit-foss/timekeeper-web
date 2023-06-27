@@ -1,4 +1,4 @@
-import Timeline from "./timeline";
+//import Timeline from "./timeline";
 import { Link } from "react-router-dom";
 
 const OurVision = () => {
@@ -15,7 +15,6 @@ const OurVision = () => {
       <div className="relative">
         <div className="md:w-1/2 min-h-full absolute inline-block border-r-2 md:ml-[2px] z-0 border-dashed"></div>
         <div className="p-5 text-center z-10 relative">
-          <Timeline />
           <div className="bg-white">
             <p className="bg-clip-text text-transparent bg-gradient-to-r from-[#00299c] to-[#0092e6] inline-block font-bold border-2 border-dashed py-1 px-3 rounded-full">
               Continuing to Grow
