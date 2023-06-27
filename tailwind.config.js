@@ -16,10 +16,13 @@ export default {
           "extra-light": "rgba(0, 0, 0, 0.1)"
         }
       },
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))"
+      },
       fontFamily: {
         cabinet: ["Cabinet Grotesk Variable", "sans"],
         inter: ["Inter", "sans"],
-        sf: ["SFP Pro Display", "sans"]
+        sf: ["SF Pro Display", "sans"]
       }
     }
   },
