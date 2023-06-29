@@ -24,12 +24,4 @@
   .gradient-text {
     @apply bg-gradient-to-r from-primary-dark to-primary-medium bg-clip-text text-transparent;
   }
-
-  .tab {
-    @apply inline-block p-2 text-gray-600 rounded-t-lg bg-[#EAEEF37F] duration-300 border-b-4
-  }
-
-  .active {
-    @apply bg-[#EAEEF3] border-primary-medium
-  }
 }

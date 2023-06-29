@@ -1,6 +1,3 @@
-import { useState } from "react";
-import { CopyBlock, monoBlue } from "react-code-blocks";
-
 const Console = () => {
   const code = [
     'const hello = require(“@utils”);',
@@ -14,18 +11,6 @@ const Console = () => {
     'console.log(sum(4, 5));'
   ];
 
-  const ExampleCode = () => {
-    return (
-      <CopyBlock
-      text={code.join('\n')}
-      language={"js"}
-      showLineNumbers={true}
-      theme={monoBlue}
-      codeBlock
-      />
-    );
-  };
-  
   const output = [
     '{"correlationId": "4e92fc149bfe5fd1b1ff7b6cdd33189d", "level": "info","message": "[tracer] - hello execution initiated", "timestamp": "2023-05-25T04:25:52.177Z"}',
     'Hello!', 
@@ -34,39 +19,21 @@ const Console = () => {
     '{"correlationId": "3d2fa3f77d4506f3192b28327cdfa88d", "level": "info", "message": "[tracer] - sum execution completed - execution_time : 0.05579999997280538ms", "timestamp": "2023-05-25T04:25:52.180Z"}',
     '9'
   ];
-
-  const ExampleCodeOutput = () => {
-    return (
-      <CopyBlock
-      text={output.join('\n')}
-      language={"json"}
-      showLineNumbers={true}
-      theme={monoBlue}
-      codeBlock
-      />
-    );
-  };
-  
-  const [ActiveTab, setActiveTab] = useState(() => ExampleCode);
   
   return (
-    <div className="space-y-10">
+    <div className="space-y-10 relative">
       <h1 className="font-cabinet font-bold lg:text-[76px] text-[30px] text-center">See the time in real-time</h1>
       <p className="text-gray-medium text-center mx-auto w-full md:w-3/4 font-inter">
         A highly portable and versatile plugin ecosystem which will enable fine-grained tracing in your Javascript
         source code
       </p>
-      <div className="md:w-[550px] mx-auto overflow-hidden shadow rounded-lg p-5">
-        <ul className="flex flex-wrap space-x-1">
-          <li className={`tab ${ActiveTab.toString() === ExampleCode.toString() ? 'active': ''}`} onClick={() => setActiveTab(() => ExampleCode)}>
-            Example.js
-          </li>
-          <li className={`tab ${ActiveTab.toString() === ExampleCodeOutput.toString() ? 'active': ''}`} onClick={() => setActiveTab(() => ExampleCodeOutput)}>
-            Output
-          </li>
-        </ul>
-        <ActiveTab />
+      <div className="md:w-[500px] bg-gray-200 mx-auto font-medium border relative z-10 rounded-3xl pt-8">
+        <p className="p-4 bg-white rounded-b-3xl" >{code.map(i => (<>{i}<br/></>))}</p>
       </div>
+      <div className="md:w-fit bg-gray-200 mx-auto font-medium border relative z-10 rounded-3xl pt-8">
+        <p className="p-4 bg-white rounded-b-3xl" >{output.map(i => (<>{i}<br/></>))}</p>
+      </div>
+      <div className="w-[80%] h-[500px] top-[40%] border-2 absolute left-[10%] z-0 border-dashed rounded-3xl"></div>
     </div>
   );
 };
