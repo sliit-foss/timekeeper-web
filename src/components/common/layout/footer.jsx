@@ -10,9 +10,9 @@ import {
 } from "react-icons/ai";
 import { Button } from "@/components/common";
 
-const Footer = () => {
+const Footer = ({className}) => {
   return (
-    <footer className="mt-[40px]">
+    <footer className={`mt-[40px] ${className}`}>
       <div className="grid md:grid-cols-3 md:grid-rows-1 grid-cols-2 grid-rows-2">
         <div className="space-y-4 col-start-1">
           <FossLogoDark />

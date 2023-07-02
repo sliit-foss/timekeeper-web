@@ -1,55 +1,33 @@
 import Timeline from "./timeline";
-import { Link } from "react-router-dom";
+import { Insight, Button, Heading } from "@/components/common";
 
 const OurVision = () => {
   return (
     <>
-      <div className="p-5 my-5 text-center">
-        <h1 className="font-cabinet font-extrabold text-5xl">Our Vision</h1>
-        <p className="font-inter text-black/60 text-xl mt-5">
-          A highly portable and versatile plugin ecosystem which will enable fine-grained tracing in your Javascript
-          source code
-        </p>
+      <div className="mt-[60px]">
+        <Heading>Our Vision</Heading>
+        <Heading sub>
+          A highly portable and versatile plugin ecosystem which will enable fine-grained tracing in your Javascript source code
+        </Heading>
       </div>
 
-      <div className="relative">
-        <div className="md:w-1/2 min-h-full absolute inline-block border-r-2 md:ml-[2px] z-0 border-dashed"></div>
-        <div className="p-5 text-center z-10 relative">
+      <div className="pb-[200px] pt-[40px] overflow-hidden relative">
+        <div className="absolute w-[2px] left-[calc(50%-1px)] bg-gradient-to-b from-black/10 to-transparent min-h-full"></div>
+        <div className="absolute left-[calc(50%-1px)] min-h-full border-2 border-white border-dashed"></div>
+        <div className="text-center pt-[30px] z-10 relative">
           <Timeline />
-          <div className="bg-white">
-            <p className="font-sf bg-clip-text text-transparent bg-gradient-to-r from-[#00299c] to-[#0092e6] inline-block font-black border-2 border-dashed py-1 px-3 rounded-full">
-              Continuing to Grow
-            </p>
-          </div>
-          <div className="my-5 md:ml-[2px] py-5 md:flex border-t-2 border-dashed justify-center">
-            <div className="mx-5 mt-2 md:mt-0 p-5 border-2 lg:w-1/2 bg-white border-dashed rounded-3xl">
-              <p className="font-inter text-black/60">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos debitis quasi perspiciatis voluptate rem
-                nam recusandae impedit nulla reprehenderit sit odio cumque aperiam minima atque, natus commodi sed,
-                incidunt maxime?
-              </p>
-              <Link to="#" target="_blank">
-                <div className="py-1 px-4 mt-3 inline-block border rounded-full bg-cyan-200/60">
-                  <div className="font-sf font-black text-lg bg-clip-text text-transparent bg-gradient-to-r from-[#00299c] to-[#0092e6]">
-                    Install Blizzard Release <span className="md:inline-block hidden"> {">"} </span>
-                  </div>
-                </div>
-              </Link>
-            </div>
-            <div className="mx-5 mt-2 md:mt-0 p-5 border-2 lg:w-1/2 bg-white border-dashed rounded-3xl">
-              <p className="font-inter text-black/60">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos debitis quasi perspiciatis voluptate rem
-                nam recusandae impedit nulla reprehenderit sit odio cumque aperiam minima atque, natus commodi sed,
-                incidunt maxime?
-              </p>
-              <Link to="#" target="_blank">
-                <div className="py-1 px-4 mt-3 inline-block border rounded-full bg-cyan-200/60">
-                  <div className="font-sf bg-clip-text text-transparent bg-gradient-to-r from-[#00299c] to-[#0092e6] font-black text-lg">
-                    Explore Source Code <span className="md:inline-block hidden"> {">"} </span>
-                  </div>
-                </div>
-              </Link>
-            </div>
+          <Button className="bg-white border-2 mx-auto mb-[80px]">
+            Continue to growing
+          </Button>
+          <div className="md:ml-[2px] pt-[28px] w-full md:flex border-t-2 border-dashed justify-center">
+            <Insight 
+              info={"Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups."} 
+              btnText={"Install Blizzard Release"}
+            />
+            <Insight 
+              info={"Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups."} 
+              btnText={"Explore Source Code"}
+            />
           </div>
         </div>
       </div>
