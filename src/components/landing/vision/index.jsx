@@ -1,4 +1,4 @@
-import { Button, Heading, Insight } from "@/components/common";
+import { Button, Heading, Insight, SubHeading } from "@/components/common";
 import Timeline from "./timeline";
 
 const OurVision = () => {
@@ -7,10 +7,10 @@ const OurVision = () => {
       <div className="mt-[60px]">
         <div className="border-t-2 border-dashed absolute inset-x-0" />
         <Heading className="pt-12 mb-4">Our Vision</Heading>
-        <Heading sub>
+        <SubHeading>
           A highly portable and versatile plugin ecosystem which will enable fine-grained tracing in your Javascript
           source code
-        </Heading>
+        </SubHeading>
       </div>
       <div className="pb-[200px] pt-[40px]">
         <div className="absolute w-[2px] left-[calc(50%+1px)] bg-gradient-to-b from-black/10 via-black/10 to-transparent min-h-full" />

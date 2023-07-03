@@ -1,5 +1,5 @@
 import { FaArrowUp } from "react-icons/fa";
-import { Button } from "@/components/common";
+import { Button, SubHeading } from "@/components/common";
 import { Timekeeper } from "@/icons";
 
 const Hero = ({ className }) => {
@@ -18,11 +18,11 @@ const Hero = ({ className }) => {
             Timekeeper
           </h1>
           <div className="flex">
-            <p className="tracking-[-0.5px] leading-tight font-normal text-[26px] text-gray-medium w-[500px]">
+            <SubHeading className="text-left">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
               dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
               ea commodo consequat.
-            </p>
+            </SubHeading>
             <div className="md:block hidden lg:px-[145px]">
               <Timekeeper height={230} />
             </div>
