@@ -2,28 +2,27 @@ import { FaArrowUp } from "react-icons/fa";
 import { Button } from "@/components/common";
 import { Timekeeper } from "@/icons";
 
-const Hero = () => {
+const Hero = ({className}) => {
   return (
-    <div className="py-14">
+    <div className={`py-[60px] ${className}`}>
       <div className="flex justify-center items-center">
         <Button className="bg-transparent border font-medium gap-x-2">
           <span className="gradient-text ">Coming Soon</span>
           <FaArrowUp className="text-primary-medium rotate-45" />
         </Button>
       </div>
-      <h1 className=" font-bold tracking-[-4.8px] font-cabinet text-[65px] md:text-[80px] lg:text-[110px]">
+      <h1 className=" font-bold tracking-[-4.8px] font-cabinet text-[65px] md:text-[80px] lg:text-[121px]">
         TimeKeeper
       </h1>
-      <div className="flex justify-between space-x-1">
-        <p className="tracking-[-0.5px] font-inter md:text-[24px] text-gray-medium w-full lg:w-[500px]">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed repudiandae quasi magnam rem voluptatibus dicta
-          quo quos quod recusandae amet, ex aut quam delectus animi voluptatem eum fugiat. Laudantium, pariatur?
+      <div className="flex">
+        <p className="tracking-[-0.5px] leading-tight font-normal font-inter text-[26px] text-gray-medium w-[500px]">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  
         </p>
-        <div className="md:block hidden">
-          <Timekeeper height={250} />
+        <div className="md:block hidden lg:px-[145px]">
+          <Timekeeper height={230} />
         </div>
       </div>
-      <div className="flex gap-x-2 mt-[20px]">
+      <div className="flex gap-x-2 mt-[40px]">
         <Button arrow>Get started</Button>
         <Button href="#" className="bg-transparent" arrowClassName="text-primary-light">
           See the docs
