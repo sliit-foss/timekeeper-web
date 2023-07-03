@@ -4,7 +4,7 @@ import { code, output } from "./data";
 const Console = ({ className }) => {
   return (
     <div className={`py-[60px] w-full ${className}`}>
-      <Heading>See the time in real-time</Heading>
+      <Heading className="mb-4">See the time in real-time</Heading>
       <Heading sub>
         A highly portable and versatile plugin ecosystem which will enable fine-grained tracing in your Javascript
         source code
