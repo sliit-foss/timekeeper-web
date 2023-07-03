@@ -10,12 +10,9 @@ import {
 } from "react-icons/ai";
 import { Button } from "@/components/common";
 
-const Footer = () => {
+const Footer = ({ className }) => {
   return (
-   
-  
-    <footer className="mt-[40px]">
-      
+    <footer className={`mt-[40px] ${className}`}>
       <div className="grid md:grid-cols-3 md:grid-rows-1 grid-cols-2 grid-rows-2">
         <div className="space-y-4 col-start-1">
           <FossLogoDark />
@@ -66,7 +63,6 @@ const Footer = () => {
       <div className="border-t-2 border-dashed absolute inset-x-0 mt-7"></div>
       <div className="text-center mb-4 mt-9">Crafted with 🖤 at SLIIT FOSS</div>
     </footer>
-    
   );
 };
 

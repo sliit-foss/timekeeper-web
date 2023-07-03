@@ -3,8 +3,8 @@ import { Hero, Console, Vision } from "@/components/landing";
 const Landing = () => {
   return (
     <>
-      <Hero />
-      <Console />
+      <Hero className="mx-[40px]" />
+      <Console className="mx-[40px]]" />
       <Vision />
     </>
   );
