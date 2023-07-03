@@ -19,8 +19,7 @@ const OurVision = () => {
           <Timeline />
           <Button className="bg-white border-2 mx-auto mb-[80px]">Continuing to grow</Button>
         </div>
-        <div className="border-t-2 border-dashed absolute inset-x-0" />
-        <div className="md:ml-[2px] pt-[28px] w-full flex flex-col md:flex-row gap-x-12 gap-y-6 justify-center items-center relative z-50">
+        <div className="md:ml-[2px] pt-[28px] w-full flex flex-col md:flex-row gap-x-[3.25rem] gap-y-6 justify-center items-center relative z-50 border-t-2 border-dashed">
           <Insight
             description="Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups."
             action={{
