@@ -1,5 +1,5 @@
-import { Timekeeper, FossLogoDark } from "@/icons";
-import { FaGithub, FaTimes, FaChevronRight } from "react-icons/fa";
+import { FaChevronRight, FaGithub, FaTimes } from "react-icons/fa";
+import { FossLogoDark, Timekeeper } from "@/icons";
 
 const Header = ({ className }) => {
   return (

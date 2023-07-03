@@ -1,4 +1,4 @@
-import { Hero, Console, Vision } from "@/components/landing";
+import { Console, Hero, Vision } from "@/components/landing";
 
 const Landing = () => {
   return (

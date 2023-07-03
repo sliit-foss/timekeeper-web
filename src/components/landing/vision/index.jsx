@@ -1,5 +1,5 @@
+import { Button, Heading, Insight } from "@/components/common";
 import Timeline from "./timeline";
-import { Insight, Button, Heading } from "@/components/common";
 
 const OurVision = () => {
   return (

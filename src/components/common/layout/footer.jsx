@@ -1,14 +1,14 @@
-import { Timekeeper, FossLogoDark } from "@/icons";
 import {
   AiFillFacebook,
+  AiFillGithub,
   AiFillInstagram,
-  AiOutlineTwitter,
   AiFillLinkedin,
   AiFillYoutube,
-  AiFillGithub,
-  AiOutlineArrowUp
+  AiOutlineArrowUp,
+  AiOutlineTwitter
 } from "react-icons/ai";
 import { Button } from "@/components/common";
+import { FossLogoDark, Timekeeper } from "@/icons";
 
 const Footer = ({ className }) => {
   return (

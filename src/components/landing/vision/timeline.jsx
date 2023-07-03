@@ -1,6 +1,5 @@
 import { RxDotFilled } from "react-icons/rx";
-import { VSCode, NPM } from "@/icons";
-
+import { NPM, VSCode } from "@/icons";
 import timeline from "./data.json";
 
 const Timeline = () => {

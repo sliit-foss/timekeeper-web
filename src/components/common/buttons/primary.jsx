@@ -1,5 +1,5 @@
-import { twMerge } from "tailwind-merge";
 import { FaChevronRight } from "react-icons/fa";
+import { twMerge } from "tailwind-merge";
 
 const Button = ({ children, className, arrow = false, arrowClassName, ...props }) => {
   return (

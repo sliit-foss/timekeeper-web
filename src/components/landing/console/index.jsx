@@ -1,5 +1,5 @@
-import { code, output } from "./example";
-import { Button, Preview, Heading } from "@/components/common";
+import { Button, Heading, Preview } from "@/components/common";
+import { code, output } from "./data";
 
 const Console = ({ className }) => {
   return (

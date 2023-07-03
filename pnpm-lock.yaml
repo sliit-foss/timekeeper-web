@@ -1,9 +1,5 @@
 lockfileVersion: "6.0"
 
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
-
 dependencies:
   react:
     specifier: 18.2.0
@@ -28,6 +24,9 @@ devDependencies:
   "@commitlint/config-conventional":
     specifier: 17.4.2
     version: 17.4.2
+  "@trivago/prettier-plugin-sort-imports":
+    specifier: 4.1.1
+    version: 4.1.1(prettier@2.8.8)
   "@types/react":
     specifier: 18.0.28
     version: 18.0.28
@@ -120,6 +119,16 @@ packages:
       semver: 6.3.0
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@babel/generator@7.17.7:
+    resolution:
+      { integrity: sha512-oLcVCTeIFadUoArDTwpluncplrYBmTCCZZgXCbgNGvOBBiSDDK3eWO4b/+eOTli5tKv1lg+a5/NAXg+nTcei1w== }
+    engines: { node: ">=6.9.0" }
+    dependencies:
+      "@babel/types": 7.22.5
+      jsesc: 2.5.2
+      source-map: 0.5.7
     dev: true
 
   /@babel/generator@7.22.5:
@@ -299,6 +308,25 @@ packages:
       "@babel/types": 7.22.5
     dev: true
 
+  /@babel/traverse@7.17.3:
+    resolution:
+      { integrity: sha512-5irClVky7TxRWIRtxlh2WPUUOLhcPN06AGgaQSB8AEwuyEBgJVuJ5imdHm5zxk8w0QS5T+tDfnDxAlhWjpb7cw== }
+    engines: { node: ">=6.9.0" }
+    dependencies:
+      "@babel/code-frame": 7.22.5
+      "@babel/generator": 7.22.5
+      "@babel/helper-environment-visitor": 7.22.5
+      "@babel/helper-function-name": 7.22.5
+      "@babel/helper-hoist-variables": 7.22.5
+      "@babel/helper-split-export-declaration": 7.22.5
+      "@babel/parser": 7.22.5
+      "@babel/types": 7.22.5
+      debug: 4.3.4
+      globals: 11.12.0
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /@babel/traverse@7.22.5:
     resolution:
       { integrity: sha512-7DuIjPgERaNo6r+PZwItpjCZEa5vyw4eJGufeLxrPdBXBoLcCJCIasvK6pK/9DVNrLZTLFhUGqaC6X/PA007TQ== }
@@ -316,6 +344,15 @@ packages:
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@babel/types@7.17.0:
+    resolution:
+      { integrity: sha512-TmKSNO4D5rzhL5bjWFcVHHLETzfQ/AmbKpKPOSjlP0WoHZ6L911fgoOKY4Alp/emzG4cHJdyN49zpgkbXFEHHw== }
+    engines: { node: ">=6.9.0" }
+    dependencies:
+      "@babel/helper-validator-identifier": 7.22.5
+      to-fast-properties: 2.0.0
     dev: true
 
   /@babel/types@7.22.5:
@@ -882,6 +919,27 @@ packages:
       { integrity: sha512-Eu1V3kz3mV0wUpVTiFHuaT8UD1gj/0VnoFHQYX35xlslQUpe8CuYoKFn9d4WZFHm3yDywz6ALZuGdnUPKrNeAw== }
     engines: { node: ">=14" }
     dev: false
+
+  /@trivago/prettier-plugin-sort-imports@4.1.1(prettier@2.8.8):
+    resolution:
+      { integrity: sha512-dQ2r2uzNr1x6pJsuh/8x0IRA3CBUB+pWEW3J/7N98axqt7SQSm+2fy0FLNXvXGg77xEDC7KHxJlHfLYyi7PDcw== }
+    peerDependencies:
+      "@vue/compiler-sfc": 3.x
+      prettier: 2.x
+    peerDependenciesMeta:
+      "@vue/compiler-sfc":
+        optional: true
+    dependencies:
+      "@babel/generator": 7.17.7
+      "@babel/parser": 7.22.5
+      "@babel/traverse": 7.17.3
+      "@babel/types": 7.17.0
+      javascript-natural-sort: 0.7.1
+      lodash: 4.17.21
+      prettier: 2.8.8
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
 
   /@tsconfig/node10@1.0.9:
     resolution:
@@ -2386,6 +2444,11 @@ packages:
       { integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw== }
     dev: true
 
+  /javascript-natural-sort@0.7.1:
+    resolution:
+      { integrity: sha512-nO6jcEfZWQXDhOiBtG2KvKyEptz7RVbpGP4vTD2hLBdmNQSsCiicO2Ioinv6UI4y9ukqnBpy+XZ9H6uLNgJTlw== }
+    dev: true
+
   /jiti@1.18.2:
     resolution:
       { integrity: sha512-QAdOptna2NYiSSpv0O/BwoHBSmz4YhpzJHyi+fnMRTXFjp7B8i/YG5Z8IfusxB1ufjcD2Sre1F3R+nX3fvy7gg== }
@@ -3366,6 +3429,12 @@ packages:
     engines: { node: ">=0.10.0" }
     dev: true
 
+  /source-map@0.5.7:
+    resolution:
+      { integrity: sha512-LbrmJOMUSdEVxIKvdcJzQC+nQhe8FUZQTXQy6+I75skNgn3OoQ0DZA8YnFa7gp8tqtL3KPf1kmo0R5DoApeSGQ== }
+    engines: { node: ">=0.10.0" }
+    dev: true
+
   /spdx-correct@3.2.0:
     resolution:
       { integrity: sha512-kN9dJbvnySHULIluDHy32WHRUu3Og7B9sbY7tsFLctQkIqnMh3hErYgdMjTYuqmcXX+lK5T1lnUt3G7zNswmZA== }
@@ -3904,3 +3973,7 @@ packages:
       { integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q== }
     engines: { node: ">=10" }
     dev: true
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
