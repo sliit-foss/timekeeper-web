@@ -1,5 +1,24 @@
 {
   "printWidth": 120,
   "trailingComma": "none",
-  "quoteProps": "consistent"
+  "quoteProps": "consistent",
+  "plugins": ["@trivago/prettier-plugin-sort-imports"],
+  "importOrder": [
+    "^(react/(.*)$)|^(react$)",
+    "^(.*react-*(.*)$)",
+    "^(.*redux-*(.*)$)",
+    "^(lodash$)|^(moment$)",
+    "<THIRD_PARTY_MODULES>",
+    "^assets/(.*)$",
+    "^components/(.*)$",
+    "^config/(.*)$",
+    "^icons/(.*)$",
+    "^pages/(.*)$",
+    "^store/(.*)$",
+    "^styles/(.*)$",
+    "^utils/(.*)$",
+    "^[./]"
+  ],
+  "importOrderSeparation": false,
+  "importOrderSortSpecifiers": true
 }
