@@ -10,7 +10,7 @@ const Hero = ({ className }) => {
         <div className={`py-[60px] ${className} relative`}>
           <div className="flex justify-center items-center">
             <Button className="bg-white border font-medium gap-x-2">
-              <span className="gradient-text">Coming Soon</span>
+              <span className="gradient-text font-semibold">Coming Soon</span>
               <FaArrowUp className="text-primary-medium rotate-45" />
             </Button>
           </div>

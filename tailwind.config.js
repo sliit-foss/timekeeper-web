@@ -13,8 +13,12 @@ export default {
         gray: {
           "medium": "rgba(0, 0, 0, 0.4)",
           "light": "rgba(0, 0, 0, 0.16)",
-          "extra-light": "rgba(0, 0, 0, 0.1)"
+          "extra-light": "rgba(0, 0, 0, 0.1)",
+          "ultra-light": "rgba(0, 0, 0, 0.03)"
         }
+      },
+      borderRadius: {
+        primary: "20px"
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))"
