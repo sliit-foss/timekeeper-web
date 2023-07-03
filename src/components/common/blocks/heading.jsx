@@ -6,7 +6,7 @@ const Heading = ({ children, sub }) => {
           {children}
         </h1>
       ) : (
-        <p className="text-gray-medium text-[26px] lg:tracking-[-0.5px] leading-tight text-center mx-auto w-full md:w-[800px] font-inter">
+        <p className="text-gray-medium text-[26px] lg:tracking-[-0.5px] leading-tight text-center mx-auto w-full md:w-[800px]">
           {children}
         </p>
       )}

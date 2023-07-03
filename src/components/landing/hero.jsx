@@ -17,7 +17,7 @@ const Hero = ({ className }) => {
           TimeKeeper
         </h1>
         <div className="flex">
-          <p className="tracking-[-0.5px] leading-tight font-normal font-inter text-[26px] text-gray-medium w-[500px]">
+          <p className="tracking-[-0.5px] leading-tight font-normal text-[26px] text-gray-medium w-[500px]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
             ea commodo consequat.

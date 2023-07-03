@@ -16,7 +16,7 @@ const Timeline = () => {
           </div>
           <div className={index % 2 == 0 ? "text-start order-4" : "place-items-end text-end order-2"}>
             <p className="leading-[26px] font-cabinet text-[26px] tracking-[-0.5px] font-bold">{details}</p>
-            <p className="text-black/40 font-inter">{date}</p>
+            <p className="text-black/40">{date}</p>
           </div>
         </div>
       ))}
