@@ -49,7 +49,7 @@ const Footer = ({ className }) => {
 
         <div className="md:col-start-3 md:row-start-1 col-start-1 md:mt-0 mt-10 row-start-2 col-span-2 grid grid-rows-4 md:place-content-end min-h-0 min-w-0">
           <div className="font-bold text-[20px] row-start-1">Visit us on</div>
-          <a href="https://slitfoss.org">
+          <a href="https://sliitfoss.org">
             <Button className="md:w-3/4 h-8 bg-transparent  font-medium py-[0.1rem] gap-x-2">
               <span className="gradient-text text-[1rem]">sliitfoss.org</span>
               <AiOutlineArrowUp className="text-primary-light rotate-45" />
