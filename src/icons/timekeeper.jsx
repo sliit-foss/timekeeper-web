@@ -1,7 +1,11 @@
 const Timekeeper = ({ width, height }) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} fill="none" viewBox="0 0 53 46">
-      <path fill="#1E1E1E" d="M0 0H53V46H0z"></path>
+      {/* here there is a border if it becomes (1)white "#FFFFFF" or (2)transparent "rgba(0, 0, 0, 0)" it will be invisible */}
+      <path fill="rgba(0, 0, 0, 0)" d="M0 0H53V46H0z"></path>
+      {/* You can only (3)remove the border lines. it becomes like comment line */}
+      {/* <path fill="#1E1E1E" d="M0 0H0z"></path> */}
+      {/* Also, if you want, you can (4)delete this line and nothing will happen*/}
       <g>
         <path fill="#fff" d="M0 0H1920V3465H0z" transform="translate(-420 -37)"></path>
         <g>
