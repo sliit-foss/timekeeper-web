@@ -20,7 +20,7 @@ jobs:
 
       - name: Install and Build
         run: |
-          pnpm install --ignore-scripts
+          pnpm install --ignore-scripts --fix-lockfile
           pnpm run build
 
       - uses: JamesIves/github-pages-deploy-action@v4

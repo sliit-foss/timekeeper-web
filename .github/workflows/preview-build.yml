@@ -27,7 +27,7 @@ jobs:
 
       - name: Install and Build
         run: |
-          pnpm install --ignore-scripts
+          pnpm install --ignore-scripts --fix-lockfile
           pnpm run build
 
       - name: Save PR number
