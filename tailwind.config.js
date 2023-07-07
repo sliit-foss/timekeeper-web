@@ -32,7 +32,8 @@ export default {
         xs: "360px"
       },
       transitionDuration: {
-        medium: "300ms"
+        medium: "300ms",
+        long: "500ms"
       }
     }
   },

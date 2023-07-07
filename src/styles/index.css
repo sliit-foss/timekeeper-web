@@ -26,9 +26,15 @@
   }
   .animated-chevron {
     @apply relative;
+    &:before {
+      @apply content-[''] absolute w-0 h-[0.18rem] top-[41%] right-[-0.05rem] mr-[0.5rem] bg-current rounded group-hover:w-[0.55rem] group-hover:md:w-[0.7rem] transition-all duration-medium;
+    }
   }
-  .animated-chevron::before {
-    content: "";
-    @apply absolute w-0 h-[0.18rem] top-[41%] right-[-0.05rem] mr-[0.5rem] bg-current rounded group-hover:w-[0.55rem] group-hover:md:w-[0.7rem] transition-all duration-medium;
+  .splash {
+    box-shadow: 0 0 10px 5px rgba(black, .2);
+    @apply overflow-hidden after:hover:w-[150%] after:hover:h-[180%];
+    &:after {
+      @apply content-[''] absolute block bg-white w-0 h-0 top-1/2 left-1/2 opacity-[0.15] rounded-full -translate-x-1/2 -translate-y-1/2 transition-all duration-long;
+    }
   }
 }

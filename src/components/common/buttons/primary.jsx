@@ -5,7 +5,7 @@ const Button = ({ children, className, arrow = false, arrowClassName, ...props }
   return (
     <button
       className={twMerge(
-        "group flex justify-center items-center text-[17px] md:text-[20px] cursor-pointer font-bold font-sf rounded-3xl px-4 py-[0.35rem]",
+        "group flex justify-center items-center text-[17px] md:text-[20px] cursor-pointer font-bold font-sf rounded-3xl px-4 py-[0.35rem] splash",
         "bg-primary-light-translucent outline outline-transparent filter",
         "hover:bg-primary-light-translucent/0 hover:outline-double hover:outline-gray-extra-light hover:contrast-[2] transition-all duration-medium",
         className
