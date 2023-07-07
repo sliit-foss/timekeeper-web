@@ -10,11 +10,11 @@ const Terminal = ({ code = [""], styles = { root: "", header: "", body: "" } }) 
           styles.body
         )}
       >
-        {code.map((line) => (
-          <>
+        {code.map((line, index) => (
+          <div key={index}>
             {line}
             <br />
-          </>
+          </div>
         ))}
       </pre>
     </div>
