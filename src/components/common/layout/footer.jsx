@@ -16,7 +16,7 @@ const Footer = ({ className }) => {
       <div className="grid md:grid-cols-3 md:grid-rows-1 grid-cols-2 grid-rows-2">
         <div className="space-y-4 col-start-1">
           <FossLogoDark />
-          <p className="md:w-[244px] text-xs opacity-40 font-sf">
+          <p className="md:w-[244px] text-black text-xs text-gray-500 opacity-80 font-sf">
             Welcome to SLIIT FOSS community. We&apos;re a group of volunteers who believe in the usage of Free/Open
             Source Software (FOSS)
           </p>
