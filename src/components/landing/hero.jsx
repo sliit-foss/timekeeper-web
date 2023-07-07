@@ -27,9 +27,15 @@ const Hero = ({ className }) => {
               <Timekeeper height={230} />
             </div>
           </div>
-          <div className="flex gap-x-2 mt-[40px]">
-            <Button arrow>Get started</Button>
-            <Button href="#" className="bg-transparent" arrowClassName="text-primary-light">
+          <div className="flex flex-wrap gap-x-2 gap-y-5 mt-[40px]">
+            <Button href="#" className="w-auto" arrowClassName="md:mt-[0.08rem]">
+              Get started
+            </Button>
+            <Button
+              href="#"
+              className="xs:bg-transparent hover:outline-transparent"
+              arrowClassName="text-primary-light"
+            >
               See the docs
             </Button>
           </div>

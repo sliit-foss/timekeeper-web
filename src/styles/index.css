@@ -24,4 +24,11 @@
   .gradient-text {
     @apply bg-gradient-to-r from-primary-dark to-primary-medium bg-clip-text text-transparent;
   }
+  .animated-chevron {
+    @apply relative;
+  }
+  .animated-chevron::before {
+    content: "";
+    @apply absolute w-0 h-[0.18rem] top-[41%] right-[-0.05rem] mr-[0.5rem] bg-current rounded group-hover:w-[0.5rem] group-hover:md:w-[0.7rem] transition-all duration-medium;
+  }
 }
