@@ -32,7 +32,7 @@
   }
   .splash {
     box-shadow: 0 0 10px 5px rgba(black, .2);
-    @apply overflow-hidden after:hover:w-[150%] after:hover:h-[180%];
+    @apply relative overflow-hidden after:hover:w-[100%] after:hover:h-[100%];
     &:after {
       @apply content-[''] absolute block bg-white w-0 h-0 top-1/2 left-1/2 opacity-[0.15] rounded-full -translate-x-1/2 -translate-y-1/2 transition-all duration-long;
     }
