@@ -54,7 +54,7 @@ const Footer = ({ className }) => {
             <AiOutlineArrowUp className="text-primary-light rotate-45" />
           </Button>
           <div className="font-bold text-[20px] row-start-3">Open with source</div>
-          <Button className="md:w-3/4 h-8 bg-transparent border font-medium gap-x-2">
+          <Button className="h-8 bg-transparent border font-medium gap-x-2 justify-start w-fit">
             <span className="gradient-text text-[1rem]">Visit at</span>
             <AiFillGithub className="text-black" />
           </Button>
