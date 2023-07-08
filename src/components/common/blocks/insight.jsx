@@ -9,7 +9,7 @@ const Insight = ({
 }) => {
   return (
     <div
-      className={`mt-2 md:mt-0 p-5 border-[1.5px] border-gray-extra-light w-10/12 md:w-[320px] bg-white rounded-primary ${className}`}
+      className={`mt-2 md:mt-0 p-5 border-[1.5px] border-gray-extra-light w-10/12 md:w-[300px] bg-white rounded-primary ${className}`}
       {...props}
     >
       <BodyText className="w-full text-black/60">{description}</BodyText>
