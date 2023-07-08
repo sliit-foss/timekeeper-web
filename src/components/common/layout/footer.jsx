@@ -65,7 +65,7 @@ const Footer = ({ className }) => {
               </div>
             </Button>
             <div className="font-semibold text-[20px] mt-0.5">Open with source</div>
-            <Button className="md:w-8/12 h-8 bg-transparent border gap-x-2">
+            <Button className="md:w-9/12 h-8 bg-transparent border gap-x-2">
               <span className="gradient-text text-[1rem]">Visit at</span>
               <AiFillGithub className="text-black" />
             </Button>
