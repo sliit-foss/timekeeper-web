@@ -51,7 +51,7 @@ const Footer = ({ className }) => {
         <div className="grid grid-rows-1 md:col-start-3 col-span-2 md:place-content-end min-h-0 min-w-0 md:mt-0 mt-10 ">
           <div className="flex flex-col gap-y-4 md:gap-y-3 -translate-y-0.5">
             <div className="font-semibold text-[20px]">Visit us on</div>
-            <Button className="md:w-10/12 h-8 bg-white border gap-x-1.5">
+            <Button className="md:w-11/12 h-8 bg-white border gap-x-1.5">
               <span className="gradient-text text-[1rem]">sliitfoss.org</span>
               <div className="-rotate-45 mb-0.5 md:mb-1">
                 <div
