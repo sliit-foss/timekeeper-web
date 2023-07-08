@@ -4,9 +4,10 @@ import {
   AiFillInstagram,
   AiFillLinkedin,
   AiFillYoutube,
-  AiOutlineArrowUp,
   AiOutlineTwitter
 } from "react-icons/ai";
+import { FaChevronRight } from "react-icons/fa";
+import { twMerge } from "tailwind-merge";
 import { Button } from "@/components/common";
 import { FossLogoDark, Timekeeper } from "@/icons";
 
@@ -49,12 +50,21 @@ const Footer = ({ className }) => {
 
         <div className="md:col-start-3 md:row-start-1 col-start-1 md:mt-0 mt-10 row-start-2 col-span-2 grid grid-rows-4 md:place-content-end min-h-0 min-w-0">
           <div className="font-bold text-[20px] row-start-1">Visit us on</div>
-          <Button className="md:w-3/4 h-8 bg-transparent border font-medium py-[0.1rem] gap-x-2">
+          <Button className="md:w-10/12 h-8 bg-white border gap-x-1.5">
             <span className="gradient-text text-[1rem]">sliitfoss.org</span>
-            <AiOutlineArrowUp className="text-primary-light rotate-45" />
+            <div className="-rotate-45 mb-0.5 md:mb-1">
+              <div
+                className={twMerge(
+                  "text-primary-medium pl-0.5 animated-chevron",
+                  "before:h-[0.14rem] before:top-[42.6%] before:w-[0.85rem] before:group-hover:w-[0.98rem]"
+                )}
+              >
+                <FaChevronRight className="p-[0.15rem]" />
+              </div>
+            </div>
           </Button>
           <div className="font-bold text-[20px] row-start-3">Open with source</div>
-          <Button className="h-8 bg-transparent border font-medium gap-x-2 justify-start w-fit">
+          <Button className="md:w-8/12 h-8 bg-transparent border gap-x-2">
             <span className="gradient-text text-[1rem]">Visit at</span>
             <AiFillGithub className="text-black" />
           </Button>
