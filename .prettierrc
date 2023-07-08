@@ -7,7 +7,7 @@
     "^(react/(.*)$)|^(react$)",
     "^(.*react-*(.*)$)",
     "^(.*redux-*(.*)$)",
-    "^(lodash$)|^(moment$)",
+    "^(aos$)|^(lodash$)|^(moment$)",
     "^(tailwind*)",
     "<THIRD_PARTY_MODULES>",
     "^assets/(.*)$",
