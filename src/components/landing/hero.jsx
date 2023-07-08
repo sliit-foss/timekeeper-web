@@ -1,7 +1,7 @@
 import { FaChevronRight } from "react-icons/fa";
 import { twMerge } from "tailwind-merge";
 import { Button, SubHeading } from "@/components/common";
-import { TimekeeperAnim } from "@/icons";
+import { TimekeeperAnimated } from "@/icons";
 
 const Hero = ({ className }) => {
   return (
@@ -34,24 +34,22 @@ const Hero = ({ className }) => {
                 dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
                 ex ea commodo consequat.
               </SubHeading>
-            </div>
-            <div className="md:flex hidden justify-center grow flex-shrink-0 basis-1/2">
-              <div className="animate-[spin_10s_linear_infinite] duration-500">
-                <TimekeeperAnim />
+              <div className="flex flex-wrap gap-x-2 gap-y-5 mt-[40px] ">
+                <Button href="#" className="w-auto" arrowClassName="md:mt-[0.08rem]">
+                  Get started
+                </Button>
+                <Button
+                  href="#"
+                  className="xs:bg-transparent hover:outline-transparent"
+                  arrowClassName="text-primary-light"
+                >
+                  See the docs
+                </Button>
               </div>
             </div>
-          </div>
-          <div className="flex flex-wrap gap-x-2 gap-y-5 mt-[40px] md:mt-0">
-            <Button href="#" className="w-auto" arrowClassName="md:mt-[0.08rem]">
-              Get started
-            </Button>
-            <Button
-              href="#"
-              className="xs:bg-transparent hover:outline-transparent"
-              arrowClassName="text-primary-light"
-            >
-              See the docs
-            </Button>
+            <div className="md:flex hidden justify-center grow flex-shrink-0 basis-1/2 -translate-y-16 ml-6">
+              <TimekeeperAnimated />
+            </div>
           </div>
         </div>
       </div>
