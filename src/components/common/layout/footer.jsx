@@ -41,7 +41,7 @@ const Footer = ({ className }) => {
           </div>
         </div>
 
-        <div className="grid col-start-2 grid-rows-3">
+        <div className="flex flex-col gap-y-2 md:gap-y-3 translate-x-5 md:translate-x-0">
           <div className="flex justify-center items-start">
             <Timekeeper height={46} />
           </div>
