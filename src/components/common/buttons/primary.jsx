@@ -7,7 +7,7 @@ const Button = ({ children, className, arrow = false, arrowClassName, ...props }
       className={twMerge(
         "group flex justify-center items-center text-[17px] md:text-[20px] cursor-pointer font-bold font-sf rounded-3xl px-4 py-[0.35rem] splash",
         "bg-primary-light-translucent outline outline-transparent filter",
-        "hover:bg-primary-light-translucent/0 hover:outline-double hover:outline-gray-extra-light hover:contrast-[2] transition-all duration-medium",
+        "hover:bg-white hover:outline-double hover:outline-gray-extra-light hover:contrast-[2] transition-all duration-medium",
         className
       )}
       {...props}
@@ -19,7 +19,7 @@ const Button = ({ children, className, arrow = false, arrowClassName, ...props }
       )}
       {(arrow || arrowClassName) && (
         <div className={twMerge("text-primary-medium md:mt-0.5 pl-1.5 animated-chevron", arrowClassName)}>
-          <FaChevronRight className="p-0.5 " />
+          <FaChevronRight className="p-0.5" />
         </div>
       )}
     </button>
