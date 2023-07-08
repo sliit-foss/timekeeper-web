@@ -1,4 +1,5 @@
-import { FaArrowUp } from "react-icons/fa";
+import { FaChevronRight } from "react-icons/fa";
+import { twMerge } from "tailwind-merge";
 import { Button, SubHeading } from "@/components/common";
 import { Timekeeper } from "@/icons";
 
@@ -9,12 +10,21 @@ const Hero = ({ className }) => {
         <div className="md:w-1/2 min-h-full absolute inline-block border-r-2 md:ml-[2px] z-0 border-dashed" />
         <div className={`py-[60px] ${className} relative`}>
           <div className="flex justify-center items-center">
-            <Button className="bg-white border font-medium gap-x-2">
+            <Button className="bg-white border font-medium gap-x-1.5">
               <span className="gradient-text font-semibold">Coming Soon</span>
-              <FaArrowUp className="text-primary-medium rotate-45" />
+              <div className="-rotate-45 mb-0.5 md:mb-1">
+                <div
+                  className={twMerge(
+                    "text-primary-medium md:mt-0.5 pl-1.5 animated-chevron",
+                    "before:h-[0.12rem] before:md:h-[0.187rem] before:top-[42.6%] before:w-[0.85rem] before:group-hover:w-[1rem] before:md:w-[1rem] before:md:group-hover:w-[1.2rem]"
+                  )}
+                >
+                  <FaChevronRight className="p-[0.08rem] md:p-[0.03rem]" />
+                </div>
+              </div>
             </Button>
           </div>
-          <h1 className=" font-bold tracking-[-4.8px] font-cabinet text-[65px] md:text-[80px] lg:text-[121px]">
+          <h1 className="font-bold tracking-[-4.8px] font-cabinet text-[65px] md:text-[80px] lg:text-[121px]">
             Timekeeper
           </h1>
           <div className="flex">
@@ -27,9 +37,15 @@ const Hero = ({ className }) => {
               <Timekeeper height={230} />
             </div>
           </div>
-          <div className="flex gap-x-2 mt-[40px]">
-            <Button arrow>Get started</Button>
-            <Button href="#" className="bg-transparent" arrowClassName="text-primary-light">
+          <div className="flex flex-wrap gap-x-2 gap-y-5 mt-[40px]">
+            <Button href="#" className="w-auto" arrowClassName="md:mt-[0.08rem]">
+              Get started
+            </Button>
+            <Button
+              href="#"
+              className="xs:bg-transparent hover:outline-transparent"
+              arrowClassName="text-primary-light"
+            >
               See the docs
             </Button>
           </div>
