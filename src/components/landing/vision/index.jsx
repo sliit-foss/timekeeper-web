@@ -1,4 +1,5 @@
 import { Button, Heading, Insight, SubHeading } from "@/components/common";
+import { timekeeperSourceCode, transformTraceNPM } from "@/constants";
 import Timeline from "./timeline";
 
 const OurVision = () => {
@@ -21,15 +22,19 @@ const OurVision = () => {
         </div>
         <div className="md:ml-[2px] pt-[28px] w-full flex flex-col md:flex-row gap-x-[3.25rem] gap-y-6 justify-center items-center relative z-50 border-t-2 border-dashed">
           <Insight
-            description="Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups."
+            description="Get instant access to a prerelease version of our small, yet powerful library as an NPM package. Integrate its capabilities into your projects through here."
             action={{
-              text: "Install Blizzard Release"
+              text: "Install Blizzard Release",
+              href: transformTraceNPM,
+              target: "_blank"
             }}
           />
           <Insight
-            description="Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups."
+            description="Discover the seamless functionality of our solution by delving into the depths of its source code. Begin your enlightening journey by clicking below."
             action={{
-              text: "Explore Source Code"
+              text: "Explore Source Code",
+              href: timekeeperSourceCode,
+              target: "_blank"
             }}
           />
         </div>
