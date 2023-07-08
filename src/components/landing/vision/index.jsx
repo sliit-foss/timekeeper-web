@@ -18,7 +18,9 @@ const OurVision = () => {
         <div className="absolute left-[calc(50%-1px)] min-h-full border-2 border-white border-dashed" />
         <div className="text-center pt-[30px] z-10 relative ml-1">
           <Timeline />
-          <Button className="bg-white border-2 mx-auto mb-[80px]">Continuing to grow</Button>
+          <div data-aos="fade">
+            <Button className="bg-white border-2 mx-auto mb-[80px]">Continuing to grow</Button>
+          </div>
         </div>
         <div className="md:ml-[2px] pt-[28px] w-full flex flex-col md:flex-row gap-x-[3.25rem] gap-y-6 justify-center items-center relative z-50 border-t-2 border-dashed">
           <Insight
