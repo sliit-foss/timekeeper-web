@@ -8,10 +8,6 @@
     src: url("../../public/assets/fonts/cabinet-grotesk-variable.ttf");
   }
   @font-face {
-    font-family: "Inter";
-    src: url("../../public/assets/fonts/inter.ttf");
-  }
-  @font-face {
     font-family: "SF Pro Display";
     src: url("../../public/assets/fonts/sf-pro-display.ttf");
   }
