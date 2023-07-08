@@ -29,10 +29,10 @@ const Hero = ({ className }) => {
           </h1>
           <div className="flex gap-5">
             <div className="grow flex-shrink-0 basis-1/2">
-              <SubHeading className="text-left">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                ex ea commodo consequat.
+              <SubHeading className="text-left md:pr-12">
+                We redefine the way you monitor and analyze your applications. Say goodbye to manual log injection and
+                tedious debugging sessions. With Timekeeper, you&apos;ll effortlessly inject logs into your application
+                source code, thanks to our ingenious series of transformations.
               </SubHeading>
               <div className="flex flex-wrap gap-x-2 gap-y-5 mt-[40px] ">
                 <Button href="#" className="w-auto" arrowClassName="md:mt-[0.08rem]">
