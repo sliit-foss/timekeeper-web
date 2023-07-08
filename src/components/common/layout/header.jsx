@@ -1,5 +1,6 @@
-import { FaChevronRight, FaGithub } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { FossLogoDark, Timekeeper, Times } from "@/icons";
+import { Button } from "..";
 
 const Header = ({ className }) => {
   return (
@@ -10,10 +11,9 @@ const Header = ({ className }) => {
         <FossLogoDark />
       </div>
       <div className="grid place-content-end grid-flow-col items-center">
-        <a href="#" className="md:flex hidden items-center space-x-1 mr-10">
-          <span className="font-bold text-[20px] font-sf gradient-text">See the docs</span>
-          <FaChevronRight style={{ color: "#11EFE3" }} />
-        </a>
+        <Button href="#" className="xs:bg-transparent hover:outline-transparent" arrowClassName="text-primary-light">
+          See the docs
+        </Button>
         <a href="#">
           <FaGithub size={36} />
         </a>

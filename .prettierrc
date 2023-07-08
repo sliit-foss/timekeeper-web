@@ -8,6 +8,7 @@
     "^(.*react-*(.*)$)",
     "^(.*redux-*(.*)$)",
     "^(lodash$)|^(moment$)",
+    "^(tailwind*)",
     "<THIRD_PARTY_MODULES>",
     "^assets/(.*)$",
     "^components/(.*)$",

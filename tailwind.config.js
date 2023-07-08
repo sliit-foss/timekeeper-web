@@ -27,6 +27,13 @@ export default {
         cabinet: ["Cabinet Grotesk Variable", "sans"],
         inter: ["Inter", "sans"],
         sf: ["SF Pro Display", "sans"]
+      },
+      screens: {
+        xs: "360px"
+      },
+      transitionDuration: {
+        medium: "300ms",
+        long: "500ms"
       }
     }
   },
