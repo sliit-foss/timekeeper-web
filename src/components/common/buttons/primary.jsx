@@ -26,10 +26,10 @@ const Button = ({ children, className, arrow = false, arrowClassName, ...props }
   );
 };
 
-const ButtonWrapper = ({ href, ...props }) => {
+const ButtonWrapper = ({ href, target = "self", ...props }) => {
   if (href) {
     return (
-      <a href={href}>
+      <a href={href} target={target}>
         <Button {...props} />
       </a>
     );
