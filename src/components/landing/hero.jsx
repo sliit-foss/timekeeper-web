@@ -9,8 +9,8 @@ const Hero = ({ className }) => {
       <div className="relative">
         <div className="md:w-1/2 min-h-full absolute inline-block border-r-2 md:ml-[2px] z-0 border-dashed" />
         <div className={`py-[60px] ${className} relative`}>
-          <div className="flex justify-center items-center">
-            <Button className="bg-white border font-medium gap-x-1.5">
+          <div className="bg-white flex justify-center items-center">
+            <Button className="bg-white border gap-x-1.5">
               <span className="gradient-text font-semibold">Coming Soon</span>
               <div className="-rotate-45 mb-0.5 md:mb-1">
                 <div
