@@ -11,7 +11,11 @@ const Header = ({ className }) => {
         <FossLogoDark />
       </div>
       <div className="grid place-content-end grid-flow-col items-center">
-        <Button href="#" className="xs:bg-transparent hover:outline-transparent" arrowClassName="text-primary-light">
+        <Button
+          href="#"
+          className="hidden sm:flex bg-transparent hover:outline-transparent"
+          arrowClassName="text-primary-light"
+        >
           See the docs
         </Button>
         <a href="#">
