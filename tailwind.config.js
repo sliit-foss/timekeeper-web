@@ -30,7 +30,7 @@ export default {
       },
       screens: {
         xs: "360px",
-        xxxl: "1600px"
+        xxxl: "1700px"
       },
       transitionDuration: {
         medium: "300ms",

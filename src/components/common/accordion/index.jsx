@@ -24,7 +24,7 @@ const AccordionTrigger = React.forwardRef(({ className, children, selectedValue,
       <AccordionPrimitive.Trigger
         ref={ref}
         className={twMerge(
-          "flex flex-1 items-center justify-between text-left my-1 py-3 font-medium transition-all [&[data-state=open]>svg]:rotate-180 ",
+          "w-full flex flex-1 items-center justify-between text-left my-1 py-3 font-medium transition-all [&[data-state=open]>svg]:rotate-180 ",
           selected ? "bg-gray-extra-light/5 text-primary-medium" : "text-gray-dark",
           "hover:bg-gray-extra-light/5 hover:text-primary-medium rounded-md px-3.5",
           className
