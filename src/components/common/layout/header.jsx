@@ -6,13 +6,15 @@ const Header = ({ className }) => {
   return (
     <header className={`items-center grid grid-flow-col py-[30px] ${className}`}>
       <div className="grid place-content-start grid-flow-col items-center space-x-[30px]">
-        <Timekeeper height="46px" width="52px" />
+        <a href="/">
+          <Timekeeper height="46px" width="52px" />
+        </a>
         <Times height="15px" width="15px" className="opacity-20" />
         <FossLogoDark />
       </div>
       <div className="grid place-content-end grid-flow-col items-center">
         <Button
-          href="#"
+          href="/docs"
           className="hidden sm:flex bg-transparent hover:outline-transparent"
           arrowClassName="text-primary-light"
         >
