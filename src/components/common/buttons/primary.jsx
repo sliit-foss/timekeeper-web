@@ -26,7 +26,7 @@ const Button = ({ children, className, arrow = false, arrowClassName, ...props }
   );
 };
 
-const ButtonWrapper = ({ href, target = "self", ...props }) => {
+const ButtonWrapper = ({ href, target = "_self", ...props }) => {
   if (href) {
     return (
       <a href={href} target={target}>

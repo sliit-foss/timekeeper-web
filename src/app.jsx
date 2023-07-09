@@ -5,6 +5,7 @@ import { Layout } from "@/components/common";
 import { default as Docs } from "@/docs";
 import { Landing } from "@/pages";
 import "aos/dist/aos.css";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   let basename = "/";
@@ -23,10 +24,12 @@ function App() {
   return (
     <Layout>
       <Router basename={basename}>
-        <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/docs/*" element={<Docs />} />
-        </Routes>
+        <AnimatePresence>
+          <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route path="/docs/*" element={<Docs />} />
+          </Routes>
+        </AnimatePresence>
       </Router>
     </Layout>
   );
