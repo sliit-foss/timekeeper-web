@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLayout } from "@/components/common/layout";
-import { useWindowDimension } from "@/hooks";
+import { useBreakpoint, useWindowDimension } from "@/hooks";
 import { Navigation } from "./components";
 import meta from "./pages/meta.json";
 
@@ -15,10 +15,20 @@ const Docs = () => {
 
   useWindowDimension();
 
+  const xxxl = useBreakpoint("2xl");
+
   return (
     <div className="">
-      <Navigation meta={meta} className="absolute left-0" style={{ width: main?.offsetLeft }} />
-      <h1>Page Content</h1>
+      {xxxl && (
+        <Navigation
+          meta={meta}
+          className="absolute left-0"
+          style={{ width: main?.offsetLeft }}
+          data-aos="fade-right"
+          data-aos-duration="300"
+        />
+      )}
+      <h1 className="p-7">Page Content</h1>
     </div>
   );
 };
