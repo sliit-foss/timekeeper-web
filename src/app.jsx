@@ -22,16 +22,16 @@ function App() {
   }, []);
 
   return (
-    <Layout>
-      <Router basename={basename}>
+    <Router basename={basename}>
+      <Layout>
         <AnimatePresence>
           <Routes>
             <Route path="/" element={<Landing />} />
             <Route path="/docs/*" element={<Docs />} />
           </Routes>
         </AnimatePresence>
-      </Router>
-    </Layout>
+      </Layout>
+    </Router>
   );
 }
 

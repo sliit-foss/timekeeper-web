@@ -1,0 +1,47 @@
+[
+  {
+    "name": "Installation"
+  },
+  {
+    "name": "Underlying Plugins",
+    "pages": [
+      {
+        "name": "Functions",
+        "pages": [
+          {
+            "name": "Installation"
+          },
+          {
+            "name": "Simple Usage"
+          },
+          {
+            "name": "Decorator"
+          },
+          {
+            "name": "Express Middleware"
+          },
+          {
+            "name": "Disable Tracing"
+          }
+        ]
+      },
+      {
+        "name": "Module Logger",
+        "pages": [
+          {
+            "name": "Installation"
+          },
+          {
+            "name": "Simple Usage"
+          },
+          {
+            "name": "Options"
+          },
+          {
+            "name": "Winston Logger"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,8 +1,13 @@
 import { FaGithub } from "react-icons/fa";
+import { useLocation } from "react-router-dom";
 import { FossLogoDark, Timekeeper, Times } from "@/icons";
 import { Button } from "..";
 
 const Header = ({ className }) => {
+  const location = useLocation();
+
+  const isDocs = location.pathname.match(/^\/docs/);
+
   return (
     <header className={`items-center grid grid-flow-col py-[30px] ${className}`}>
       <div className="grid place-content-start grid-flow-col items-center space-x-[30px]">
@@ -13,13 +18,15 @@ const Header = ({ className }) => {
         <FossLogoDark />
       </div>
       <div className="grid place-content-end grid-flow-col items-center">
-        <Button
-          href="/docs"
-          className="hidden sm:flex bg-transparent hover:outline-transparent"
-          arrowClassName="text-primary-light"
-        >
-          See the docs
-        </Button>
+        {!isDocs && (
+          <Button
+            href="/docs"
+            className="hidden sm:flex bg-transparent hover:outline-transparent"
+            arrowClassName="text-primary-light"
+          >
+            See the docs
+          </Button>
+        )}
         <a href="#">
           <FaGithub size={36} />
         </a>
