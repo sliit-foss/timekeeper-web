@@ -27,7 +27,7 @@ const OurVision = () => {
             description="Get instant access to a prerelease version of our small, yet powerful library as an NPM package. Integrate its capabilities into your projects through here."
             action={{
               text: "Install Blizzard Release",
-              href: transformTraceNPM,
+              to: transformTraceNPM,
               target: "_blank"
             }}
           />
@@ -35,7 +35,7 @@ const OurVision = () => {
             description="Discover the seamless functionality of our solution by delving into the depths of its source code. Begin your enlightening journey by clicking below."
             action={{
               text: "Explore Source Code",
-              href: timekeeperSourceCode,
+              to: timekeeperSourceCode,
               target: "_blank"
             }}
           />

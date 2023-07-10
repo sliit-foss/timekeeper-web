@@ -1,5 +1,6 @@
 import { FaGithub } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FossLogoDark, Timekeeper, Times } from "@/icons";
 import { Button } from "..";
 
@@ -11,9 +12,9 @@ const Header = ({ className }) => {
   return (
     <header className={`items-center grid grid-flow-col py-[30px] ${className}`}>
       <div className="grid place-content-start grid-flow-col items-center space-x-[30px]">
-        <a href="/">
+        <Link to="/">
           <Timekeeper height="46px" width="52px" />
-        </a>
+        </Link>
         <Times height="15px" width="15px" className="opacity-20" />
         <FossLogoDark />
       </div>
@@ -27,9 +28,9 @@ const Header = ({ className }) => {
             See the docs
           </Button>
         )}
-        <a href="#">
+        <Link href="#">
           <FaGithub size={36} />
-        </a>
+        </Link>
       </div>
     </header>
   );

@@ -18,9 +18,9 @@
   }
 }
 
-@layer components {
+@layer utilities {
   .border-custom {
-    @apply border-dashed border-gray-extra-light/[.085];
+    @apply border-dashed border-gray-borders;
   }
   .border-floating {
     @apply border-custom absolute inset-x-0;

@@ -7,9 +7,9 @@ import NavigationCore from "./core";
 const NavigationMobile = ({ className, onSelect, ...props }) => {
   const selector = useRef(null);
   return (
-    <Accordion type="multiple" collapsible="true" className={twMerge("w-full -mt-0.5", className)}>
+    <Accordion type="multiple" collapsible="true" className={twMerge("w-full mt-3 px-3", className)}>
       <AccordionItem value="page-selector">
-        <AccordionTrigger ref={selector} className="bg-[#222222] rounded-none text-white">
+        <AccordionTrigger ref={selector} className="rounded-md">
           {startCase(last(props.current?.split("/")))}
         </AccordionTrigger>
         <AccordionContent>

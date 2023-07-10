@@ -4,7 +4,7 @@ import { BodyText, Button } from "..";
 const Insight = ({
   className,
   description,
-  action: { className: actionClassName, text, href, target, ...actionProps },
+  action: { className: actionClassName, text, to, target, ...actionProps },
   ...props
 }) => {
   return (
@@ -18,7 +18,7 @@ const Insight = ({
     >
       <BodyText className="w-full text-black/60">{description}</BodyText>
       <Button
-        href={href}
+        to={to}
         target={target}
         className={twMerge("mx-auto mt-[18px] px-[1.1rem]", actionClassName)}
         arrow

@@ -11,9 +11,11 @@ export default {
           "light-translucent": "var(--primary-light-translucent)"
         },
         gray: {
+          "borders": "var(--gray-borders)",
           "medium": "var(--gray-medium)",
           "light": "var(--gray-light)",
           "extra-light": "var(--gray-extra-light)",
+          "extra-lighter": "var(--gray-extra-lighter)",
           "ultra-light": "var(--gray-ultra-light)"
         }
       },

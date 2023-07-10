@@ -72,7 +72,7 @@ const Footer = ({ className }) => {
           </div>
         </div>
       </div>
-      <div className="border-floating border-t-2 mt-7" />
+      <div className="border-custom border-t-2 mt-7" />
       <div className="text-xs font-medium text-center pt-1 pb-3 mt-9">Crafted with 🖤 at SLIIT FOSS</div>
     </footer>
   );
