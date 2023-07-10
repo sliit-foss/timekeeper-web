@@ -10,7 +10,7 @@ const Console = ({ className }) => {
         source code
       </SubHeading>
       <TerminalGroup className="w-[870px] mx-auto mt-[20px]" primary={code} secondary={output} />
-      <Button className="mx-auto mb-[-85px]" arrow> 
+      <Button className="mx-auto mb-[-85px]" arrow>
         Try it out
       </Button>
     </div>
