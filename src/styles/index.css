@@ -1,6 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 @import url("https://fonts.cdnfonts.com/css/sf-pro-display");
 
+@import "colors.css";
+@import "animations/index.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -24,18 +27,5 @@
   }
   .gradient-text {
     @apply bg-gradient-to-r from-primary-dark to-primary-medium bg-clip-text text-transparent;
-  }
-  .animated-chevron {
-    @apply relative;
-    &:before {
-      @apply content-[''] absolute w-0 h-[0.18rem] top-[41%] right-[-0.05rem] mr-[0.5rem] bg-current rounded group-hover:w-[0.55rem] group-hover:md:w-[0.7rem] transition-all duration-medium;
-    }
-  }
-  .splash {
-    box-shadow: 0 0 10px 5px rgba(black, 0.2);
-    @apply relative overflow-hidden after:hover:w-[100%] after:hover:h-[100%];
-    &:after {
-      @apply content-[''] absolute block bg-white w-0 h-0 top-1/2 left-1/2 opacity-[0.15] rounded-full -translate-x-1/2 -translate-y-1/2 transition-all duration-long;
-    }
   }
 }

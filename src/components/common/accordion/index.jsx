@@ -18,15 +18,14 @@ AccordionItem.displayName = "AccordionItem";
 
 const AccordionTrigger = React.forwardRef(({ className, children, selectedValue, chevron = true, ...props }, ref) => {
   const selected = selectedValue === props.value;
-  console.log(selectedValue, props.value, selected);
   return (
     <AccordionPrimitive.Header className="flex">
       <AccordionPrimitive.Trigger
         ref={ref}
         className={twMerge(
           "w-full flex flex-1 items-center justify-between text-left my-1 py-3 font-medium transition-all [&[data-state=open]>svg]:rotate-180 ",
-          selected ? "bg-gray-extra-light/5 text-primary-medium" : "text-gray-dark",
-          "hover:bg-gray-extra-light/5 hover:text-primary-medium rounded-md px-3.5",
+          selected ? "bg-[#222222] text-white" : "text-gray-dark",
+          "hover:bg-[#222222] hover:text-white rounded-md px-3.5",
           className
         )}
         {...props}

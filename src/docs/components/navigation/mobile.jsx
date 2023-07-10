@@ -1,14 +1,26 @@
+import { useRef } from "react";
+import { last, startCase } from "lodash";
 import { twMerge } from "tailwind-merge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/common";
 import NavigationCore from "./core";
 
-const NavigationMobile = ({ className, ...props }) => {
+const NavigationMobile = ({ className, onSelect, ...props }) => {
+  const selector = useRef(null);
   return (
-    <Accordion type="multiple" collapsible="true" className={twMerge("w-full", className)}>
+    <Accordion type="multiple" collapsible="true" className={twMerge("w-full -mt-0.5", className)}>
       <AccordionItem value="page-selector">
-        <AccordionTrigger>afsdfsdf</AccordionTrigger>
+        <AccordionTrigger ref={selector} className="bg-[#222222] rounded-none text-white">
+          {startCase(last(props.current?.split("/")))}
+        </AccordionTrigger>
         <AccordionContent>
-          <NavigationCore {...props} />
+          <NavigationCore
+            onSelect={(value) => {
+              onSelect(value);
+              console.log(selector.current);
+              selector.current.click();
+            }}
+            {...props}
+          />
         </AccordionContent>
       </AccordionItem>
     </Accordion>

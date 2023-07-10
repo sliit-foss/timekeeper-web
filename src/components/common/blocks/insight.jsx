@@ -9,7 +9,11 @@ const Insight = ({
 }) => {
   return (
     <div
-      className={`mt-2 md:mt-0 p-5 border-[1.5px] border-gray-extra-light w-10/12 md:w-[320px] bg-white rounded-primary ${className}`}
+      className={twMerge(
+        `w-10/12 md:w-[320px] bg-white rounded-primary mt-2 md:mt-0 p-[1.3rem] py-[1.5rem] cursor-default`,
+        "animated-border text-gray-extra-light from-primary-dark via-gray-extra-light via-[40%] to-gray-extra-light",
+        className
+      )}
       {...props}
     >
       <BodyText className="w-full text-black/60">{description}</BodyText>

@@ -5,16 +5,16 @@ export default {
     extend: {
       colors: {
         primary: {
-          "dark": "rgba(0, 41, 156, 1)",
-          "medium": "rgba(0, 115, 230, 1)",
-          "light": "rgba(17, 239, 227, 1)",
-          "light-translucent": "rgba(17, 239, 227, 0.24)"
+          "dark": "var(--primary-dark)",
+          "medium": "var(--primary-medium)",
+          "light": "var(--primary-light)",
+          "light-translucent": "var(--primary-light-translucent)"
         },
         gray: {
-          "medium": "rgba(0, 0, 0, 0.4)",
-          "light": "rgba(0, 0, 0, 0.16)",
-          "extra-light": "rgba(0, 0, 0, 0.1)",
-          "ultra-light": "rgba(0, 0, 0, 0.03)"
+          "medium": "var(--gray-medium)",
+          "light": "var(--gray-light)",
+          "extra-light": "var(--gray-extra-light)",
+          "ultra-light": "var(--gray-ultra-light)"
         }
       },
       borderRadius: {
