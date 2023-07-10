@@ -2,14 +2,14 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { throttle } from "lodash";
 import { useBreakpoint } from "@/hooks";
-import { getRoutePath } from "../../utils";
+import { constructDocRoute } from "@/utils";
 import NavigationCore from "./core";
 import NavigationMobile from "./mobile";
 
 const Navigation = ({ meta, className }) => {
   const navigate = useNavigate();
 
-  const [current, setCurrent] = useState(getRoutePath(meta[0]));
+  const [current, setCurrent] = useState(constructDocRoute(meta[0]));
 
   const xxl = useBreakpoint("2xl");
 

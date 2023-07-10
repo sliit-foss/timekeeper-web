@@ -1,11 +1,10 @@
 import { useEffect } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { default as Aos } from "aos";
-import { Layout } from "@/components/common";
-import { default as Docs } from "@/docs";
-import { Landing } from "@/pages";
-import "aos/dist/aos.css";
 import { AnimatePresence } from "framer-motion";
+import { Layout } from "@/components/common";
+import { Docs, Landing } from "@/pages";
+import "aos/dist/aos.css";
 
 function App() {
   let basename = "/";

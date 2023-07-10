@@ -1,5 +1,5 @@
-import { Explorer, Navigation } from "./components";
-import meta from "./pages/meta.json";
+import { Explorer, Navigation } from "@/components/docs";
+import meta from "./meta.json";
 
 const Docs = () => {
   return (

@@ -25,7 +25,7 @@ const Explorer = ({ className }) => {
             Open an Issue
           </a>
           <a
-            href={`${repositoryLink}/blob/main/src/docs/pages${pathname.replace("/docs", "")}.mdx`}
+            href={`${repositoryLink}/blob/main/src/pages/docs/${pathname.replace("/docs", "")}.mdx`}
             target="_blank"
             className="hover:gradient-text cursor-pointer"
             rel="noreferrer"
