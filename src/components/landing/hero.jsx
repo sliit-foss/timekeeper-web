@@ -7,7 +7,7 @@ const Hero = ({ className }) => {
   return (
     <>
       <div className="relative">
-        <div className="md:w-1/2 min-h-full absolute inline-block border-r-2 md:ml-[2px] z-0 border-dashed" />
+        <div className="border-floating border-r-2 md:w-1/2 min-h-full inline-block md:ml-[2px]" />
         <div className={`py-[60px] ${className} relative`}>
           <div className="bg-white flex justify-center items-center">
             <Button className="bg-white border gap-x-1.5">
@@ -53,7 +53,7 @@ const Hero = ({ className }) => {
           </div>
         </div>
       </div>
-      <div className="w-full absolute left-0 border-b-2 z-50 border-dashed" />
+      <div className="border-floating border-b-2" />
     </>
   );
 };

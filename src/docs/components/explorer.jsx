@@ -10,13 +10,19 @@ const Explorer = ({ className, ...props }) => {
       {...props}
     >
       <div className="flex flex-col w-full gap-y-4 text-black">
-        <a href={`${repositoryLink}/issues`} target="_blank" className="hover:gradient-text cursor-pointer" rel="noreferrer">
+        <a
+          href={`${repositoryLink}/issues`}
+          target="_blank"
+          className="hover:gradient-text cursor-pointer"
+          rel="noreferrer"
+        >
           Open an Issue
         </a>
         <a
           href={`${repositoryLink}/blob/main/src/docs/pages${pathname.replace("/docs", "")}.mdx`}
           target="_blank"
-          className="hover:gradient-text cursor-pointer" rel="noreferrer"
+          className="hover:gradient-text cursor-pointer"
+          rel="noreferrer"
         >
           Edit this page on GitHub
         </a>
