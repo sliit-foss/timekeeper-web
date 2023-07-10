@@ -1,35 +1,17 @@
-import { useState } from "react";
 import { useMemo } from "react";
-import { useNavigate } from "react-router-dom";
-import { flatMap, throttle } from "lodash";
+import { flatMap } from "lodash";
 import { twMerge } from "tailwind-merge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/common";
-import { getRoutePath } from "../utils";
+import { getRoutePath } from "../../utils";
 
-const Navigation = ({ meta, className, ...props }) => {
-  const navigate = useNavigate();
-
+const NavigationCore = ({ className, meta, onSelect, current, ...props }) => {
   const openValues = useMemo(() => {
     return meta.reduce((acc, l1) => [...acc, getRoutePath(l1), ...flatMap(l1.pages, (l2) => getRoutePath(l1, l2))], []);
   }, [meta]);
 
-  const [current, setCurrent] = useState(getRoutePath(meta[0]));
-
-  const onSelect = throttle(
-    (value) => {
-      setCurrent(value);
-      navigate(`/docs/${value}`);
-    },
-    100,
-    {
-      leading: true,
-      trailing: false
-    }
-  );
-
   return (
-    <nav className={twMerge("w-fuil h-full px-3.5 py-3", className)} {...props}>
-      <Accordion type="multiple" collapsible="true" className="w-full" defaultValue={openValues}>
+    <nav className={twMerge("w-full h-full py-3", className)} {...props}>
+      <Accordion type="multiple" collapsible="true" className="w-full px-3.5" defaultValue={openValues}>
         {meta.map((l1) => {
           const l1Value = getRoutePath(l1);
           return (
@@ -77,4 +59,4 @@ const Navigation = ({ meta, className, ...props }) => {
   );
 };
 
-export default Navigation;
+export default NavigationCore;
