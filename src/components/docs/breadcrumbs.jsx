@@ -13,7 +13,7 @@ const BreadCrumbs = ({ className }) => {
         return (
           <div key={index} className="flex justify-start items-center">
             <span className={`text-gray-dark ${last ? "font-semibold" : ""}`}>{startCase(crumb)}</span>
-            {!last && <FaChevronRight className="mx-2 text-gray-dark w-3.5 h-3.5" />}
+            {!last && <FaChevronRight className="mx-2 text-gray-dark opacity-70 w-3.5 h-3.5" />}
           </div>
         );
       })}
