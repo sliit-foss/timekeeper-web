@@ -35,11 +35,11 @@ const Hero = ({ className }) => {
                 source code, thanks to our ingenious series of transformations.
               </SubHeading>
               <div className="flex flex-wrap gap-x-2 gap-y-5 mt-[40px] ">
-                <Button href="/docs/get-started" className="w-auto" arrowClassName="md:mt-[0.08rem]">
+                <Button href="/docs/quickstart" className="w-auto" arrowClassName="md:mt-[0.08rem]">
                   Get started
                 </Button>
                 <Button
-                  href="/docs"
+                  href="/docs/quickstart"
                   className="xs:bg-transparent hover:outline-transparent"
                   arrowClassName="text-primary-light"
                 >

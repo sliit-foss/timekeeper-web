@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLayout } from "@/components/common/layout";
 import { useBreakpoint, useWindowDimension } from "@/hooks";
-import { Navigation } from "./components";
+import { Explorer, Navigation } from "./components";
 import meta from "./pages/meta.json";
 
 const Docs = () => {
@@ -23,12 +23,20 @@ const Docs = () => {
         <Navigation
           meta={meta}
           className="absolute left-0"
-          style={{ width: main?.offsetLeft }}
+          style={{ width: main?.offsetLeft, top: main?.offsetTop }}
           data-aos="fade-right"
           data-aos-duration="300"
         />
       )}
       <h1 className="p-7">Page Content</h1>
+      {xxxl && (
+        <Explorer
+          className="absolute right-0"
+          style={{ width: main?.offsetLeft, top: main?.offsetTop }}
+          data-aos="fade-left"
+          data-aos-duration="300"
+        />
+      )}
     </div>
   );
 };

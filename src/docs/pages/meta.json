@@ -1,6 +1,12 @@
 [
   {
+    "name": "QuickStart"
+  },
+  {
     "name": "Installation"
+  },
+  {
+    "name": "Configuration"
   },
   {
     "name": "Underlying Dependencies",
