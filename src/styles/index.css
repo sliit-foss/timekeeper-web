@@ -9,6 +9,9 @@
   .markdown *:not(path, .border-docs, .revert) {
     all: revert;
   }
+  a:link {
+    color: var(--primary-medium) !important;
+  }
 }
 
 @layer base {

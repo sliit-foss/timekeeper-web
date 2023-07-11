@@ -7,7 +7,7 @@ const ShellTabs = ({ className, selected, tabs }) => {
     <Tabs defaultValue={selected ?? tabs[0]?.name} className={twMerge("-ml-1", className)}>
       <TabsList>
         {tabs.map((tab) => (
-          <TabsTrigger key={tab.name} value={tab.name} className="w-20">
+          <TabsTrigger key={tab.name} value={tab.name} className="w-20 text-[16px]">
             {tab.name}
           </TabsTrigger>
         ))}

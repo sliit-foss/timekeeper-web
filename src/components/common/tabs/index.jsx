@@ -20,8 +20,8 @@ const TabsTrigger = React.forwardRef(({ className, ...props }, ref) => (
   <TabsPrimitive.Trigger
     ref={ref}
     className={twMerge(
-      "bg-white hover:text-primary-dark px-3 py-1.5 rounded-md text-sm border-none cursor-pointer font-semibold disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-primary-light-translucent",
-      "transition-all duration-300",
+      "bg-white  px-3 py-1.5 rounded-md text-sm border-none cursor-pointer font-semibold disabled:pointer-events-none disabled:opacity-50",
+      "hover:text-primary-medium data-[state=active]:hover:text-black data-[state=active]:bg-primary-light-translucent transition-all duration-300",
       className
     )}
     {...props}
