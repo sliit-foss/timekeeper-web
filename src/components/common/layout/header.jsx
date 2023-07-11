@@ -28,7 +28,7 @@ const Header = ({ className }) => {
             See the docs
           </Button>
         )}
-        <Link href="#">
+        <Link href="#" className="icon-hover">
           <FaGithub size={36} />
         </Link>
       </div>

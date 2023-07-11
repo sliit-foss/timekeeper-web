@@ -9,7 +9,7 @@
   .markdown *:not(path, .border-docs, .revert) {
     all: revert;
   }
-  a:link {
+  .markdown a:link {
     color: var(--primary-medium) !important;
   }
 }
@@ -33,6 +33,9 @@
   }
   .gradient-text {
     @apply bg-gradient-to-r from-primary-dark to-primary-medium bg-clip-text text-transparent;
+  }
+  .icon-hover {
+    @apply transition-colors duration-medium hover:text-black/70;
   }
 }
 
