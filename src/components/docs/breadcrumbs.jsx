@@ -6,7 +6,12 @@ import { twMerge } from "tailwind-merge";
 const BreadCrumbs = ({ className }) => {
   const path = useLocation().pathname;
   return (
-    <div className={twMerge("w-full flex justify-start flex-wrap py-4 2xl:py-7 px-6 2xl:px-7 gap-y-2", className)}>
+    <div
+      className={twMerge(
+        "w-full flex justify-start flex-wrap py-4 pb-6 2xl:pb-7 2xl:py-7 px-6 2xl:px-7 gap-y-2",
+        className
+      )}
+    >
       {path.split("/").map((crumb, index) => {
         if (crumb === "") return null;
         const last = index === path.split("/").length - 1;

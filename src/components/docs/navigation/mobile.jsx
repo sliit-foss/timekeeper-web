@@ -16,7 +16,6 @@ const NavigationMobile = ({ className, onSelect, ...props }) => {
           <NavigationCore
             onSelect={(value) => {
               onSelect(value);
-              console.log(selector.current);
               selector.current.click();
             }}
             {...props}
