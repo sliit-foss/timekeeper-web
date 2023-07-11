@@ -10,6 +10,7 @@ import { FaChevronRight } from "react-icons/fa";
 import { twMerge } from "tailwind-merge";
 import { Button } from "@/components/common";
 import { FossLogoDark, Timekeeper } from "@/icons";
+import socials from "@/resource/links.js";
 
 const Footer = ({ className }) => {
   return (
@@ -23,19 +24,19 @@ const Footer = ({ className }) => {
           </p>
           <div className="font-semibold text-[20px]">Connect with us</div>
           <div className="flex space-x-2 flex-shrink-0">
-            <a href="#">
+            <a href={socials.facebook}>
               <AiFillFacebook />
             </a>
-            <a href="#">
+            <a href={socials.instagram}>
               <AiFillInstagram />
             </a>
-            <a href="#">
+            <a href={socials.twitter}>
               <AiOutlineTwitter />
             </a>
-            <a href="#">
+            <a href={socials.linkedIn}>
               <AiFillLinkedin />
             </a>
-            <a href="#">
+            <a href={socials.youTube}>
               <AiFillYoutube />
             </a>
           </div>
