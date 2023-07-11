@@ -24,5 +24,13 @@
     "react-hooks/exhaustive-deps": "off",
     "react-refresh/only-export-components": "off",
     "react/prop-types": "off"
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.mdx"],
+      "rules": {
+        "react/no-unescaped-entities": "off"
+      }
+    }
+  ]
 }
