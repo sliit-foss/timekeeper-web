@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-@import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.cdnfonts.com/css/sf-pro-display");
 
 @tailwind base;
 @tailwind components;
@@ -26,10 +26,16 @@
     }
   }
   .splash {
-    box-shadow: 0 0 10px 5px rgba(black, .2);
+    box-shadow: 0 0 10px 5px rgba(black, 0.2);
     @apply relative overflow-hidden after:hover:w-[100%] after:hover:h-[100%];
     &:after {
       @apply content-[''] absolute block bg-white w-0 h-0 top-1/2 left-1/2 opacity-[0.15] rounded-full -translate-x-1/2 -translate-y-1/2 transition-all duration-long;
     }
+  }
+}
+
+@layer utilities {
+  .icon-hover {
+    @apply transition-colors duration-medium hover:text-black-opacity-80;
   }
 }

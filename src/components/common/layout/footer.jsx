@@ -23,20 +23,20 @@ const Footer = ({ className }) => {
           </p>
           <div className="font-semibold text-[20px]">Connect with us</div>
           <div className="flex space-x-2 flex-shrink-0">
-            <a href="#">
-              <AiFillFacebook />
+            <a href="#" className="icon-hover">
+              <AiFillFacebook className="h-5 w-5" />
             </a>
-            <a href="#">
-              <AiFillInstagram />
+            <a href="#" className="icon-hover">
+              <AiFillInstagram className="h-5 w-5" />
             </a>
-            <a href="#">
-              <AiOutlineTwitter />
+            <a href="#" className="icon-hover">
+              <AiOutlineTwitter className="h-5 w-5" />
             </a>
-            <a href="#">
-              <AiFillLinkedin />
+            <a href="#" className="icon-hover">
+              <AiFillLinkedin className="h-5 w-5" />
             </a>
-            <a href="#">
-              <AiFillYoutube />
+            <a href="#" className="icon-hover">
+              <AiFillYoutube className="h-5 w-5" />
             </a>
           </div>
         </div>
