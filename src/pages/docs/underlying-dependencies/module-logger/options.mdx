@@ -1,0 +1,76 @@
+import { Shell } from "@/components/docs";
+
+### Overridable Defaults
+
+<Shell
+  code={[
+    "{",
+    "   console: {",
+    "      enabled: true,",
+    "      options: {",
+    "         handleRejections: true,",
+    "         handleExceptions: true,",
+    "      },",
+    "   },",
+    "   file: {",
+    "      enabled: true,",
+    "      options: {",
+    "         filename: '%DATE%.log',",
+    "         datePattern: 'YYYY-MM-DD',",
+    "         zippedArchive: false,",
+    "         maxFiles: '7d',",
+    "         dirname: './logs',",
+    "      },",
+    "   },",
+    "   transportOverrides: [],",
+    "   globalAttributes: {},",
+    "}"
+  ]}
+/>
+
+- **console.enabled** - <>{"<boolean>"}</>
+
+  - Enable/Disable console transport
+
+- **console.options** - <>{"<object>"}</>
+
+  - Takes in all the options supported by a [winston console transport](https://github.com/winstonjs/winston/blob/master/docs/transports.md#console-transport)
+
+- **file.enabled** - <>{"<boolean>"}</>
+
+  - Enable/Disable file transport
+
+- **file.options** - <>{"<object>"}</>
+
+  - Takes in all the options supported by a [winston daily rotate file transport](https://www.npmjs.com/package/winston-daily-rotate-file)
+
+- **transportOverrides** - <>{"<array>"}</>
+
+  - An array of custom transports to be added to the logger which will override the default transports
+
+- **globalAttributes** - <>{"<object>"}</>
+  - An object of global attributes to be added to every log message
+
+<br />
+
+<div className="border-docs" />
+
+## Example - Enabling File Transport
+
+The following needs to be done at the beginning of the application
+
+<Shell
+  code={[
+    "import { configure, moduleLogger } from '@sliit-foss/module-logger';",
+    "",
+    "configure({",
+    "   console: { enabled: false },",
+    "   file: {",
+    "      enabled: true,",
+    "      options: {",
+    "          filename: 'my-custom-log-file.log'",
+    "      }",
+    "   }",
+    "});"
+  ]}
+/>

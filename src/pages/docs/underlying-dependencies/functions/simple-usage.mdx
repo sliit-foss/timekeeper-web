@@ -1,0 +1,33 @@
+import { Shell } from "@/components/docs";
+
+## Trace A Function
+
+Used to trace the execution of a function then and there.
+
+<Shell
+  code={['import { trace } from "@sliit-foss/functions";', "", "trace(function foo() {", "  console.log(123);", "});"]}
+/>
+
+The above code produces the following log in the console.
+
+<Shell code={["foo execution initiated", "123", "foo execution completed - execution_time : 0.2069999985396862"]} />
+
+## Decorators
+
+Used to create a traceable function by passing it your original function.
+
+<Shell
+  code={[
+    'import { traced } from "@sliit-foss/functions";',
+    "",
+    "const tracedFoo = traced(function foo() {",
+    "  console.log(123);",
+    "})();",
+    "",
+    "tracedFoo();"
+  ]}
+/>
+
+The above code produces the same output log as the previous example.
+
+You can pass in arguments to the traced function in the same way as you would to the original function.

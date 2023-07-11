@@ -9,6 +9,7 @@ import {
 import { FaChevronRight } from "react-icons/fa";
 import { twMerge } from "tailwind-merge";
 import { Button } from "@/components/common";
+import { repositoryLink, sliitFossMainWebsite } from "@/constants";
 import { FossLogoDark, Timekeeper } from "@/icons";
 
 const Footer = ({ className }) => {
@@ -27,16 +28,16 @@ const Footer = ({ className }) => {
               <AiFillFacebook className="h-5 w-5" />
             </a>
             <a href="#" className="icon-hover">
-              <AiFillInstagram className="h-5 w-5" />
+              <AiFillInstagram className="h-[1.285rem] w-[1.285rem]" />
             </a>
             <a href="#" className="icon-hover">
-              <AiOutlineTwitter className="h-5 w-5" />
+              <AiOutlineTwitter className="h-[1.36rem] w-[1.36rem]" />
             </a>
             <a href="#" className="icon-hover">
               <AiFillLinkedin className="h-5 w-5" />
             </a>
             <a href="#" className="icon-hover">
-              <AiFillYoutube className="h-5 w-5" />
+              <AiFillYoutube className="h-[1.36rem] w-[1.36rem]" />
             </a>
           </div>
         </div>
@@ -51,7 +52,7 @@ const Footer = ({ className }) => {
         <div className="grid grid-rows-1 md:col-start-3 col-span-2 md:place-content-end min-h-0 min-w-0 md:mt-0 mt-10 ">
           <div className="flex flex-col gap-y-4 md:gap-y-3 -translate-y-0.5">
             <div className="font-semibold text-[20px]">Visit us on</div>
-            <Button className="md:w-11/12 h-8 bg-white border gap-x-1.5">
+            <Button to={sliitFossMainWebsite} target="_blank" className="md:w-11/12 h-8 bg-white border gap-x-1.5">
               <span className="gradient-text text-[1rem]">sliitfoss.org</span>
               <div className="-rotate-45 mb-0.5 md:mb-1">
                 <div
@@ -65,14 +66,14 @@ const Footer = ({ className }) => {
               </div>
             </Button>
             <div className="font-semibold text-[20px] mt-0.5">Open with source</div>
-            <Button className="md:w-9/12 h-8 bg-transparent border gap-x-2">
+            <Button to={repositoryLink} target="_blank" className="md:w-9/12 h-8 bg-transparent border gap-x-2">
               <span className="gradient-text text-[1rem]">Visit at</span>
               <AiFillGithub className="text-black" />
             </Button>
           </div>
         </div>
       </div>
-      <div className="border-t-2 border-dashed absolute inset-x-0 mt-7"></div>
+      <div className="border-floating border-t-2 mt-7" />
       <div className="text-xs font-medium text-center pt-1 pb-3 mt-9">Crafted with 🖤 at SLIIT FOSS</div>
     </footer>
   );
