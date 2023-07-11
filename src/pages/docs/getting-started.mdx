@@ -1,5 +1,16 @@
 import { Heading, SubHeading } from "@/components/common";
+import { repositoryLink } from "@/constants";
 
 <SubHeading className="text-left text-gray-dark font-medium">What is Timekeeper?</SubHeading>
 <br />
 Timekeeper is an automated tracing solution which injects logging statements into your code.
+<br />
+The full process revolves around using a plugin for a popular build tool to detect your function invokations and decorating them with a specially crafted function 
+which handles the logging. The generated logs include:
+
+* The function name <br />
+* Time taken to execute the  <br />
+* Correlation ID (if applicable) <br />
+
+<br />
+**Important:** Timekeeper is currently in beta. Please report any issues you encounter at the following <a href={`${repositoryLink}/issues`} target="_blank"><b>link</b></a>.

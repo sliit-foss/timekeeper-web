@@ -11,8 +11,10 @@ export default defineConfig(async () => {
         promiseExportName: "__tla",
         promiseImportName: (i) => `__tla_${i}`
       }),
-      react(),
-      mdx.default()
+      mdx.default({
+        remarkPlugins: []
+      }),
+      react()
     ],
     base: "./",
     resolve: {
