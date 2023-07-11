@@ -8,7 +8,7 @@ const BreadCrumbs = ({ className }) => {
   return (
     <div
       className={twMerge(
-        "w-full flex justify-start flex-wrap py-4 2xl:py-7 pb-6 2xl:pb-2 px-6 2xl:px-7 gap-y-2",
+        "w-full flex justify-start flex-wrap py-4 2xl:py-7 pb-0 2xl:pb-2 px-6 2xl:px-7 gap-y-2",
         className
       )}
     >
