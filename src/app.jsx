@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { default as Aos } from "aos";
 import { AnimatePresence } from "framer-motion";
-import { Layout } from "@/components/common";
+import { Layout, ScrollToTop } from "@/components/common";
 import { Docs, Landing } from "@/pages";
 import "aos/dist/aos.css";
 
@@ -22,6 +22,7 @@ function App() {
 
   return (
     <Router basename={basename}>
+      <ScrollToTop />
       <Layout>
         <AnimatePresence>
           <Routes>
