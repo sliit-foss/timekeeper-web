@@ -30,4 +30,10 @@
       @apply animate-[rotate_4s_linear_infinite] opacity-0 hover:opacity-100;
     }
   }
+  .animated-border-static {
+    @apply animated-border from-primary-dark via-primary-light via-[70%] to-gray-light after:opacity-100;
+    &:before {
+      all: unset;
+    }
+  }
 }

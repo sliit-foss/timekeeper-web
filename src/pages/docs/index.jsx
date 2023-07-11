@@ -20,14 +20,15 @@ const routes = await Promise.all(
 
 const Docs = () => {
   return (
-    <div className="2xl:absolute 2xl:w-full flex flex-col 2xl:flex-row justify-center left-0">
-      <Navigation meta={meta} />
-      <div className="2xl:min-w-[1160px]">
-        <BreadCrumbs />
-        <Routes className="p-7">{routes}</Routes>
+    <>
+      <div className="2xl:absolute 2xl:w-full flex flex-col 2xl:flex-row justify-center left-0">
+        <Navigation meta={meta} />
+        <div className="2xl:min-w-[1160px]" />
+        <Explorer />
       </div>
-      <Explorer />
-    </div>
+      <BreadCrumbs />
+      <Routes>{routes}</Routes>
+    </>
   );
 };
 

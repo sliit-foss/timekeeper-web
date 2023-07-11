@@ -9,7 +9,7 @@
 @tailwind utilities;
 
 @layer base {
-  .markdown * {
+  .markdown *:not(path, .border-docs, .revert) {
     all: revert;
   }
 }

@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "format": "prettier --write --cache \"**/*.{js,jsx,ts,tsx,md}\"",
+    "format": "prettier --write --cache \"**/*.{js,jsx,ts,tsx,md,mdx}\"",
     "lint": "eslint src --ext js,jsx --ignore-path .gitignore --fix --report-unused-disable-directives",
     "preview": "vite preview",
     "prepare": "husky install"
