@@ -1,6 +1,7 @@
 import { FaGithub } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { repositoryLink } from "@/constants";
 import { FossLogoDark, Timekeeper, Times } from "@/icons";
 import { Button } from "..";
 
@@ -21,14 +22,14 @@ const Header = ({ className }) => {
       <div className="grid place-content-end grid-flow-col items-center">
         {!isDocs && (
           <Button
-            href="/docs"
+            to="/docs/getting-started"
             className="hidden sm:flex bg-transparent hover:outline-transparent"
             arrowClassName="text-primary-light"
           >
             See the docs
           </Button>
         )}
-        <Link href="#" className="icon-hover">
+        <Link href={repositoryLink} target="_blank" className="icon-hover">
           <FaGithub size={36} />
         </Link>
       </div>
