@@ -4,6 +4,9 @@ export default {
   theme: {
     extend: {
       colors: {
+        'black-opacity': {
+          '80': 'rgba(0, 0, 0, 0.8)'
+        },
         primary: {
           "dark": "rgba(0, 41, 156, 1)",
           "medium": "rgba(0, 115, 230, 1)",
