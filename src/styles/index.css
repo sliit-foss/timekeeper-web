@@ -9,6 +9,12 @@
 @tailwind utilities;
 
 @layer base {
+  .markdown * {
+    all: revert;
+  }
+}
+
+@layer base {
   @font-face {
     font-family: "Cabinet Grotesk Variable";
     src: url("../../public/assets/fonts/cabinet-grotesk-variable.ttf");
@@ -28,4 +34,8 @@
   .gradient-text {
     @apply bg-gradient-to-r from-primary-dark to-primary-medium bg-clip-text text-transparent;
   }
+}
+
+.border-docs {
+  border-top: 1px solid var(--gray-borders);
 }

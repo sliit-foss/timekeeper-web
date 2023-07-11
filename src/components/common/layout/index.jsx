@@ -1,10 +1,16 @@
 import { motion } from "framer-motion";
+import { twMerge } from "tailwind-merge";
 import Footer from "./footer";
 import Header from "./header";
 
 const Layout = ({ children }) => {
   return (
-    <div className="mx-auto max-w-[1160px] border-custom border-x border-solid border-gray-extra-light font-inter">
+    <div
+      className={twMerge(
+        "border-custom",
+        "mx-auto max-w-[1160px] border-x border-solid border-gray-extra-light font-inter"
+      )}
+    >
       <Header className="mx-[40px]" />
       <div className="border-floating border-t-2 z-50" />
       <motion.main

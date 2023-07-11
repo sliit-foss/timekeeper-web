@@ -11,7 +11,7 @@ const routes = await Promise.all(
         <Route
           key={path}
           path={path.replace("./", "").replace(".mdx", "")}
-          element={<div className="px-6 2xl:px-7 pb-7">{resolvedModule.default()}</div>}
+          element={<div className="px-6 2xl:px-7 pb-7 markdown">{resolvedModule.default()}</div>}
         />
       );
     });
