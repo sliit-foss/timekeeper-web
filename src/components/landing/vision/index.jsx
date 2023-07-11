@@ -5,7 +5,7 @@ import Timeline from "./timeline";
 const OurVision = () => {
   return (
     <>
-      <div className="mt-[60px]">
+      <div>
         <div className="border-t-2 border-dashed absolute inset-x-0" />
         <Heading className="pt-12 px-5 mb-6">Our Vision</Heading>
         <SubHeading className="px-5 md:px-12 lg:px-40">
