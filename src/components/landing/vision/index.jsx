@@ -5,14 +5,14 @@ import Timeline from "./timeline";
 const OurVision = () => {
   return (
     <>
-      <div className="mt-[60px]">
+      <>
         <div className="border-floating border-t-2" />
         <Heading className="pt-12 px-5 mb-6">Our Vision</Heading>
         <SubHeading className="px-5 md:px-12 lg:px-40">
           A highly portable and versatile plugin ecosystem which will enable fine-grained tracing in your Javascript
           source code
         </SubHeading>
-      </div>
+      </>
       <div className="pb-[200px] pt-[40px]">
         <div className="absolute w-[2px] left-[calc(50%+1px)] bg-gradient-to-b from-black/10 via-black/10 to-transparent min-h-full" />
         <div className="absolute left-[calc(50%+1px)] min-h-full border-2 border-white border-dashed" />
