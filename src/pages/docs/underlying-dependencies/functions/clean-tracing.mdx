@@ -1,0 +1,30 @@
+import { Shell } from "@/components/docs";
+
+## Clean Tracing
+
+Functions provides 2 functions named **cleanTrace** and **cleanTraced** which behaves the same as **trace** and **traced** but ignores logging anything if the function
+passed to it does not have a name whereas the **trace** and **traced** functions will log everything with the function name as **unnamed**.
+
+This can be useful if the function which needs to be traced is passed at runtime and you want to prevent such scenarios from cluttering your logs.
+
+This also is the mechanism which is used behind the scenes in the @sliit-foss/babel-plugin-transform-trace to facilitate clean tracing.
+
+## Example
+
+<Shell
+  code={[
+    'import { cleanTrace, cleanTraced } from "@sliit-foss/functions";',
+    "",
+    "cleanTrace(function () {",
+    "  console.log(123);",
+    "});",
+    "",
+    "const cleanTracedFn = cleanTraced(function () {",
+    "  console.log(123);",
+    "})();",
+    "",
+    "cleanTracedFn();"
+  ]}
+/>
+
+The above code will not log anything to the console.

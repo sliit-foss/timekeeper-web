@@ -1,1 +1,35 @@
-sdfsdf
+import { Shell } from "@/components/docs";
+
+## Traced AsyncHandler
+
+An extension of a normal express async handler function but with tracing capabilities.
+
+<Shell
+  code={[
+    'import { tracedAsyncHandler } from "@sliit-foss/functions";',
+    "",
+    "tracedAsyncHandler(async function hello(req, res) => {",
+    "  res.send('Hello World');",
+    "});"
+  ]}
+/>
+
+The above code produces the following log in the console.
+
+<Shell code={["hello execution initiated", "hello execution completed - execution_time : 0.2069999985396862"]} />
+
+<div className="border-docs" />
+
+## AsyncHandler
+
+The common express async handler. You can use it as follows (It does not have tracing capabilities).
+
+<Shell
+  code={[
+    'import { asyncHandler } from "@sliit-foss/functions";',
+    "",
+    "asyncHandler(async function hello(req, res) => {",
+    '  res.send("Hello World");',
+    "});"
+  ]}
+/>
