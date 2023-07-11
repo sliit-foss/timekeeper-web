@@ -29,6 +29,7 @@ jobs:
         run: |
           pnpm install --ignore-scripts --fix-lockfile
           pnpm run build
+          cp dist/index.html dist/404.html
 
       - name: Save PR number
         run: |
