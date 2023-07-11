@@ -1,0 +1,3 @@
+import{j as e,S as r,__tla as i}from"./index-2978dca9.js";let a,c=Promise.all([(()=>{try{return i}catch{}})()]).then(async()=>{function s(t){const n=Object.assign({p:"p"},t.components);return e.jsxs(e.Fragment,{children:[e.jsx(r,{className:"text-left text-gray-dark font-medium",children:"What is Timekeeper?"}),`
+`,e.jsx("br",{}),`
+`,e.jsx(n.p,{children:"Timekeeper is an automated tracing solution which injects logging statements into your code."})]})}a=function(t={}){const{wrapper:n}=t.components||{};return n?e.jsx(n,Object.assign({},t,{children:e.jsx(s,t)})):s(t)}});export{c as __tla,a as default};
