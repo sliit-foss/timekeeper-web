@@ -14,7 +14,7 @@ const ShellTabs = ({ className, selected, tabs }) => {
       </TabsList>
       {tabs.map((tab) => (
         <TabsContent key={tab.name} value={tab.name}>
-          <Shell code={tab.code} />
+          <Shell code={tab.code} styles={{ root: "mt-2" }} />
         </TabsContent>
       ))}
     </Tabs>

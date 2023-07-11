@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import { last, startCase, throttle } from "lodash";
+import { compact, flatMap, last, startCase, throttle } from "lodash";
 import { twMerge } from "tailwind-merge";
 import { useTitle } from "@/hooks";
 import { constructDocRoute } from "@/utils";
@@ -17,14 +17,29 @@ const Navigation = ({ meta, className }) => {
   useTitle(`${startCase(last(current?.split("/")))} - Timekeeper`, [current]);
 
   useEffect(() => {
-    const currentFromPath = location.pathname.replace("/docs", "").split("/").reverse()[0];
+    const currentFromPath = location.pathname.replace("/docs/", "");
     if (currentFromPath !== current) setCurrent(currentFromPath);
   }, [location.pathname]);
 
+  const parentNodes = useMemo(() => {
+    return compact(
+      meta.reduce(
+        (acc, l1) => [
+          ...acc,
+          l1.pages?.length && constructDocRoute(l1),
+          ...flatMap(l1.pages, (l2) => constructDocRoute(l1, l2))
+        ],
+        []
+      )
+    );
+  }, [meta]);
+
   const onSelect = throttle(
     (value) => {
-      setCurrent(value);
-      navigate(`/docs/${value}`);
+      if (!parentNodes.includes(value)) {
+        setCurrent(value);
+        navigate(`/docs/${value}`);
+      }
     },
     100,
     {
@@ -37,6 +52,7 @@ const Navigation = ({ meta, className }) => {
     <>
       <NavigationCore
         meta={meta}
+        parentNodes={parentNodes}
         onSelect={onSelect}
         current={current}
         className={twMerge("hidden 2xl:block", className)}
@@ -45,6 +61,7 @@ const Navigation = ({ meta, className }) => {
       />
       <NavigationMobile
         meta={meta}
+        parentNodes={parentNodes}
         onSelect={onSelect}
         current={current}
         className={twMerge("block 2xl:hidden", className)}

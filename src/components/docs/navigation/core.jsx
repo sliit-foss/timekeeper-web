@@ -1,20 +1,11 @@
-import { useMemo } from "react";
-import { flatMap } from "lodash";
 import { twMerge } from "tailwind-merge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/common";
 import { constructDocRoute } from "@/utils";
 
-const NavigationCore = ({ className, meta, onSelect, current, ...props }) => {
-  const openValues = useMemo(() => {
-    return meta.reduce(
-      (acc, l1) => [...acc, constructDocRoute(l1), ...flatMap(l1.pages, (l2) => constructDocRoute(l1, l2))],
-      []
-    );
-  }, [meta]);
-
+const NavigationCore = ({ className, meta, parentNodes, onSelect, current, ...props }) => {
   return (
     <nav className={twMerge("w-full h-full py-3", className)} {...props}>
-      <Accordion type="multiple" collapsible="true" className="w-full px-3.5" defaultValue={openValues}>
+      <Accordion type="multiple" collapsible="true" className="w-full px-3.5" defaultValue={parentNodes}>
         {meta.map((l1) => {
           const l1Value = constructDocRoute(l1);
           return (

@@ -17,7 +17,7 @@ const routes = Object.entries(pages).map(([path, page]) => {
 const Docs = () => {
   return (
     <>
-      <div className="2xl:absolute 2xl:w-full flex flex-col 2xl:flex-row justify-center left-0">
+      <div className="2xl:absolute 2xl:w-full flex flex-col 2xl:flex-row justify-center left-0 overflow-x-hidden">
         <Navigation meta={meta} />
         <div className="2xl:min-w-[1160px]" />
         <Explorer />
