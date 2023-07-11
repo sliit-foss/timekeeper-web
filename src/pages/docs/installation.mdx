@@ -1,16 +1,10 @@
-import { Shell, ShellTabs } from "@/components/docs";
+import { Installer, Shell } from "@/components/docs";
 
 #### Since the CLI and VSCode extension are not yet ready, this section will only cover the installation and setup of the babel plugin. The content of this section will be updated in the future.
 
 ## Installing the Babel Plugin
 
-<ShellTabs
-  tabs={[
-    { name: "npm", code: "npm install --save-dev @sliit-foss/babel-plugin-transform-trace" },
-    { name: "yarn", code: "yarn add --dev @sliit-foss/babel-plugin-transform-trace" },
-    { name: "pnpm", code: "pnpm add --save-dev @sliit-foss/babel-plugin-transform-trace" }
-  ]}
-/>
+<Installer library="@sliit-foss/babel-plugin-transform-trace" dev />
 
 ## Registering the Babel Plugin
 
@@ -23,10 +17,4 @@ Add the following to your babel config file (`.babelrc`, `babel.config.js`, etc)
 - This plugin assumes that [Babel](https://babeljs.io/) is already installed and configured in your project.
 - If your project does not have access to underlying node modules such as in the default behaviour of [pnpm](https://pnpm.js.org/), you will need to install the following library as well :-
 
-<ShellTabs
-  tabs={[
-    { name: "npm", code: "npm install @sliit-foss/functions" },
-    { name: "yarn", code: "yarn add @sliit-foss/functions" },
-    { name: "pnpm", code: "pnpm add @sliit-foss/functions" }
-  ]}
-/>
+<Installer library="@sliit-foss/functions" />
