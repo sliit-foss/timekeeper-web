@@ -21,7 +21,8 @@ export default {
         }
       },
       borderRadius: {
-        primary: "20px"
+        primary: "20px",
+        secondary: "10px"
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))"
