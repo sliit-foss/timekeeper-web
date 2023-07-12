@@ -44,7 +44,7 @@ const Footer = ({ className }) => {
 
         <div className="flex flex-col gap-y-2 md:gap-y-3 translate-x-5 md:translate-x-0">
           <div className="flex justify-center items-start">
-            <Timekeeper height={46} />
+            <Timekeeper height={46} tilt/>
           </div>
           <span className="font-cabinet row-start-2 text-[20px] font-bold text-center">Timekeeper</span>
         </div>
