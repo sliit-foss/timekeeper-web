@@ -14,7 +14,7 @@ const Header = ({ className }) => {
     <header className={`items-center grid grid-flow-col py-[30px] ${className}`}>
       <div className="grid place-content-start grid-flow-col items-center space-x-[30px]">
         <Link to="/">
-          <Timekeeper height="46px" width="52px" willRotate/>
+          <Timekeeper height="46px" width="52px" tilt/>
         </Link>
         <Times height="15px" width="15px" className="opacity-20" />
         <FossLogoDark />
