@@ -38,7 +38,7 @@ export default {
       },
       transitionDuration: {
         medium: "300ms",
-        long: "500ms",
+        long: "500ms"
       },
       keyframes: {
         "accordion-down": {

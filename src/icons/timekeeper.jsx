@@ -1,6 +1,21 @@
-const Timekeeper = ({ width, height , tilt }) => {
+import { twMerge } from "tailwind-merge";
+
+const Timekeeper = ({ size, width, height, tilt, className }) => {
+  width = width ?? size;
+  height = height ?? size;
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} fill="none" viewBox="0 0 53 46" className={tilt && "hover:rotate-[20deg] transition duration-long ease-in-out origin-[43.5%_50%]"} >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={width}
+      height={height}
+      fill="none"
+      viewBox="0 0 53 46"
+      className={twMerge(
+        "origin-[43.5%_50%]",
+        tilt && "hover:rotate-[20deg] transition duration-long ease-in-out",
+        className
+      )}
+    >
       <path fill="rgba(0, 0, 0, 0)" d="M0 0H53V46H0z"></path>
       <g>
         <g>
