@@ -16,6 +16,29 @@ const Timekeeper = ({ size, width, height, tilt, className }) => {
         className
       )}
     >
+      <defs>
+        <linearGradient id="paint0_linear_426_33" x1="42.55" x2="17.25" y1="23" y2="23" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#11EFE3"></stop>
+          <stop offset="0.33" stopColor="#15E8E2"></stop>
+          <stop offset="0.74" stopColor="#1FD3E0"></stop>
+          <stop offset="1" stopColor="#21CFE0"></stop>
+        </linearGradient>
+        <linearGradient id="paint1_linear_426_33" x1="5.75" x2="40.25" y1="23" y2="23" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#00299C"></stop>
+          <stop offset="1" stopColor="#0073E6"></stop>
+        </linearGradient>
+        <linearGradient
+          id="paint2_linear_426_33"
+          x1="26.451"
+          x2="53.476"
+          y1="23"
+          y2="23"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#00299C"></stop>
+          <stop offset="1" stopColor="#0073E6"></stop>
+        </linearGradient>
+      </defs>
       <path fill="rgba(0, 0, 0, 0)" d="M0 0H53V46H0z"></path>
       <g>
         <g>
@@ -44,29 +67,6 @@ const Timekeeper = ({ size, width, height, tilt, className }) => {
           ></path>
         </g>
       </g>
-      <defs>
-        <linearGradient id="paint0_linear_426_33" x1="42.55" x2="17.25" y1="23" y2="23" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#11EFE3"></stop>
-          <stop offset="0.33" stopColor="#15E8E2"></stop>
-          <stop offset="0.74" stopColor="#1FD3E0"></stop>
-          <stop offset="1" stopColor="#21CFE0"></stop>
-        </linearGradient>
-        <linearGradient id="paint1_linear_426_33" x1="5.75" x2="40.25" y1="23" y2="23" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#00299C"></stop>
-          <stop offset="1" stopColor="#0073E6"></stop>
-        </linearGradient>
-        <linearGradient
-          id="paint2_linear_426_33"
-          x1="26.451"
-          x2="53.476"
-          y1="23"
-          y2="23"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop stopColor="#00299C"></stop>
-          <stop offset="1" stopColor="#0073E6"></stop>
-        </linearGradient>
-      </defs>
     </svg>
   );
 };
