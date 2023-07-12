@@ -1,6 +1,6 @@
 const Timekeeper = ({ width, height }) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} fill="none" viewBox="0 0 53 46">
+    <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} fill="none" viewBox="0 0 53 46" className="clock-logo">
       <path fill="rgba(0, 0, 0, 0)" d="M0 0H53V46H0z"></path>
       <g>
         <g>

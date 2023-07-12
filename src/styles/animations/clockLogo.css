@@ -1,0 +1,8 @@
+.clock-logo{
+    transition: 0.4s ease-in-out;
+}
+.clock-logo:hover{
+    rotate: 20deg;
+    transition: 0.4s ease-in-out;
+    
+}
