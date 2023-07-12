@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { repositoryLink } from "@/constants";
 import { FossLogoDark, Timekeeper, Times } from "@/icons";
 import { Button } from "..";
-
+import "../../../styles/animations/clockLogo.css"
 const Header = ({ className }) => {
   const location = useLocation();
 
