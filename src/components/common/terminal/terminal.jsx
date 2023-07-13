@@ -1,6 +1,9 @@
 import { twMerge } from "tailwind-merge";
+import Typewriter from "typewriter-effect";
 
 const Terminal = ({ code = [""], styles = { root: "", header: "", body: "" } }) => {
+  const string = code.join("<br /><br />");
+  console.log(string);
   return (
     <div className={twMerge("mb-[40px] rounded-primary", styles.root)}>
       <div className={twMerge("border-x border-t bg-gray-ultra-light h-[36px] rounded-t-primary", styles.header)} />
@@ -10,12 +13,14 @@ const Terminal = ({ code = [""], styles = { root: "", header: "", body: "" } }) 
           styles.body
         )}
       >
-        {code.map((line, index) => (
-          <div key={index}>
-            {line}
-            <br />
-          </div>
-        ))}
+        <div>
+          <Typewriter
+            onInit={(typewriter) => {
+              typewriter.typeString(string).start();
+            }}
+          />
+          <br />
+        </div>
       </pre>
     </div>
   );
