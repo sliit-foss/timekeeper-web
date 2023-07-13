@@ -5,7 +5,7 @@ const Timeline = () => {
   return (
     <>
       {timeline?.map(({ icon, details, date }, index) => (
-        <div className="flex flex-col md:flex-row justify-center items-center md:items-start m-10 gap-y-4" key={index}>
+        <div className="flex flex-col md:flex-row justify-center items-center md:items-start mx-auto m-10 gap-y-4 md:w-[650px] w-[200px]" key={index}>
           <div
             className={`flex-1 grid justify-center items-start ${
               index % 2 == 0 ? "md:order-2 md:justify-end" : "md:order-4 md:justify-start"
@@ -34,7 +34,7 @@ const Timeline = () => {
             }`}
             data-aos={index % 2 == 0 ? "fade-left" : "fade-right"}
           >
-            <p className="leading-[26px] font-cabinet text-[26px] tracking-[-0.5px] font-bold">{details}</p>
+            <p className="leading-[26px] font-cabinet md:text-[26px] text-[20px] tracking-[-0.5px] font-bold">{details}</p>
             <p className="text-black/40 font-medium mt-1">{date}</p>
           </div>
         </div>

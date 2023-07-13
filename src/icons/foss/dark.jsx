@@ -1,10 +1,9 @@
-const FossLogoDark = () => {
+const FossLogoDark = ({className="h-[42px] w-[74px]"}) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      width="74"
-      height="42"
+      className={className}
       fill="none"
       viewBox="0 0 74 42"
     >
