@@ -1,20 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>404 - Timekeeper</title>
-    <script type="text/javascript">  
-      const pathSegmentsToKeep = 0;
-      const l = window.location;
-      l.replace(
-        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
-        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
-        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-        l.hash
-      );
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./assets/icons/timekeeper.svg" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
+    <link rel="preload" href="https://fonts.cdnfonts.com/css/sf-pro-display" as="style" />
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/sf-pro-display" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timekeeper</title>
+    <script type="text/javascript">
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          const decoded = l.search.slice(1).split('&').map((s) => { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
     </script>
+    <script type="module" crossorigin src="./assets/index-3e766701.js"></script>
+    <link rel="stylesheet" href="./assets/index-19811ef0.css">
   </head>
   <body>
+    <div id="root"></div>
+    
   </body>
 </html>
