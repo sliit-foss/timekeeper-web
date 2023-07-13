@@ -44,6 +44,8 @@ jobs:
           
           rm script.js
 
+          sed -i "s/.\/assets/\/assets/" dist/index.html
+
       - uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: ./dist/
