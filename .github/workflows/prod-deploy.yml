@@ -32,7 +32,7 @@ jobs:
               <script type="text/javascript">
                   (function(l) {
                       const matchPreviewDeployment = l.pathname.match(/preview\/pr-\d+/);
-                      if (matchPreviewDeployment) l.replace(l.origin + matchPreviewDeployment[0]);
+                      if (matchPreviewDeployment) l.replace(l.origin + "/" +matchPreviewDeployment[0]);
                   }(window.location))
               </script>
             </head>
