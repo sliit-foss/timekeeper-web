@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="/assets/index-19811ef0.css">
     <script type="text/javascript">
         (function(l) {
-            const matchPreviewDeployment = window.location.pathname.match(/preview\/pr-\d+/);
-            if (matchPreviewDeployment) window.history.replaceState(null, null, window.location.pathname.replace(matchPreviewDeployment[0], ''));
+            const matchPreviewDeployment = l.pathname.match(/preview\/pr-\d+/);
+            if (matchPreviewDeployment) l.replace(l.origin + matchPreviewDeployment[0]);
         }(window.location))
     </script>
   </head>
