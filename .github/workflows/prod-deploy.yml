@@ -22,6 +22,7 @@ jobs:
         run: |
           pnpm install --ignore-scripts --fix-lockfile
           pnpm run build
+          sed -i "s/.\/assets/\/assets/" dist/index.html
           cp dist/index.html ./dist/404.html
 
       - uses: JamesIves/github-pages-deploy-action@v4
