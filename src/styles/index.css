@@ -54,3 +54,7 @@ html::-webkit-scrollbar-thumb {
 html::-webkit-scrollbar-thumb:hover {
   background-color: #000000;
 }
+
+svg:focus {
+  outline: none !important;
+}
