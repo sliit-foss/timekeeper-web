@@ -22,27 +22,8 @@ jobs:
         run: |
           pnpm install --ignore-scripts --fix-lockfile
           pnpm run build
-
-      - name: Fix 404 on GitHub Pages
-        run: |
-          cp dist/index.html dist/404.html
-
-          cat <<EOF > script.js
-              <script type="text/javascript">
-                  (function(l) {
-                      const matchPreviewDeployment = window.location.pathname.match(/preview\/pr-\d+/);
-                      if (matchPreviewDeployment) window.history.replaceState(null, null, window.location.pathname.replace(matchPreviewDeployment[0], ''));
-                  }(window.location))
-              </script>
-            </head>
-          EOF
-          
-          sed -i '/<\/head>/ {
-              r script.js
-              d
-          }' dist/404.html
-          
-          rm script.js
+          sed -i "s/.\/assets/\/assets/" dist/index.html
+          cp dist/index.html ./dist/404.html
 
       - uses: JamesIves/github-pages-deploy-action@v4
         with:
