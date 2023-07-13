@@ -1,7 +1,7 @@
 import { FaChevronRight } from "react-icons/fa";
 import { twMerge } from "tailwind-merge";
 import { Button, SubHeading } from "@/components/common";
-import { TimekeeperAnimated } from "@/icons";
+import { Timekeeper } from "@/icons";
 
 const Hero = ({ className }) => {
   return (
@@ -48,7 +48,7 @@ const Hero = ({ className }) => {
               </div>
             </div>
             <div className="md:flex hidden justify-center items-center grow flex-shrink-0 basis-1/2 -translate-y-16 ml-6">
-              <TimekeeperAnimated />
+              <Timekeeper size={310} className="animate-[spin_10s_linear_infinite]" />
             </div>
           </div>
         </div>
