@@ -3,7 +3,6 @@ import Typewriter from "typewriter-effect";
 
 const Terminal = ({ code = [""], styles = { root: "", header: "", body: "" } }) => {
   const string = code.join("<br /><br />");
-  console.log(string);
   return (
     <div className={twMerge("mb-[40px] rounded-primary", styles.root)}>
       <div className={twMerge("border-x border-t bg-gray-ultra-light h-[36px] rounded-t-primary", styles.header)} />
