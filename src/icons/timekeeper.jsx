@@ -1,6 +1,6 @@
-const Timekeeper = ({ width, height }) => {
+const Timekeeper = ({ className="h-[46px] w-[52px]" }) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} fill="none" viewBox="0 0 53 46">
+    <svg xmlns="http://www.w3.org/2000/svg" className={className} fill="none" viewBox="0 0 53 46">
       <path fill="rgba(0, 0, 0, 0)" d="M0 0H53V46H0z"></path>
       <g>
         <g>
