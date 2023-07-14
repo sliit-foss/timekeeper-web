@@ -16,6 +16,7 @@
     "@radix-ui/react-tabs": "1.0.4",
     "aos": "2.3.4",
     "framer-motion": "10.12.18",
+    "highlight.js": "11.8.0",
     "install": "0.13.0",
     "lodash": "4.17.21",
     "npm": "9.8.0",

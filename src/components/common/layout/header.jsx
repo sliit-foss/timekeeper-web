@@ -14,10 +14,10 @@ const Header = ({ className }) => {
     <header className={`items-center grid grid-flow-col py-[30px] ${className}`}>
       <div className="grid place-content-start grid-flow-col items-center md:space-x-[30px] space-x-3">
         <Link to="/">
-          <Timekeeper className="md:h-[46px] md:w-[52px] w-[30px]" />
+          <Timekeeper className="h-[46px] w-[52px]" />
         </Link>
-        <Times className="md:h-[15px] h-3 opacity-20" />
-        <FossLogoDark className="md:h-[42px] md:w-[74px] w-[50px]"/>
+        <Times className="h-[15px] opacity-20" />
+        <FossLogoDark className="h-[42px] w-[74px]"/>
       </div>
       <div className="grid place-content-end grid-flow-col items-center">
         {!isDocs && (
@@ -30,7 +30,7 @@ const Header = ({ className }) => {
           </Button>
         )}
         <Link href={repositoryLink} target="_blank" className="icon-hover">
-          <FaGithub size={25} />
+          <FaGithub className="text-[35px]"/>
         </Link>
       </div>
     </header>

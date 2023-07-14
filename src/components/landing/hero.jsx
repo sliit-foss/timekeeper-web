@@ -24,7 +24,7 @@ const Hero = ({ className }) => {
               </div>
             </Button>
           </div>
-          <h1 className="font-bold tracking-[-4.8px] font-cabinet text-center md:text-left text-[60px] md:text-[80px] lg:text-[121px]">
+          <h1 className="font-bold tracking-[-4.8px] font-cabinet text-left text-[60px] md:text-[80px] lg:text-[121px]">
             Timekeeper
           </h1>
           <div className="flex gap-5">
