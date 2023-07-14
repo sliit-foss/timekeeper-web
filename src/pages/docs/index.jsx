@@ -9,7 +9,7 @@ const routes = Object.entries(pages).map(([path, page]) => {
     <Route
       key={path}
       path={path.replace("./", "").replace(".mdx", "")}
-      element={<div className="px-6 2xl:px-7 pb-7 markdown relative z-50">{page.default()}</div>}
+      element={<div className="px-10 2xl:px-7 pb-7 markdown relative z-50">{page.default()}</div>}
     />
   );
 });
@@ -17,7 +17,7 @@ const routes = Object.entries(pages).map(([path, page]) => {
 const Docs = () => {
   return (
     <>
-      <div className="2xl:absolute 2xl:w-full flex flex-col 2xl:flex-row justify-center left-0 overflow-x-hidden">
+      <div className="2xl:absolute 2xl:w-full flex flex-col 2xl:flex-row justify-center left-0 overflow-x-hidden px-8">
         <Navigation meta={meta} />
         <div className="2xl:min-w-[1160px]" />
         <Explorer />
