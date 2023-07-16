@@ -18,9 +18,9 @@ const App = () => {
 
   const navigationStyles = useMemo(() => {
     return twMerge(
-      "border-gray-extra-light max-w-[1160px] mx-auto px-4 md:px-[40px] border-x transition-all duration-[600ms]",
+      "border-gray-extra-light max-w-[1160px] mx-auto px-[40px] border-x transition-all duration-[600ms]",
       location.pathname.includes("docs")
-        ? "2xl:w-full 2xl:border-transparent 2xl:max-w-none"
+        ? "2xl:w-full 2xl:border-transparent 2xl:max-w-none px-[35px]"
         : "2xl:w-[1160px] 2xl:max-w-none"
     );
   }, [location.pathname]);
@@ -48,7 +48,7 @@ const App = () => {
         </AnimatePresence>
         <div className="border-floating border-t-2 z-50" />
       </div>
-      <Footer className={navigationStyles} />
+      <Footer className={twMerge(navigationStyles, "px-[40px]")} />
     </>
   );
 };
