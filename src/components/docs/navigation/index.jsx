@@ -55,7 +55,7 @@ const Navigation = ({ meta, className }) => {
         parentNodes={parentNodes}
         onSelect={onSelect}
         current={current}
-        className={twMerge("hidden 2xl:block", className)}
+        className={twMerge("hidden 2xl:block pl-3", className)}
       />
       <NavigationMobile
         meta={meta}

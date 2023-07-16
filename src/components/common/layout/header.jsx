@@ -41,7 +41,7 @@ const Header = ({ className }) => {
             </div>
           )}
         </AnimatePresence>
-        <Link href={repositoryLink} target="_blank" className="icon-hover">
+        <Link to={repositoryLink} target="_blank" className="icon-hover">
           <FaGithub size={36} />
         </Link>
       </div>

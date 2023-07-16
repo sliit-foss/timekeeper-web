@@ -11,7 +11,7 @@ const Explorer = ({ className }) => {
       initial={{ opacity: 0, translateX: "100%" }}
       animate={{ opacity: 1, translateX: 0 }}
       exit={{ opacity: 0, translateX: "100%" }}
-      transition={{ duration: 0.4 }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
     >
       <div className="px-6">
         <div className="flex flex-col w-full gap-y-4 text-black">

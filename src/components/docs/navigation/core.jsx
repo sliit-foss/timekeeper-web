@@ -10,7 +10,7 @@ const NavigationCore = ({ className, meta, parentNodes, onSelect, current, ...pr
       initial={{ opacity: 0, translateX: "-100%" }}
       animate={{ opacity: 1, translateX: 0 }}
       exit={{ opacity: 0, translateX: "-100%" }}
-      transition={{ duration: 0.4 }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
       className={twMerge("w-full h-full py-3", className)}
       {...props}
     >
