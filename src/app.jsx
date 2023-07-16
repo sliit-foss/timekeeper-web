@@ -1,6 +1,10 @@
+import { useEffect } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import { Layout } from "@/components/common";
-import { Landing } from "@/pages";
+import { default as Aos } from "aos";
+import { AnimatePresence } from "framer-motion";
+import { Layout, ScrollToTop } from "@/components/common";
+import { Docs, Landing } from "@/pages";
+import "aos/dist/aos.css";
 
 function App() {
   let basename = "/";
@@ -11,14 +15,23 @@ function App() {
     basename += matchPreviewDeployment[0];
   }
 
+  useEffect(() => {
+    Aos.init({ offset: 0, duration: 850 });
+    window.addEventListener("load", Aos.refresh);
+  }, []);
+
   return (
-    <Layout>
-      <Router basename={basename}>
-        <Routes>
-          <Route path="/" element={<Landing />} />
-        </Routes>
-      </Router>
-    </Layout>
+    <Router basename={basename}>
+      <ScrollToTop />
+      <Layout>
+        <AnimatePresence>
+          <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route path="/docs/*" element={<Docs />} />
+          </Routes>
+        </AnimatePresence>
+      </Layout>
+    </Router>
   );
 }
 

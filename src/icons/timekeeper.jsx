@@ -1,25 +1,46 @@
-const Timekeeper = ({ width, height }) => {
+import { twMerge } from "tailwind-merge";
+
+const Timekeeper = ({ size, width, height, tilt, className }) => {
+  width = width ?? size;
+  height = height ?? size;
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} fill="none" viewBox="0 0 53 46">
-      {/* here there is a border if it becomes (1)white "#FFFFFF" or (2)transparent "rgba(0, 0, 0, 0)" it will be invisible */}
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={width}
+      height={height}
+      fill="none"
+      viewBox="0 0 53 46"
+      className={twMerge(
+        "origin-[43.5%_50%]",
+        tilt && "hover:rotate-[20deg] transition duration-long ease-in-out",
+        className
+      )}
+    >
+      <defs>
+        <linearGradient id="paint0_linear_426_33" x1="42.55" x2="17.25" y1="23" y2="23" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#11EFE3"></stop>
+          <stop offset="0.33" stopColor="#15E8E2"></stop>
+          <stop offset="0.74" stopColor="#1FD3E0"></stop>
+          <stop offset="1" stopColor="#21CFE0"></stop>
+        </linearGradient>
+        <linearGradient id="paint1_linear_426_33" x1="5.75" x2="40.25" y1="23" y2="23" gradientUnits="userSpaceOnUse">
+          <stop stopColor="#00299C"></stop>
+          <stop offset="1" stopColor="#0073E6"></stop>
+        </linearGradient>
+        <linearGradient
+          id="paint2_linear_426_33"
+          x1="26.451"
+          x2="53.476"
+          y1="23"
+          y2="23"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stopColor="#00299C"></stop>
+          <stop offset="1" stopColor="#0073E6"></stop>
+        </linearGradient>
+      </defs>
       <path fill="rgba(0, 0, 0, 0)" d="M0 0H53V46H0z"></path>
-      {/* You can only (3)remove the border lines. it becomes like comment line */}
-      {/* <path fill="#1E1E1E" d="M0 0H0z"></path> */}
-      {/* Also, if you want, you can (4)delete this line and nothing will happen*/}
       <g>
-        <path fill="#fff" d="M0 0H1920V3465H0z" transform="translate(-420 -37)"></path>
-        <g>
-          <mask id="path-1-inside-1_426_33" fill="#fff">
-            <path d="M-420-37h1920V83H-420V-37z"></path>
-          </mask>
-          <path fill="#fff" d="M-420-37h1920V83H-420V-37z"></path>
-          <path
-            fill="#000"
-            fillOpacity="0.1"
-            d="M-420 83.5h3v-1h-3v1zm9 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1H9v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h6v-1h-6v1zm12 0h3v-1h-3v1zM-420 84h3v-2h-3v2zm9 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2H9v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h6v-2h-6v2zm12 0h3v-2h-3v2z"
-            mask="url(#path-1-inside-1_426_33)"
-          ></path>
-        </g>
         <g>
           <path
             fill="#0073E6"
@@ -45,41 +66,7 @@ const Timekeeper = ({ width, height }) => {
             clipRule="evenodd"
           ></path>
         </g>
-        <g fill="#000">
-          <mask id="path-7-outside-2_426_33" width="1162" height="3463" x="-41" y="-37" maskUnits="userSpaceOnUse">
-            <path fill="#fff" d="M-41 -37H1121V3426H-41z"></path>
-            <path d="M-40-37h1160v3463H-40V-37z"></path>
-          </mask>
-          <path
-            fillOpacity="0.1"
-            d="M1119-37v3463h2V-37h-2zM-39 3426V-37h-2v3463h2z"
-            mask="url(#path-7-outside-2_426_33)"
-          ></path>
-        </g>
       </g>
-      <defs>
-        <linearGradient id="paint0_linear_426_33" x1="42.55" x2="17.25" y1="23" y2="23" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#11EFE3"></stop>
-          <stop offset="0.33" stopColor="#15E8E2"></stop>
-          <stop offset="0.74" stopColor="#1FD3E0"></stop>
-          <stop offset="1" stopColor="#21CFE0"></stop>
-        </linearGradient>
-        <linearGradient id="paint1_linear_426_33" x1="5.75" x2="40.25" y1="23" y2="23" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#00299C"></stop>
-          <stop offset="1" stopColor="#0073E6"></stop>
-        </linearGradient>
-        <linearGradient
-          id="paint2_linear_426_33"
-          x1="26.451"
-          x2="53.476"
-          y1="23"
-          y2="23"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop stopColor="#00299C"></stop>
-          <stop offset="1" stopColor="#0073E6"></stop>
-        </linearGradient>
-      </defs>
     </svg>
   );
 };

@@ -1,3 +1,1 @@
-import socials from 'socials.js';
-
-export default socials;
+export * from "./hyperlinks";

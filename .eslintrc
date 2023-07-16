@@ -5,6 +5,7 @@
   },
   "extends": [
     "eslint:recommended",
+    "plugin:mdx/recommended",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended"
@@ -20,7 +21,16 @@
   },
   "plugins": ["react-refresh"],
   "rules": {
+    "react-hooks/exhaustive-deps": "off",
     "react-refresh/only-export-components": "off",
     "react/prop-types": "off"
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.mdx"],
+      "rules": {
+        "react/no-unescaped-entities": "off"
+      }
+    }
+  ]
 }

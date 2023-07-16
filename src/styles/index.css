@@ -1,27 +1,60 @@
+@import "colors.css";
+@import "animations/index.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  .markdown *:not(path, .border-docs, .revert) {
+    all: revert;
+  }
+  .markdown a:link {
+    color: var(--primary-medium) !important;
+  }
+}
 
 @layer base {
   @font-face {
     font-family: "Cabinet Grotesk Variable";
     src: url("../../public/assets/fonts/cabinet-grotesk-variable.ttf");
   }
-  @font-face {
-    font-family: "Inter";
-    src: url("../../public/assets/fonts/inter.ttf");
-  }
-  @font-face {
-    font-family: "SF Pro Display";
-    src: url("../../public/assets/fonts/sf-pro-display.ttf");
-  }
   html {
     scroll-behavior: smooth;
   }
 }
 
-@layer components {
+@layer utilities {
+  .border-custom {
+    @apply border-dashed border-gray-borders;
+  }
+  .border-floating {
+    @apply border-custom absolute inset-x-0;
+  }
   .gradient-text {
     @apply bg-gradient-to-r from-primary-dark to-primary-medium bg-clip-text text-transparent;
   }
+  .icon-hover {
+    @apply transition-colors duration-medium hover:text-black/70;
+  }
+}
+
+.border-docs {
+  border-top: 1px solid var(--gray-borders);
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: var(--charcoal);
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background-color: #000000;
+}
+
+svg, svg *:focus {
+  outline: none !important;
 }

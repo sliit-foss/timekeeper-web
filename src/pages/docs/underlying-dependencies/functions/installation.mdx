@@ -1,0 +1,24 @@
+import { Installer } from "@/components/docs";
+
+## Overview
+
+Functions is the core library which exposes the necessary modules required for function tracing. It exposes 6 main functions for the purpose which will be described in detail
+within this documentation.
+
+## Installation
+
+<Installer library="@sliit-foss/functions" />
+
+<div className="border-docs" />
+
+Functions also exposes a few other modules which however are not required by timekeeper. For a full list of modules exposed by functions and their usage,
+please refer to the [examples provided](https://www.npmjs.com/package/@sliit-foss/functions?activeTab=readme). Here are however, a high level overview of the functions available.
+
+## Modules
+
+- **bindKey** - Creates a bounded function from a passed object and function key with its context preserved.
+
+  - This method is **distint from the bindKey function of lodash** as this **preserves the function's name** property where lodash sets it as **wrapper**.
+
+- **cached** - Creates a cached function that memoizes the result of the passed function. It makes uses of the [express-http-context](https://www.npmjs.com/package/express-http-context)
+  to maintain the cache. This cache is specific to a single request.

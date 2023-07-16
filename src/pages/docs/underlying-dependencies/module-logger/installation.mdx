@@ -1,0 +1,29 @@
+import { Installer, Shell } from "@/components/docs";
+
+## Overview
+
+This is a library which is used to log the messages which you see to the console. This library is a direct wrapper around [Winston](https://github.com/winstonjs/winston)
+and is intended to make the logging process easier and at the same time facilitate tracing and debugging by injecting the **correlation id** to the logs and formatting them.
+
+## Installation
+
+<Installer library="@sliit-foss/module-logger" />
+
+## Using Winston
+
+You can access any of the winston modules as if you are accessing them directly from winston. <br/>
+
+<Shell
+  code={[
+    'import { createLogger } from "@sliit-foss/module-logger";',
+    "",
+    "const logger = winston.createLogger({",
+    "  transports: [",
+    "    new winston.transports.Console(),",
+    '    new winston.transports.File({ filename: "combined.log" })',
+    "  ]",
+    "});",
+    "",
+    'logger.info("Hello World");'
+  ]}
+/>
