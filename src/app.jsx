@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { default as Aos } from "aos";
-import { Layout } from "@/components/common";
-import { Landing } from "@/pages";
+import { AnimatePresence } from "framer-motion";
+import { Layout, ScrollToTop } from "@/components/common";
+import { Docs, Landing } from "@/pages";
 import "aos/dist/aos.css";
 
 function App() {
@@ -20,13 +21,17 @@ function App() {
   }, []);
 
   return (
-    <Layout>
-      <Router basename={basename}>
-        <Routes>
-          <Route path="/" element={<Landing />} />
-        </Routes>
-      </Router>
-    </Layout>
+    <Router basename={basename}>
+      <ScrollToTop />
+      <Layout>
+        <AnimatePresence>
+          <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route path="/docs/*" element={<Docs />} />
+          </Routes>
+        </AnimatePresence>
+      </Layout>
+    </Router>
   );
 }
 

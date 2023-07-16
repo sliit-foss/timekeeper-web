@@ -1,13 +1,13 @@
 import { FaChevronRight } from "react-icons/fa";
 import { twMerge } from "tailwind-merge";
 import { Button, SubHeading } from "@/components/common";
-import { TimekeeperAnimated } from "@/icons";
+import { Timekeeper } from "@/icons";
 
 const Hero = ({ className }) => {
   return (
     <>
       <div className="relative">
-        <div className="md:w-1/2 min-h-full absolute inline-block border-r-2 md:ml-[2px] z-0 border-dashed" />
+        <div className="border-floating border-r-2 md:w-1/2 min-h-full inline-block md:ml-[2px]" />
         <div className={`py-[60px] ${className} relative`}>
           <div className="bg-white flex justify-center items-center">
             <Button className="bg-white border gap-x-1.5">
@@ -35,11 +35,11 @@ const Hero = ({ className }) => {
                 source code, thanks to our ingenious series of transformations.
               </SubHeading>
               <div className="flex flex-wrap gap-x-2 gap-y-5 mt-[40px] ">
-                <Button href="#" className="w-auto" arrowClassName="md:mt-[0.08rem]">
+                <Button to="/docs/getting-started" className="w-auto" arrowClassName="md:mt-[0.08rem]">
                   Get started
                 </Button>
                 <Button
-                  href="#"
+                  to="/docs/getting-started"
                   className="xs:bg-transparent hover:outline-transparent"
                   arrowClassName="text-primary-light"
                 >
@@ -48,12 +48,12 @@ const Hero = ({ className }) => {
               </div>
             </div>
             <div className="md:flex hidden justify-center grow flex-shrink-0 basis-1/2 -translate-y-16 ml-6">
-              <TimekeeperAnimated />
+              <Timekeeper size={310} className="animate-[spin_10s_linear_infinite]" />
             </div>
           </div>
         </div>
       </div>
-      <div className="w-full absolute left-0 border-b-2 z-50 border-dashed" />
+      <div className="border-floating border-b-2" />
     </>
   );
 };

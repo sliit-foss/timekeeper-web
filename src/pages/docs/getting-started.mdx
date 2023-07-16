@@ -1,0 +1,48 @@
+import { GiPlanetCore } from "react-icons/gi";
+import { SiWindowsterminal } from "react-icons/si";
+import { Link } from "react-router-dom";
+import { StatusCard } from "@/components/docs";
+import { repositoryLink } from "@/constants";
+import { Babel, VSCode } from "@/icons";
+
+## What is Timekeeper ?
+
+Timekeeper is an automated tracing solution which injects logging statements into your code at build time.
+
+The full process revolves around using a plugin for an existing build tool to detect your function invokations and decorating them with a specially crafted function
+which handles the logging. The generated logs include:
+
+- The function name
+- Time taken to execute the function
+- Timestamp (in ISO 8601 format)
+- Correlation ID (if configured as described <Link to="/docs/configuration#context-setup"><b>here</b></Link>)
+
+The correlation ID is a unique identifier which is passed through the function call chain. This allows you to trace the execution of a request through multiple
+functions and services.
+
+The entirety of this means that you can **get a detailed view of your code execution without having to change it**.
+
+<div className="border-docs" />
+
+## Components
+
+<div className="w-full grid grid-cols-2 lg:grid-cols-4 gap-6 my-8 text-center">
+  <StatusCard className="col-span-1" icon={GiPlanetCore} title="Function Core" subtitle="Stable" />
+  <StatusCard className="col-span-1" icon={Babel} title="Babel Plugin" subtitle="(Prelease)" />
+  <StatusCard
+    className="col-span-1 from-black/70 via-gray-light via-[70%] to-gray-light"
+    icon={SiWindowsterminal}
+    title="CLI"
+    subtitle="(Coming Soon)"
+  />
+  <StatusCard
+    className="col-span-1 from-black/70 via-gray-light via-[70%] to-gray-light"
+    icon={VSCode}
+    title="Extension"
+    subtitle="(Coming Soon)"
+  />
+</div>
+
+<div className="border-docs" />
+
+**Important:** Timekeeper is currently in **beta**. Please report any issues you encounter at the following <Link to={`${repositoryLink}/issues`} target="\_blank"><b>link</b></Link>.

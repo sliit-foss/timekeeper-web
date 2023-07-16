@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Getting Started"
+  },
+  {
+    "name": "Installation"
+  },
+  {
+    "name": "Configuration"
+  },
+  {
+    "name": "Underlying Dependencies",
+    "pages": [
+      {
+        "name": "Functions",
+        "pages": [
+          {
+            "name": "Installation"
+          },
+          {
+            "name": "Simple Usage"
+          },
+          {
+            "name": "Clean Tracing"
+          },
+          {
+            "name": "Express Middleware"
+          },
+          {
+            "name": "Disable Tracing"
+          }
+        ]
+      },
+      {
+        "name": "Module Logger",
+        "pages": [
+          {
+            "name": "Installation"
+          },
+          {
+            "name": "Simple Usage"
+          },
+          {
+            "name": "Options"
+          }
+        ]
+      }
+    ]
+  }
+]

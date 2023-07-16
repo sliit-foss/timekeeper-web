@@ -1,4 +1,5 @@
 import { FaChevronRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import { twMerge } from "tailwind-merge";
 
 const Button = ({ children, className, arrow = false, arrowClassName, ...props }) => {
@@ -26,12 +27,12 @@ const Button = ({ children, className, arrow = false, arrowClassName, ...props }
   );
 };
 
-const ButtonWrapper = ({ href, target = "self", ...props }) => {
-  if (href) {
+const ButtonWrapper = ({ to, target = "_self", ...props }) => {
+  if (to) {
     return (
-      <a href={href} target={target}>
+      <Link to={to} target={target}>
         <Button {...props} />
-      </a>
+      </Link>
     );
   }
   return <Button {...props} />;

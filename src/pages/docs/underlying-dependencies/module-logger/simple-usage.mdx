@@ -1,0 +1,38 @@
+import { Shell } from "@/components/docs";
+
+## Simple Usage
+
+<Shell
+  code={[
+    'import { moduleLogger } from "@sliit-foss/module-logger";',
+    "",
+    'const logger = moduleLogger("MY-MODULE-NAME");',
+    "",
+    'logger.info("This is a modularized info log");'
+  ]}
+/>
+
+The above code produces the following log in the console.
+
+<Shell
+  styles={{ root: "2xl:w-full" }}
+  code={[
+    '{"correlationId":"correlation-id-from-context","level":"info","message":"[MY-MODULE-NAME] - This is a modularized info log","timestamp":"2023-02-22T16:44:53.711Z"}'
+  ]}
+/>
+
+## Logging Additional Data
+
+<Shell
+  code={[
+    'import { moduleLogger } from "@sliit-foss/module-logger";',
+    "",
+    'const logger = moduleLogger("MY-MODULE-NAME");',
+    "",
+    'logger.info("This is a modularized info log", {',
+    '  additional: "data",',
+    '  can: "be",',
+    '  passed: "here",',
+    "});"
+  ]}
+/>
