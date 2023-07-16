@@ -1,6 +1,6 @@
-const VSCode = ({ width = 24, height = 24, color = "white" }) => {
+const VSCode = ({ width = 24, height = 24, color = "white", ...props }) => {
   return (
-    <svg width={width} height={height} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width={width} height={height} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
       <g clipPath="url(#clip0_437_146)">
         <mask id="mask0_437_146" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
           <path d="M0 0H24V24H0V0Z" fill={color} />
