@@ -1,6 +1,7 @@
 import { FaGithub } from "react-icons/fa";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
 import { repositoryLink } from "@/constants";
 import { FossLogoDark, Timekeeper, Times } from "@/icons";
 import { Button } from "..";
@@ -20,16 +21,27 @@ const Header = ({ className }) => {
         <FossLogoDark />
       </div>
       <div className="grid place-content-end grid-flow-col items-center">
-        {!isDocs && (
-          <Button
-            to="/docs/getting-started"
-            className="hidden sm:flex bg-transparent hover:outline-transparent"
-            arrowClassName="text-primary-light"
-          >
-            See the docs
-          </Button>
-        )}
-        <Link href={repositoryLink} target="_blank" className="icon-hover">
+        <AnimatePresence>
+          {!isDocs && (
+            <div className="overflow-clip">
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+              >
+                <Button
+                  to="/docs/getting-started"
+                  className="hidden sm:flex bg-transparent hover:outline-transparent"
+                  arrowClassName="text-primary-light"
+                >
+                  See the docs
+                </Button>
+              </motion.div>
+            </div>
+          )}
+        </AnimatePresence>
+        <Link to={repositoryLink} target="_blank" className="icon-hover">
           <FaGithub size={36} />
         </Link>
       </div>

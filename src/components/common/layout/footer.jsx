@@ -14,7 +14,7 @@ import { FossLogoDark, Timekeeper } from "@/icons";
 
 const Footer = ({ className }) => {
   return (
-    <footer className={`mt-[40px] ${className}`}>
+    <footer className={`pt-[40px] ${className}`}>
       <div className="grid md:grid-cols-3 md:grid-rows-1 grid-cols-2 grid-rows-2">
         <div className="space-y-4 col-start-1">
           <FossLogoDark />
@@ -23,20 +23,20 @@ const Footer = ({ className }) => {
             Source Software (FOSS)
           </p>
           <div className="font-semibold text-[20px]">Connect with us</div>
-          <div className="flex space-x-2 flex-shrink-0">
-            <a href={facebook} className="icon-hover">
+          <div className="flex space-x-2 flex-shrink-0 -ml-0.5">
+            <a href={facebook} target="_blank" className="icon-hover" rel="noreferrer">
               <AiFillFacebook className="h-5 w-5" />
             </a>
-            <a href={instagram} className="icon-hover">
+            <a href={instagram} target="_blank" className="icon-hover" rel="noreferrer">
               <AiFillInstagram className="h-[1.285rem] w-[1.285rem]" />
             </a>
-            <a href={twitter} className="icon-hover">
+            <a href={twitter} target="_blank" className="icon-hover" rel="noreferrer">
               <AiOutlineTwitter className="h-[1.36rem] w-[1.36rem]" />
             </a>
-            <a href={linkedIn} className="icon-hover">
+            <a href={linkedIn} target="_blank" className="icon-hover" rel="noreferrer">
               <AiFillLinkedin className="h-5 w-5" />
             </a>
-            <a href={youTube} className="icon-hover">
+            <a href={youTube} target="_blank" className="icon-hover" rel="noreferrer">
               <AiFillYoutube className="h-[1.36rem] w-[1.36rem]" />
             </a>
           </div>

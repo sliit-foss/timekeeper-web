@@ -1,15 +1,17 @@
 import { useLocation } from "react-router-dom";
+import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { repositoryLink } from "@/constants";
 
 const Explorer = ({ className }) => {
   const pathname = useLocation().pathname;
-
   return (
-    <div
-      className={twMerge("hidden 2xl:flex flex-col w-full h-full py-6 transition-all duration-medium", className)}
-      data-aos="fade-left"
-      data-aos-duration="300"
+    <motion.div
+      className={twMerge("hidden 2xl:flex flex-col w-full h-full py-6", className)}
+      initial={{ opacity: 0, translateX: "100%" }}
+      animate={{ opacity: 1, translateX: 0 }}
+      exit={{ opacity: 0, translateX: "100%" }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
     >
       <div className="px-6">
         <div className="flex flex-col w-full gap-y-4 text-black">
@@ -31,7 +33,7 @@ const Explorer = ({ className }) => {
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
