@@ -9,7 +9,7 @@ import {
 import { FaChevronRight } from "react-icons/fa";
 import { twMerge } from "tailwind-merge";
 import { Button } from "@/components/common";
-import { repositoryLink, sliitFossMainWebsite } from "@/constants";
+import { repositoryLink, sliitFossMainWebsite, facebook, twitter, instagram, youTube, linkedIn } from "@/constants";
 import { FossLogoDark, Timekeeper } from "@/icons";
 
 const Footer = ({ className }) => {
@@ -24,19 +24,19 @@ const Footer = ({ className }) => {
           </p>
           <div className="font-semibold text-[20px]">Connect with us</div>
           <div className="flex space-x-2 flex-shrink-0">
-            <a href="#" className="icon-hover">
+            <a href={facebook} className="icon-hover">
               <AiFillFacebook className="h-5 w-5" />
             </a>
-            <a href="#" className="icon-hover">
+            <a href={instagram} className="icon-hover">
               <AiFillInstagram className="h-[1.285rem] w-[1.285rem]" />
             </a>
-            <a href="#" className="icon-hover">
+            <a href={twitter} className="icon-hover">
               <AiOutlineTwitter className="h-[1.36rem] w-[1.36rem]" />
             </a>
-            <a href="#" className="icon-hover">
+            <a href={linkedIn} className="icon-hover">
               <AiFillLinkedin className="h-5 w-5" />
             </a>
-            <a href="#" className="icon-hover">
+            <a href={youTube} className="icon-hover">
               <AiFillYoutube className="h-[1.36rem] w-[1.36rem]" />
             </a>
           </div>
