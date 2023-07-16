@@ -1,3 +1,4 @@
+import { useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { Explorer, Navigation } from "@/components/docs";
@@ -6,6 +7,7 @@ import Footer from "./footer";
 import Header from "./header";
 
 const Layout = ({ children }) => {
+  const { pathname } = useLocation();
   return (
     <div
       className={twMerge(
@@ -16,6 +18,7 @@ const Layout = ({ children }) => {
       <Header className="mx-[40px]" />
       <div className="border-floating border-t-2 z-50" />
       <motion.main
+        key={pathname}
         className="min-h-screen mx-auto bg-white"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
