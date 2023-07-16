@@ -9,7 +9,7 @@ const routes = Object.entries(pages).map(([path, page]) => {
     <Route
       key={path}
       path={path.replace("./", "").replace(".mdx", "")}
-      element={<div className="px-6 2xl:px-7 pb-7 markdown relative z-50">{page.default()}</div>}
+      element={<div className="px-[40px] pb-7 markdown relative z-50">{page.default()}</div>}
     />
   );
 });

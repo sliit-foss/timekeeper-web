@@ -9,12 +9,12 @@ import {
 import { FaChevronRight } from "react-icons/fa";
 import { twMerge } from "tailwind-merge";
 import { Button } from "@/components/common";
-import { repositoryLink, sliitFossMainWebsite } from "@/constants";
+import { facebook, instagram, linkedIn, repositoryLink, sliitFossMainWebsite, twitter, youTube } from "@/constants";
 import { FossLogoDark, Timekeeper } from "@/icons";
 
 const Footer = ({ className }) => {
   return (
-    <footer className={`mt-[40px] ${className}`}>
+    <footer className={`pt-[40px] ${className}`}>
       <div className="grid md:grid-cols-3 md:grid-rows-1 grid-cols-2 grid-rows-2">
         <div className="space-y-4 col-start-1">
           <FossLogoDark />
@@ -27,16 +27,16 @@ const Footer = ({ className }) => {
             <a href="#" className="icon-hover">
               <AiFillFacebook className="h-5 w-5" />
             </a>
-            <a href="#" className="icon-hover">
+            <a href={instagram} target="_blank" className="icon-hover" rel="noreferrer">
               <AiFillInstagram className="h-[1.285rem] w-[1.285rem]" />
             </a>
-            <a href="#" className="icon-hover">
+            <a href={twitter} target="_blank" className="icon-hover" rel="noreferrer">
               <AiOutlineTwitter className="h-[1.36rem] w-[1.36rem]" />
             </a>
-            <a href="#" className="icon-hover">
+            <a href={linkedIn} target="_blank" className="icon-hover" rel="noreferrer">
               <AiFillLinkedin className="h-5 w-5" />
             </a>
-            <a href="#" className="icon-hover">
+            <a href={youTube} target="_blank" className="icon-hover" rel="noreferrer">
               <AiFillYoutube className="h-[1.36rem] w-[1.36rem]" />
             </a>
           </div>
