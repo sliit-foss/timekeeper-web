@@ -56,8 +56,6 @@ const Navigation = ({ meta, className }) => {
         onSelect={onSelect}
         current={current}
         className={twMerge("hidden 2xl:block", className)}
-        data-aos="fade-right"
-        data-aos-duration="300"
       />
       <NavigationMobile
         meta={meta}

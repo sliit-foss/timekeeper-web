@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import { BreadCrumbs, Explorer, Navigation } from "@/components/docs";
-import meta from "./meta.json";
+import { BreadCrumbs } from "@/components/docs";
 
 const pages = import.meta.glob("./**/**.mdx", { eager: true });
 
@@ -17,11 +16,6 @@ const routes = Object.entries(pages).map(([path, page]) => {
 const Docs = () => {
   return (
     <>
-      <div className="2xl:absolute 2xl:w-full flex flex-col 2xl:flex-row justify-center left-0 overflow-x-hidden">
-        <Navigation meta={meta} />
-        <div className="2xl:min-w-[1160px]" />
-        <Explorer />
-      </div>
       <BreadCrumbs />
       <Routes>{routes}</Routes>
     </>
