@@ -57,15 +57,13 @@ const Navigation = ({ meta, className }) => {
         current={current}
         className={twMerge("hidden 2xl:block", className)}
       />
-      {location.pathname.includes("docs") && (
-        <NavigationMobile
-          meta={meta}
-          parentNodes={parentNodes}
-          onSelect={onSelect}
-          current={current}
-          className={twMerge("block 2xl:hidden", className)}
-        />
-      )}
+      <NavigationMobile
+        meta={meta}
+        parentNodes={parentNodes}
+        onSelect={onSelect}
+        current={current}
+        className={twMerge("block 2xl:hidden", className)}
+      />
     </>
   );
 };

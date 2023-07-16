@@ -25,9 +25,9 @@ const Header = ({ className }) => {
           {!isDocs && (
             <div className="overflow-clip">
               <motion.div
-                initial={{ opacity: 0, translateX: "100%" }}
-                animate={{ opacity: 1, translateX: 0 }}
-                exit={{ opacity: 0, translateX: "100%" }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }}
               >
                 <Button
