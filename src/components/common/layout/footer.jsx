@@ -9,9 +9,8 @@ import {
 import { FaChevronRight } from "react-icons/fa";
 import { twMerge } from "tailwind-merge";
 import { Button } from "@/components/common";
-import { repositoryLink, sliitFossMainWebsite } from "@/constants";
+import { repositoryLink, sliitFossMainWebsite, facebook, twitter, instagram, youTube, linkedIn } from "@/constants";
 import { FossLogoDark, Timekeeper } from "@/icons";
-import { facebook, twitter, instagram, youTube, linkedIn } from "@/constants/index";
 
 const Footer = ({ className }) => {
   return (
