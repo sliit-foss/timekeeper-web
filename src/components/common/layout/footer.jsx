@@ -9,7 +9,7 @@ import {
 } from "react-icons/ai";
 import { Button } from "@/components/common";
 import { FossLogoDark, Timekeeper } from "@/icons";
-import socials from "@/resource/links.js";
+import socials from "@/constants/index.js";
 
 const Footer = ({ className }) => {
   return (
