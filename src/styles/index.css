@@ -48,13 +48,14 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-thumb {
-  background-color: var(--charcoal);
+  background-color: var(--gray-light);
 }
 
 html::-webkit-scrollbar-thumb:hover {
-  background-color: #000000;
+  background-color: var(--gray-medium);
 }
 
-svg, svg *:focus {
+svg,
+svg *:focus {
   outline: none !important;
 }
