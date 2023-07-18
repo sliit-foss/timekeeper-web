@@ -26,7 +26,7 @@
       @apply content-[''] absolute inset-0 rounded-primary border-[1.5px] border-transparent filter contrast-[6] bg-current pointer-events-none transition-all duration-1000;
     }
     &:after {
-      background: linear-gradient(var(--angle), var(--tw-gradient-stops)) border-box;
+      background: linear-gradient(var(--angle, 0deg), var(--tw-gradient-stops)) border-box;
       @apply animate-[rotate_4s_linear_infinite] opacity-0 hover:opacity-100;
     }
   }
