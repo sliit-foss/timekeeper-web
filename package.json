@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "format": "prettier --write --cache \"**/*.{js,jsx,ts,tsx,md,mdx}\"",
-    "lint": "eslint src --ext js,jsx,mdx --ignore-path .gitignore --fix --report-unused-disable-directives",
+    "lint": "eslint src --ext js,jsx,mdx --ignore-path .gitignore --fix --cache --report-unused-disable-directives",
     "preview": "vite preview",
     "prepare": "husky install"
   },
