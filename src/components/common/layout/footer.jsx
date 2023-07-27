@@ -22,9 +22,9 @@ const Footer = ({ className }) => {
             Welcome to SLIIT FOSS community. We&apos;re a group of volunteers who believe in the usage of Free/Open
             Source Software (FOSS)
           </p>
-          <div className="font-semibold text-[20px]">Connect with us</div>
-          <div className="flex space-x-2 flex-shrink-0 -ml-0.5">
-            <a href={facebook} target="_blank" className="icon-hover" rel="noreferrer">
+          <div className="font-semibold md:text-[20px] text-[16px]">Connect with us</div>
+          <div className="flex space-x-2 flex-shrink-0">
+            <a href="#" className="icon-hover">
               <AiFillFacebook className="h-5 w-5" />
             </a>
             <a href={instagram} target="_blank" className="icon-hover" rel="noreferrer">
@@ -46,12 +46,12 @@ const Footer = ({ className }) => {
           <div className="flex justify-center items-start">
             <Timekeeper height={46} tilt />
           </div>
-          <span className="font-cabinet row-start-2 text-[20px] font-bold text-center">Timekeeper</span>
+          <span className="font-cabinet row-start-2 md:text-[20px] text-[16px] font-bold text-center">Timekeeper</span>
         </div>
 
         <div className="grid grid-rows-1 md:col-start-3 col-span-2 md:place-content-end min-h-0 min-w-0 md:mt-0 mt-10 ">
           <div className="flex flex-col gap-y-4 md:gap-y-3 -translate-y-0.5">
-            <div className="font-semibold text-[20px]">Visit us on</div>
+            <div className="font-semibold md:text-[20px] text-[16px]">Visit us on</div>
             <Button to={sliitFossMainWebsite} target="_blank" className="md:w-11/12 h-8 bg-white border gap-x-1.5">
               <span className="gradient-text text-[1rem]">sliitfoss.org</span>
               <div className="-rotate-45 mb-0.5 md:mb-1">
@@ -65,7 +65,7 @@ const Footer = ({ className }) => {
                 </div>
               </div>
             </Button>
-            <div className="font-semibold text-[20px] mt-0.5">Open with source</div>
+            <div className="font-semibold md:text-[20px] text-[16px] mt-0.5">Open with source</div>
             <Button to={repositoryLink} target="_blank" className="md:w-9/12 h-8 bg-transparent border gap-x-2">
               <span className="gradient-text text-[1rem]">Visit at</span>
               <AiFillGithub className="text-black" />

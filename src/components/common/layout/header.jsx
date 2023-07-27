@@ -13,12 +13,12 @@ const Header = ({ className }) => {
 
   return (
     <header className={`items-center grid grid-flow-col py-[30px] ${className}`}>
-      <div className="grid place-content-start grid-flow-col items-center space-x-[30px]">
+      <div className="grid place-content-start grid-flow-col items-center md:space-x-[30px] space-x-3">
         <Link to="/">
-          <Timekeeper height="46px" width="52px" tilt />
+          <Timekeeper className="h-[46px] w-[52px]" />
         </Link>
-        <Times height="15px" width="15px" className="opacity-20" />
-        <FossLogoDark />
+        <Times className="h-[15px] opacity-20" />
+        <FossLogoDark className="h-[42px] w-[74px]"/>
       </div>
       <div className="grid place-content-end grid-flow-col items-center">
         <AnimatePresence>
@@ -42,7 +42,7 @@ const Header = ({ className }) => {
           )}
         </AnimatePresence>
         <Link to={repositoryLink} target="_blank" className="icon-hover">
-          <FaGithub size={36} />
+          <FaGithub className="text-[35px]" />
         </Link>
       </div>
     </header>

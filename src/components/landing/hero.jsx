@@ -24,7 +24,7 @@ const Hero = ({ className }) => {
               </div>
             </Button>
           </div>
-          <h1 className="font-bold tracking-[-4.8px] font-cabinet text-[65px] md:text-[80px] lg:text-[121px]">
+          <h1 className="font-bold tracking-[-4.8px] font-cabinet text-left text-[60px] md:text-[80px] lg:text-[121px]">
             Timekeeper
           </h1>
           <div className="flex gap-5">
@@ -34,7 +34,7 @@ const Hero = ({ className }) => {
                 tedious debugging sessions. With Timekeeper, you&apos;ll effortlessly inject logs into your application
                 source code, thanks to our ingenious series of transformations.
               </SubHeading>
-              <div className="flex flex-wrap gap-x-2 gap-y-5 mt-[40px] ">
+              <div className="flex flex-wrap md:justify-start justify-center gap-x-2 gap-y-5 mt-[40px] ">
                 <Button to="/docs/getting-started" className="w-auto" arrowClassName="md:mt-[0.08rem]">
                   Get started
                 </Button>
@@ -47,7 +47,7 @@ const Hero = ({ className }) => {
                 </Button>
               </div>
             </div>
-            <div className="md:flex hidden justify-center grow flex-shrink-0 basis-1/2 -translate-y-16 ml-6">
+            <div className="md:flex hidden justify-center items-center grow flex-shrink-0 basis-1/2 -translate-y-16 ml-6">
               <Timekeeper size={310} className="animate-[spin_10s_linear_infinite]" />
             </div>
           </div>
