@@ -6,7 +6,7 @@ import { Timekeeper } from "@/icons";
 const Hero = ({ className }) => {
   return (
     <>
-      <div className="relative">
+      <div className="relative overflow-hidden">
         <div className="border-floating border-r-2 md:w-1/2 min-h-full inline-block md:ml-[2px]" />
         <div className={`py-[60px] ${className} relative`}>
           <div className="bg-white flex justify-center items-center">
