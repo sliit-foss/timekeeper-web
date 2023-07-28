@@ -6,7 +6,7 @@ const Terminal = ({ code = [""], styles = { root: "", header: "", body: "" } }) 
       <div className={twMerge("bg-gray-ultra-light h-[36px] rounded-t-primary", styles.header)} />
       <pre
         className={twMerge(
-          "font-sf md:text-[22px] text-[16px] bg-white md:px-[24px] md:pt-[18px] md:pb-[38px] md:rounded-b-primary md:m-0 m-[16px] md:leading-5",
+          "font-sf text-[22px] bg-white md:px-[24px] md:pt-[18px] md:pb-[38px] md:rounded-b-primary md:m-0 m-[16px] md:leading-5",
           styles.body
         )}
       >

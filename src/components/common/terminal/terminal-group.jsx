@@ -8,7 +8,8 @@ const TerminalGroup = ({ primary = [""], secondary = [""], className = "" }) => 
       <Terminal 
         code={primary} 
         styles={{
-          body: "text-[16px] leading-[16px]"
+          root: "",
+          body: "md:text-[22px] text-[16px] leading-[16px] md:leading-[22px]"
         }}
       />
       <div className="md:hidden grid h-[30px] border-r-2 border-dashed w-1/2"></div>
