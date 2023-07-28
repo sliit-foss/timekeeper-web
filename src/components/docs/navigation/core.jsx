@@ -1,10 +1,19 @@
+import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/common";
 import { constructDocRoute } from "@/utils";
 
 const NavigationCore = ({ className, meta, parentNodes, onSelect, current, ...props }) => {
   return (
-    <nav className={twMerge("w-full h-full py-3", className)} {...props}>
+    <motion.nav
+      key={"navigation-core"}
+      initial={{ opacity: 0, translateX: "-100%" }}
+      animate={{ opacity: 1, translateX: 0 }}
+      exit={{ opacity: 0, translateX: "-100%" }}
+      transition={{ duration: 0.3, ease: "easeOut" }}
+      className={twMerge("w-full h-full py-3", className)}
+      {...props}
+    >
       <Accordion type="multiple" collapsible="true" className="w-full px-3.5" defaultValue={parentNodes}>
         {meta.map((l1) => {
           const l1Value = constructDocRoute(l1);
@@ -49,7 +58,7 @@ const NavigationCore = ({ className, meta, parentNodes, onSelect, current, ...pr
           );
         })}
       </Accordion>
-    </nav>
+    </motion.nav>
   );
 };
 

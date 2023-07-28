@@ -16,7 +16,7 @@ const OurVision = () => {
       <div className="pb-[200px] pt-[40px]">
         <div className="absolute w-[2px] left-[calc(50%+1px)] bg-gradient-to-b from-black/10 via-black/10 to-transparent min-h-full" />
         <div className="absolute left-[calc(50%+1px)] min-h-full border-2 border-white border-dashed" />
-        <div className="text-center pt-[30px] z-10 relative ml-1">
+        <div className="text-center overflow-x-hidden pt-[30px] z-10 relative ml-1">
           <Timeline />
           <div className="bg-white flex justify-center items-center mb-[80px]" data-aos="fade">
             <Button className="bg-white border-2 mx-auto">Continuing to grow</Button>

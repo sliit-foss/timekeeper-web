@@ -1,9 +1,7 @@
-import { GiPlanetCore } from "react-icons/gi";
-import { SiWindowsterminal } from "react-icons/si";
+import { VscExtensions, VscGlobe, VscTerminalBash, VscTools } from "react-icons/vsc";
 import { Link } from "react-router-dom";
 import { StatusCard } from "@/components/docs";
 import { repositoryLink } from "@/constants";
-import { Babel, VSCode } from "@/icons";
 
 ## What is Timekeeper ?
 
@@ -27,17 +25,17 @@ The entirety of this means that you can **get a detailed view of your code execu
 ## Components
 
 <div className="w-full grid grid-cols-2 lg:grid-cols-4 gap-6 my-8 text-center">
-  <StatusCard className="col-span-1" icon={GiPlanetCore} title="Function Core" subtitle="Stable" />
-  <StatusCard className="col-span-1" icon={Babel} title="Babel Plugin" subtitle="(Prelease)" />
+  <StatusCard className="col-span-1" icon={VscGlobe} title="Function Core" subtitle="Stable" />
+  <StatusCard className="col-span-1" icon={VscTools} title="Babel Plugin" subtitle="(Prelease)" />
   <StatusCard
     className="col-span-1 from-black/70 via-gray-light via-[70%] to-gray-light"
-    icon={SiWindowsterminal}
+    icon={VscTerminalBash}
     title="CLI"
     subtitle="(Coming Soon)"
   />
   <StatusCard
     className="col-span-1 from-black/70 via-gray-light via-[70%] to-gray-light"
-    icon={VSCode}
+    icon={VscExtensions}
     title="Extension"
     subtitle="(Coming Soon)"
   />
