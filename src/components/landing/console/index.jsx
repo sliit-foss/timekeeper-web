@@ -10,7 +10,7 @@ const Console = ({ className }) => {
         with ease
       </SubHeading>
       <TerminalGroup className="md:w-[calc(85%+80px)] md:mx-auto mx-[26px] justify-center mt-[20px]" primary={code} secondary={output} />
-      <Button to="/docs/installation" className="mx-auto mt-[60px]" arrow>
+      <Button to="/docs/installation" className="mx-auto mt-[20px]" arrow>
         Try it out
       </Button>
     </div>

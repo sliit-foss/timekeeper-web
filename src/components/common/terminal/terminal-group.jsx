@@ -8,8 +8,8 @@ const TerminalGroup = ({ primary = [""], secondary = [""], className = "" }) => 
       <Terminal 
         code={primary} 
         styles={{
-          root: "",
-          body: "md:text-[22px] text-[16px] leading-[16px] md:leading-[22px]"
+          root: "md:mb-[40px] mb-0",
+          body: "md:text-[22px] md:pb-[38px] text-[16px] leading-[16px] md:leading-[20px]"
         }}
       />
       <div className="md:hidden grid h-[30px] border-r-2 border-dashed w-1/2"></div>
@@ -18,7 +18,7 @@ const TerminalGroup = ({ primary = [""], secondary = [""], className = "" }) => 
         code={secondary}
         styles={{
           root: "md:col-span-3 mx-auto lg:w-[865px] md:w-[calc(100%-40px)]",
-          body: "md:text-[20px] text-[16px] md:h-auto h-[265px] overflow-y-scroll no-scrollbar whitespace-pre-wrap leading-[22px]"
+          body: "md:text-[20px] text-[16px] md:pb-[38px] md:h-auto h-[265px] overflow-y-scroll no-scrollbar whitespace-pre-wrap md:leading-[26px] leading-[22px]"
         }}
       />
     </div>
