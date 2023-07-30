@@ -7,7 +7,7 @@ on:
 
 jobs:
   send-pr-number-to-clean:
-    name: Record PR number to clean 📤
+    name: Record PR number to clean
     runs-on: ubuntu-latest
     steps:
       - name: Upload PR number 📤

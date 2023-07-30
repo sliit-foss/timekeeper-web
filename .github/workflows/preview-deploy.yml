@@ -9,7 +9,7 @@ on:
 
 jobs:
   deploy-preview:
-    name: Deploy preview 🚀
+    name: Deploy preview
     runs-on: ubuntu-latest
     environment: Production
     if: >

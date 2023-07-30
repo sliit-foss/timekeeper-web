@@ -8,7 +8,7 @@ on:
 
 jobs:
   close-preview:
-    name: Close PR preview 🧹
+    name: Close PR preview
     runs-on: ubuntu-latest
     if: >
       github.event.workflow_run.event == 'pull_request' &&
