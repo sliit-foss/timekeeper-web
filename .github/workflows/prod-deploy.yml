@@ -8,7 +8,6 @@ jobs:
   deploy-production:
     name: Deploy to production 🚀
     runs-on: ubuntu-latest
-    environment: Production
     steps:
       - name: Checkout repository 🛎️
         uses: actions/checkout@v3
