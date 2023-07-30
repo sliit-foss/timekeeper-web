@@ -15,7 +15,7 @@ runs:
         cache: 'pnpm'
 
     - name: Install dependencies
-      run: pnpm install --ignore-scripts
+      run: pnpm install --ignore-scripts --fix-lockfile
       shell: bash
 
     - name: Build changes
