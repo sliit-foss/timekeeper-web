@@ -9,69 +9,17 @@ on:
 
 jobs:
   deploy-preview:
+    name: Deploy preview 🚀
     runs-on: ubuntu-latest
+    environment: Production
     if: >
       github.event.workflow_run.event == 'pull_request' &&
       github.event.workflow_run.conclusion == 'success'
     steps:
-      - name: Checkout
+      - name: Checkout repository 🛎️
         uses: actions/checkout@v3
 
-      - uses: actions/setup-python@v2
+      - name: Deploy preview 🚀
+        uses: sliit-foss/actions/preview-deployments/deploy@main
         with:
-          python-version: 3.x
-
-      - name: "Download PR number"
-        uses: actions/github-script@v3.1.0
-        with:
-          script: |
-            var artifacts = await github.actions.listWorkflowRunArtifacts({
-               owner: context.repo.owner,
-               repo: context.repo.repo,
-               run_id: ${{github.event.workflow_run.id }},
-            });
-            var matchArtifact = artifacts.data.artifacts.filter((artifact) => {
-              return artifact.name == "pr"
-            })[0];
-            var download = await github.actions.downloadArtifact({
-               owner: context.repo.owner,
-               repo: context.repo.repo,
-               artifact_id: matchArtifact.id,
-               archive_format: 'zip',
-            });
-            var fs = require('fs');
-            fs.writeFileSync('${{github.workspace}}/pr.zip', Buffer.from(download.data));
-      - run: |
-          unzip pr.zip
-          echo "pr-number=$(cat NB)" >> "$GITHUB_ENV"
-        shell: bash
-
-      - name: "Download built site"
-        uses: actions/github-script@v3.1.0
-        with:
-          script: |
-            var artifacts = await github.actions.listWorkflowRunArtifacts({
-               owner: context.repo.owner,
-               repo: context.repo.repo,
-               run_id: ${{github.event.workflow_run.id }},
-            });
-            var matchArtifact = artifacts.data.artifacts.filter((artifact) => {
-              return artifact.name == "pr_site"
-            })[0];
-            var download = await github.actions.downloadArtifact({
-               owner: context.repo.owner,
-               repo: context.repo.repo,
-               artifact_id: matchArtifact.id,
-               archive_format: 'zip',
-            });
-            var fs = require('fs');
-            fs.writeFileSync('${{github.workspace}}/pr_site.zip', Buffer.from(download.data));
-      - run: unzip pr_site.zip
-      - name: Deploy preview
-        uses: akalanka47000/pr-preview-action@main
-        with:
-          source-dir: dist
-          action: deploy
-          pr-number: ${{ env.pr-number }}
-          umbrella-dir: preview
-          custom-url: timekeeper.sliitfoss.org
+          site_domain: timekeeper.sliitfoss.org

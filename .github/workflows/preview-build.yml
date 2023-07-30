@@ -13,37 +13,17 @@ concurrency:
 
 jobs:
   build-preview:
+    name: Build preview 🏗️
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8
+      - name: Checkout repository 🛎️
+        uses: actions/checkout@v3
 
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16.x
-          cache: "pnpm"
+      - name: Build 🏗️
+        uses: ./.github/actions/build
+        env:
+          TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+          TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
 
-      - name: Install and Build
-        run: |
-          pnpm install --ignore-scripts --fix-lockfile
-          pnpm run build
-
-      - name: Save PR number
-        run: |
-          mkdir -p ./pr
-          echo ${{ github.event.number }} > ./pr/NB
-      - uses: actions/upload-artifact@v2
-        with:
-          name: pr
-          path: pr/
-
-      - name: Save build directory
-        run: |
-          mkdir -p ./pr_site
-          mv dist ./pr_site/.
-      - uses: actions/upload-artifact@v2
-        with:
-          name: pr_site
-          path: pr_site/
+      - name: Upload build files 📤
+        uses: sliit-foss/actions/preview-deployments/postbuild@main

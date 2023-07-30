@@ -5,8 +5,8 @@ const TerminalGroup = ({ primary = [""], secondary = [""], className = "" }) => 
   return (
     <div className={twMerge("grid", className)}>
       <div className="md:grid hidden col-start-1 ml-[50%] md:mt-[calc(50%+40px)] mt-[500%] border-t-2 border-l-2 border-custom rounded-tl-[40px] place-items-end"></div>
-      <Terminal 
-        code={primary} 
+      <Terminal
+        code={primary}
         styles={{
           root: "md:mb-[40px] mb-0",
           body: "md:text-[22px] md:pb-[38px] text-[16px] leading-[16px] md:leading-[20px]"

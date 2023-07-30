@@ -6,46 +6,24 @@ on:
       - main
 jobs:
   deploy-production:
+    name: Deploy to production 🚀
     runs-on: ubuntu-latest
+    environment: Production
     steps:
-      - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8
+      - name: Checkout repository 🛎️
+        uses: actions/checkout@v3
 
-      - uses: actions/setup-node@v3
-        with:
-          node-version: 16.x
-          cache: "pnpm"
+      - name: Fix 404 on page reload 🚧
+        uses: sliit-foss/actions/preview-deployments/404@main
 
-      - name: Install and Build
-        run: |
-          pnpm install --ignore-scripts --fix-lockfile
-          pnpm run build
+      - name: Build 🏗️
+        uses: ./.github/actions/build
+        env:
+          TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+          TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
 
-      - name: Fix 404 on GitHub Pages
-        run: |
-          sed -i "s/.\/assets/\/assets/" dist/index.html
-          cp dist/index.html dist/404.html
-
-          cat <<EOF > script.js
-              <script type="text/javascript">
-                  (function(l) {
-                      const matchPreviewDeployment = l.pathname.match(/preview\/pr-\d+/);
-                      if (matchPreviewDeployment) l.replace(l.origin + "/" +matchPreviewDeployment[0]);
-                  }(window.location))
-              </script>
-            </head>
-          EOF
-          
-          sed -i '/<\/head>/ {
-              r script.js
-              d
-          }' dist/404.html
-          
-          rm script.js
-
-      - uses: JamesIves/github-pages-deploy-action@v4
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: ./dist/
           branch: gh-pages

@@ -6,14 +6,9 @@ on:
       - closed
 
 jobs:
-  send-number:
+  send-pr-number-to-clean:
+    name: Record PR number to clean 📤
     runs-on: ubuntu-latest
     steps:
-      - name: Save PR number
-        run: |
-          mkdir -p ./prnumber
-          echo ${{ github.event.number }} > ./prnumber/prnumber.txt
-      - uses: actions/upload-artifact@v2
-        with:
-          name: prnumber
-          path: prnumber/
+      - name: Upload PR number 📤
+        uses: sliit-foss/actions/preview-deployments/upload-pr-number@main

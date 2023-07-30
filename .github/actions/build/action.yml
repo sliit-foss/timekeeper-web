@@ -1,0 +1,23 @@
+name: build
+description: Base build action for the project
+runs:
+  using: composite
+  steps:
+    - name: Install pnpm
+      uses: pnpm/action-setup@v2
+      with:
+        version: 8.0.0
+
+    - name: Install Node.js 18 and setup dependency caching
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18.x
+        cache: 'pnpm'
+
+    - name: Install dependencies
+      run: pnpm install --ignore-scripts
+      shell: bash
+
+    - name: Build changes
+      run: pnpm build
+      shell: bash
