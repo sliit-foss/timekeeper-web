@@ -13,6 +13,7 @@ const Console = ({ className }) => {
         className="md:w-[calc(85%+80px)] md:mx-auto mx-[26px] justify-center mt-[20px]"
         primary={code}
         secondary={output}
+        animate
       />
       <Button to="/docs/installation" className="mx-auto mt-[20px]" arrow>
         Try it out

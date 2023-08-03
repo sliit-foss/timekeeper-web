@@ -1,9 +1,12 @@
 export const code = [
   "const hello = require(“@utils”);",
+  " ",
   "const sum = (a, b) => {",
   "		return a + b;",
   "};",
+  " ",
   "hello();",
+  " ",
   "console.log(sum(4, 5));"
 ];
 
