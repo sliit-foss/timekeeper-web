@@ -19,7 +19,7 @@ const TerminalGroup = ({ primary = [""], secondary = [""], className = "", anima
         code={secondary}
         styles={{
           root: "md:col-span-3 mx-auto lg:w-[865px] w-[85vw] md:w-[calc(100%-40px)] md:min-w-[700px] min-h-[250px]",
-          body: "md:text-[20px] text-[16px] md:pb-0 overflow-y-scroll no-scrollbar whitespace-pre-wrap md:leading-[26px] leading-[22px]"
+          body: "md:text-[20px] text-[16px] md:pb-0 md:h-auto h-[265px] overflow-y-scroll no-scrollbar whitespace-pre-wrap md:leading-[26px] leading-[22px]"
         }}
         animate={animate}
         animateDelay={0}
