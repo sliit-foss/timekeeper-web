@@ -24,19 +24,19 @@ const Footer = ({ className }) => {
           </p>
           <div className="font-semibold text-[20px]">Connect with us</div>
           <div className="flex space-x-2 flex-shrink-0 -ml-0.5">
-            <a href={facebook} target="_blank" className="icon-hover" rel="noreferrer">
+            <a href={facebook} target="_blank" className="icon-hover" rel="noreferrer" aria-label="Facebook">
               <AiFillFacebook className="h-5 w-5" />
             </a>
-            <a href={instagram} target="_blank" className="icon-hover" rel="noreferrer">
+            <a href={instagram} target="_blank" className="icon-hover" rel="noreferrer" aria-label="Instagram">
               <AiFillInstagram className="h-[1.285rem] w-[1.285rem]" />
             </a>
-            <a href={twitter} target="_blank" className="icon-hover" rel="noreferrer">
+            <a href={twitter} target="_blank" className="icon-hover" rel="noreferrer" aria-label="Twitter">
               <AiOutlineTwitter className="h-[1.36rem] w-[1.36rem]" />
             </a>
-            <a href={linkedIn} target="_blank" className="icon-hover" rel="noreferrer">
+            <a href={linkedIn} target="_blank" className="icon-hover" rel="noreferrer" aria-label="LinkedIn">
               <AiFillLinkedin className="h-5 w-5" />
             </a>
-            <a href={youTube} target="_blank" className="icon-hover" rel="noreferrer">
+            <a href={youTube} target="_blank" className="icon-hover" rel="noreferrer" aria-label="YouTube">
               <AiFillYoutube className="h-[1.36rem] w-[1.36rem]" />
             </a>
           </div>
