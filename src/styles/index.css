@@ -18,6 +18,7 @@
   @font-face {
     font-family: "Cabinet Grotesk Variable";
     src: url("../../public/assets/fonts/cabinet-grotesk-variable.ttf");
+    font-display: swap;
   }
   html {
     scroll-behavior: smooth;
