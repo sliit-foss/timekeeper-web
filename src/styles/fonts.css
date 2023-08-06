@@ -1,0 +1,28 @@
+@layer base {
+  @font-face {
+    font-family: "Cabinet Grotesk Variable";
+    src: url("../../public/assets/fonts/cabinet-grotesk-variable.ttf");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: sf pro display;
+    font-style: normal;
+    font-weight: 400;
+    src: local("SF Pro Display"), url(https://fonts.cdnfonts.com/s/59278/SFPRODISPLAYREGULAR.woff) format("woff");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: sf pro display;
+    font-style: normal;
+    font-weight: 500;
+    src: local("SF Pro Display"), url(https://fonts.cdnfonts.com/s/59278/SFPRODISPLAYMEDIUM.woff) format("woff");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: sf pro display;
+    font-style: normal;
+    font-weight: 700;
+    src: local("SF Pro Display"), url(https://fonts.cdnfonts.com/s/59278/SFPRODISPLAYBOLD.woff) format("woff");
+    font-display: swap;
+  }
+}
