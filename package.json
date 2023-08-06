@@ -44,5 +44,10 @@
     "tailwindcss": "3.3.2",
     "tailwindcss-animate": "1.0.6",
     "vite": "4.3.9"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "typewriter-effect@2.20.1": "patches/typewriter-effect@2.20.1.patch"
+    }
   }
 }

@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  typewriter-effect@2.20.1:
+    hash: afk4wdwhno2cmvaympfxqsxrde
+    path: patches/typewriter-effect@2.20.1.patch
+
 dependencies:
   '@radix-ui/react-accordion':
     specifier: 1.1.2
@@ -37,7 +42,7 @@ dependencies:
     version: 1.13.2
   typewriter-effect:
     specifier: 2.20.1
-    version: 2.20.1(react-dom@18.2.0)(react@18.2.0)
+    version: 2.20.1(patch_hash=afk4wdwhno2cmvaympfxqsxrde)(react-dom@18.2.0)(react@18.2.0)
 
 devDependencies:
   '@commitlint/cli':
@@ -5098,7 +5103,7 @@ packages:
     hasBin: true
     dev: true
 
-  /typewriter-effect@2.20.1(react-dom@18.2.0)(react@18.2.0):
+  /typewriter-effect@2.20.1(patch_hash=afk4wdwhno2cmvaympfxqsxrde)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-3yQW4fUzCuIEgGHA5k+2Y2RzdsHUC9pPJpRahDREfloDpoPiMLj4GjMcuobdKD4CQ0pRBW4DD3pdNz7ZhfR96g==}
     peerDependencies:
       react: ^17.x || ^18.x
@@ -5109,6 +5114,7 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: false
+    patched: true
 
   /unbox-primitive@1.0.2:
     resolution: {integrity: sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw==}

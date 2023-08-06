@@ -1,7 +1,7 @@
-import { Fragment, memo, useRef } from "react";
+import { Fragment, memo, useMemo, useRef } from "react";
 import { compact, isEqual } from "lodash";
 import { twMerge } from "tailwind-merge";
-import { useBreakpoint } from "@/hooks";
+import { useBreakpoint, useResize } from "@/hooks";
 import { default as Typewriter } from "typewriter-effect";
 
 const Terminal = ({
@@ -13,8 +13,20 @@ const Terminal = ({
   animateDelay = 20
 }) => {
   const containerRef = useRef(null);
+  const promptRef = useRef(null);
 
   const { md } = useBreakpoint();
+
+  const terminalId = useMemo(() => Math.random().toString(36).substr(2, 9), []);
+
+  useResize(() => {
+    if (promptRef.current) {
+      const clone = promptRef.current.cloneNode(true);
+      promptRef.current.remove();
+      clone.classList.add("top-0", "left-0");
+      document.getElementById(terminalId)?.appendChild(clone);
+    }
+  }, [promptRef.current]);
 
   return (
     <div className={twMerge("mb-[40px] rounded-primary border", styles.root)}>
@@ -45,8 +57,14 @@ const Terminal = ({
             ))
           ) : (
             <>
-              {showPrompt && <span className="absolute">{prompt}</span>}
+              {showPrompt && (
+                <span ref={promptRef} className="absolute">
+                  {prompt}
+                </span>
+              )}
               <Typewriter
+                id={terminalId}
+                className="relative"
                 options={{
                   autoStart: true,
                   strings: compact(code).join("<br />"),
