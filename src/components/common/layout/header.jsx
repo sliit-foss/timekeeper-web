@@ -14,7 +14,7 @@ const Header = ({ className }) => {
   return (
     <header className={`items-center grid grid-flow-col py-[30px] ${className}`}>
       <div className="grid place-content-start grid-flow-col items-center space-x-[30px]">
-        <Link to="/">
+        <Link to="/" aria-label="Home">
           <Timekeeper height="46px" width="52px" tilt />
         </Link>
         <Times height="15px" width="15px" className="opacity-20" />
@@ -41,7 +41,7 @@ const Header = ({ className }) => {
             </div>
           )}
         </AnimatePresence>
-        <Link to={repositoryLink} target="_blank" className="icon-hover">
+        <Link to={repositoryLink} target="_blank" className="icon-hover" aria-label="GitHub repository">
           <FaGithub size={36} />
         </Link>
       </div>
