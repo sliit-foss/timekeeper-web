@@ -6,10 +6,7 @@ const Console = ({ className }) => {
   const [secondary, setSecondary] = useState([]);
   useLayoutEffect(() => {
     setTimeout(() => {
-      setSecondary([
-        "<span class='opacity-0'>user@machine demo ~ %</span> &nbsp;<span class='text-primary-dark'>npm</span> run dev",
-        ...output
-      ]);
+      setSecondary(["<span class='opacity-0'>user@machine demo ~ %</span> &nbsp;npm run dev", ...output]);
     }, 3500);
   }, []);
   return (
