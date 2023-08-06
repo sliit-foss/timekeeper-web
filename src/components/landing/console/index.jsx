@@ -1,7 +1,17 @@
+import { useLayoutEffect, useState } from "react";
 import { Button, Heading, SubHeading, TerminalGroup } from "@/components/common";
 import { code, output } from "./data";
 
 const Console = ({ className }) => {
+  const [secondary, setSecondary] = useState([]);
+  useLayoutEffect(() => {
+    setTimeout(() => {
+      setSecondary([
+        "<span class='opacity-0'>user@machine demo ~ %</span> &nbsp;<span class='text-primary-dark'>npm</span> run dev",
+        ...output
+      ]);
+    }, 3500);
+  }, []);
   return (
     <div className={`py-[60px] w-full ${className}`}>
       <Heading className="px-5 mb-6">See the time in real-time</Heading>
@@ -12,7 +22,7 @@ const Console = ({ className }) => {
       <TerminalGroup
         className="md:w-[calc(85%+80px)] md:mx-auto mx-[26px] justify-center mt-[20px]"
         primary={code}
-        secondary={output}
+        secondary={secondary}
         animate
       />
       <Button to="/docs/installation" className="mx-auto mt-[20px]" arrow>

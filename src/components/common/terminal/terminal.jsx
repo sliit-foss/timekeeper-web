@@ -1,17 +1,33 @@
-import { Fragment, useRef } from "react";
-import { compact } from "lodash";
+import { Fragment, memo, useRef } from "react";
+import { compact, isEqual } from "lodash";
 import { twMerge } from "tailwind-merge";
 import { useBreakpoint } from "@/hooks";
 import { default as Typewriter } from "typewriter-effect";
 
-const Terminal = ({ code = [""], styles = { root: "", header: "", body: "" }, animate = false, animateDelay = 60 }) => {
+const Terminal = ({
+  code = [""],
+  prompt = "user@machine ~ demo %",
+  showPrompt = false,
+  styles = { root: "", header: "", body: "" },
+  animate = false,
+  animateDelay = 20
+}) => {
   const containerRef = useRef(null);
 
   const { md } = useBreakpoint();
 
   return (
     <div className={twMerge("mb-[40px] rounded-primary border", styles.root)}>
-      <div className={twMerge("bg-gray-ultra-light h-[36px] rounded-t-primary", styles.header)} />
+      <div
+        className={twMerge(
+          "bg-gray-ultra-light h-[50px] rounded-t-primary flex items-center px-[1.5rem] gap-x-3",
+          styles.header
+        )}
+      >
+        <div className="w-3.5 h-3.5 rounded-full bg-[#fc605c]" />
+        <div className="w-3.5 h-3.5 rounded-full bg-[#ffbe2f]" />
+        <div className="w-3.5 h-3.5 rounded-full bg-[#34c749]" />
+      </div>
       <div className="transition-all duration-300 ease-in-out">
         <div
           ref={containerRef}
@@ -29,6 +45,7 @@ const Terminal = ({ code = [""], styles = { root: "", header: "", body: "" }, an
             ))
           ) : (
             <>
+              {showPrompt && <span className="absolute">{prompt}</span>}
               <Typewriter
                 options={{
                   autoStart: true,
@@ -55,4 +72,4 @@ const Terminal = ({ code = [""], styles = { root: "", header: "", body: "" }, an
   );
 };
 
-export default Terminal;
+export default memo(Terminal, (prevProps, currentProps) => isEqual(prevProps, currentProps));
