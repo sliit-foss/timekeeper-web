@@ -1,8 +1,8 @@
 export const code = [
-  "const hello = require(“@utils”);",
+  "const hello = require(“./utils”);",
   " ",
   "const sum = (a, b) => {",
-  "		return a + b;",
+  "&nbsp;&nbsp;&nbsp;&nbsp;return a + b;",
   "};",
   " ",
   "hello();",
