@@ -21,9 +21,6 @@ jobs:
 
       - name: Build 🏗️
         uses: ./.github/actions/build
-        env:
-          TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-          TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
 
       - name: Upload build files 📤
         uses: sliit-foss/actions/preview-deployments/postbuild@main

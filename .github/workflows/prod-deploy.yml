@@ -14,9 +14,6 @@ jobs:
 
       - name: Build 🏗️
         uses: ./.github/actions/build
-        env:
-          TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-          TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
 
       - name: Fix 404 on page reload 🚧
         uses: sliit-foss/actions/preview-deployments/404@main
