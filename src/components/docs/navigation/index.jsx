@@ -55,14 +55,14 @@ const Navigation = ({ meta, className }) => {
         parentNodes={parentNodes}
         onSelect={onSelect}
         current={current}
-        className={twMerge("hidden 2xl:block px-2", className)}
+        className={twMerge("hidden xxl-mid:block", className)}
       />
       <NavigationMobile
         meta={meta}
         parentNodes={parentNodes}
         onSelect={onSelect}
         current={current}
-        className={twMerge("block 2xl:hidden", className)}
+        className={twMerge("block xxl-mid:hidden", className)}
       />
     </>
   );

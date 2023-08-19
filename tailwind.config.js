@@ -35,8 +35,9 @@ export default {
         sf: ["SF Pro Display", "sans"]
       },
       screens: {
-        xs: "360px",
-        xxxl: "1700px"
+        "xs": "360px",
+        "xxl-mid": "1620px",
+        "xxxl": "1700px"
       },
       transitionDuration: {
         medium: "300ms",

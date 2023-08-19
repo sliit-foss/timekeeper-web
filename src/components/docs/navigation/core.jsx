@@ -6,7 +6,7 @@ import { constructDocRoute } from "@/utils";
 
 const NavigationCore = ({ className, meta, parentNodes, onSelect, current, ...props }) => {
   const breakpoints = useBreakpoint();
-  const animationProps = breakpoints["2xl"]
+  const animationProps = breakpoints["xxl-mid"]
     ? {
         initial: { opacity: 0, translateX: "-100%" },
         animate: { opacity: 1, translateX: 0 },
@@ -20,7 +20,7 @@ const NavigationCore = ({ className, meta, parentNodes, onSelect, current, ...pr
   return (
     <motion.nav
       key={"navigation-core"}
-      className={twMerge("w-full h-full py-3", className)}
+      className={twMerge("w-full h-full py-3 xxl-mid:px-1 xxxl:px-3", className)}
       transition={{ duration: 0.3, ease: "easeOut" }}
       {...animationProps}
       {...props}

@@ -16,12 +16,14 @@ const App = () => {
     window.addEventListener("load", Aos.refresh);
   }, []);
 
+  const maxWidth = "max-w-[1200px]";
+
   const navigationStyles = useMemo(() => {
     return twMerge(
-      "border-gray-extra-light max-w-[1160px] mx-auto px-[40px] border-x transition-all duration-[600ms]",
+      `border-gray-extra-light ${maxWidth} mx-auto px-[40px] md:px-[55px] border-x transition-all duration-500`,
       location.pathname.includes("docs")
-        ? "2xl:w-full 2xl:border-transparent 2xl:max-w-none px-[35px]"
-        : "2xl:w-[1160px] 2xl:max-w-none"
+        ? "xxl-mid:w-full xxl-mid:border-transparent xxl-mid:max-w-none px-[35px]"
+        : `xxl-mid:w-[1200px] xxl-mid:max-w-none`
     );
   }, [location.pathname]);
 
@@ -29,7 +31,7 @@ const App = () => {
     <>
       <ScrollToTop />
       <Header className={navigationStyles} />
-      <div className="border-custom mx-auto max-w-[1160px] border-x border-solid border-gray-extra-light font-inter">
+      <div className={twMerge("border-custom mx-auto border-x border-solid border-gray-borders font-inter", maxWidth)}>
         <div className="border-floating border-t-2 z-50" />
         <AnimatePresence mode="wait">
           <motion.main
@@ -48,7 +50,7 @@ const App = () => {
         </AnimatePresence>
         <div className="border-floating border-t-2 z-50" />
       </div>
-      <Footer className={twMerge(navigationStyles, "px-[40px]")} />
+      <Footer className={twMerge(navigationStyles, "px-[40px] md:px-[55px]")} />
     </>
   );
 };

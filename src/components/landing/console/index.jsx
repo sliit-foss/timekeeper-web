@@ -7,7 +7,7 @@ const Console = ({ className }) => {
   useLayoutEffect(() => {
     setTimeout(() => {
       setSecondary(["<span class='opacity-0'>user@machine demo ~ %</span> &nbsp;timekeeper script.js", ...output]);
-    }, 3500);
+    }, 2300);
   }, []);
   return (
     <div className={`py-[60px] w-full ${className}`}>
