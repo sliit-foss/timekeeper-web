@@ -163,7 +163,7 @@ please refer to the `,p.jsx(t.a,{href:"https://www.npmjs.com/package/@sliit-foss
 `,p.jsxs(t.li,{children:[`
 `,p.jsxs(t.p,{children:[p.jsx(t.strong,{children:"bindKey"})," - Creates a bounded function from a passed object and function key with its context preserved."]}),`
 `,p.jsxs(t.ul,{children:[`
-`,p.jsxs(t.li,{children:["This method is ",p.jsx(t.strong,{children:"distint from the bindKey function of lodash"})," as this ",p.jsx(t.strong,{children:"preserves the function's name"})," property where lodash sets it as ",p.jsx(t.strong,{children:"wrapper"}),"."]}),`
+`,p.jsxs(t.li,{children:["This method is ",p.jsx(t.strong,{children:"distinct from the bindKey function of lodash"})," as this ",p.jsx(t.strong,{children:"preserves the function's name"})," property where lodash sets it as ",p.jsx(t.strong,{children:"wrapper"}),"."]}),`
 `]}),`
 `]}),`
 `,p.jsxs(t.li,{children:[`
